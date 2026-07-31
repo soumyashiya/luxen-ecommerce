@@ -165,133 +165,147 @@ export default function ProductPageClient({ product }: { product: Product }) {
               </div>
 
               {/* Janoshik verified report button */}
-              <a
-                href={product.janoshikUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-2 rounded-xl border-2 border-brand bg-white px-5 py-3 text-sm font-bold uppercase tracking-wide text-brand transition-all hover:-translate-y-0.5 hover:bg-brand hover:text-white"
-              >
-                <FileText size={16} aria-hidden="true" />
-                View Janoshik Analytical Report
-                <ExternalLink size={14} aria-hidden="true" />
-              </a>
+              {product.janoshikUrl && (
+                <a
+                  href={product.janoshikUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex items-center gap-2 rounded-xl border-2 border-brand bg-white px-5 py-3 text-sm font-bold uppercase tracking-wide text-brand transition-all hover:-translate-y-0.5 hover:bg-brand hover:text-white"
+                >
+                  <FileText size={16} aria-hidden="true" />
+                  View Janoshik Analytical Report
+                  <ExternalLink size={14} aria-hidden="true" />
+                </a>
+              )}
 
               {/* Janoshik lab analysis card */}
-              <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-[0_20px_60px_-40px_rgba(0,0,0,0.25)]">
-                <div className="border-b border-black/10 bg-surface px-5 py-4">
-                  <h2 className="text-base font-bold text-ink">
-                    Janoshik Third-Party Lab Analysis
-                  </h2>
-                  <p className="mt-1 text-xs text-muted">
-                    Independently tested and verified by Janoshik Analytical.
-                  </p>
-                </div>
+              {product.analysis ? (
+                <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-[0_20px_60px_-40px_rgba(0,0,0,0.25)]">
+                  <div className="border-b border-black/10 bg-surface px-5 py-4">
+                    <h2 className="text-base font-bold text-ink">
+                      Janoshik Third-Party Lab Analysis
+                    </h2>
+                    <p className="mt-1 text-xs text-muted">
+                      Independently tested and verified by Janoshik Analytical.
+                    </p>
+                  </div>
 
-                <div
-                  className={`grid gap-px bg-black/5 ${
-                    product.analysis.purity ? "grid-cols-3" : "grid-cols-2"
-                  }`}
-                >
-                  <div className="bg-white px-5 py-4">
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-muted">
-                      Batch Number
-                    </p>
-                    <p className="mt-1 text-sm font-bold text-ink">
-                      {product.analysis.batchNumber}
-                    </p>
-                  </div>
-                  <div className="bg-white px-5 py-4">
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-muted">
-                      Fill Volume
-                    </p>
-                    <p className="mt-1 text-sm font-bold text-ink">
-                      {product.analysis.fillVolume}
-                    </p>
-                  </div>
-                  {product.analysis.purity && (
+                  <div
+                    className={`grid gap-px bg-black/5 ${
+                      product.analysis.purity ? "grid-cols-3" : "grid-cols-2"
+                    }`}
+                  >
                     <div className="bg-white px-5 py-4">
                       <p className="text-[10px] font-bold uppercase tracking-wider text-muted">
-                        Purity
+                        Batch Number
                       </p>
-                      <p className="mt-1 text-sm font-bold text-brand">
-                        {product.analysis.purity}
+                      <p className="mt-1 text-sm font-bold text-ink">
+                        {product.analysis.batchNumber}
                       </p>
+                    </div>
+                    <div className="bg-white px-5 py-4">
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-muted">
+                        Fill Volume
+                      </p>
+                      <p className="mt-1 text-sm font-bold text-ink">
+                        {product.analysis.fillVolume}
+                      </p>
+                    </div>
+                    {product.analysis.purity && (
+                      <div className="bg-white px-5 py-4">
+                        <p className="text-[10px] font-bold uppercase tracking-wider text-muted">
+                          Purity
+                        </p>
+                        <p className="mt-1 text-sm font-bold text-brand">
+                          {product.analysis.purity}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left text-sm">
+                      <thead className="bg-black/[0.03]">
+                        <tr>
+                          <th className="px-5 py-3 text-[10px] font-bold uppercase tracking-wider text-muted">
+                            Compound
+                          </th>
+                          <th className="px-5 py-3 text-[10px] font-bold uppercase tracking-wider text-muted">
+                            Concentration
+                          </th>
+                          <th className="px-5 py-3 text-[10px] font-bold uppercase tracking-wider text-muted">
+                            Verified Content
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {product.analysis.compounds.map((c) => (
+                          <tr key={c.compound} className="border-t border-black/5">
+                            <td className="px-5 py-3 font-bold text-ink">{c.compound}</td>
+                            <td className="px-5 py-3 text-ink">{c.concentration}</td>
+                            <td className="px-5 py-3 font-semibold text-brand">
+                              {c.verifiedContent}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <p className="border-t border-black/10 px-5 py-3 text-xs leading-relaxed text-muted">
+                    Concentration is measured per ml; verified content reflects the total assayed
+                    mass across the stated fill volume.
+                  </p>
+
+                  {(product.certificateImages?.length ?? 0) > 0 && (
+                    <button
+                      type="button"
+                      onClick={() => setShowCert((v) => !v)}
+                      aria-expanded={showCert}
+                      className="flex w-full items-center justify-between border-t border-black/10 bg-surface px-5 py-3 text-sm font-bold text-brand transition-colors hover:bg-brand hover:text-white"
+                    >
+                      <span className="inline-flex items-center gap-2">
+                        <FileText size={14} aria-hidden="true" />
+                        {showCert ? "Hide certificate images" : "View certificate images"}
+                      </span>
+                      <span aria-hidden="true">{showCert ? "−" : "+"}</span>
+                    </button>
+                  )}
+
+                  {showCert && (
+                    <div className="grid gap-3 border-t border-black/10 bg-white p-4 sm:grid-cols-2">
+                      {product.certificateImages?.map((src, i) => (
+                        <a
+                          key={src}
+                          href={src}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group relative block aspect-[3/4] overflow-hidden rounded-xl ring-1 ring-black/10 transition-all hover:ring-brand"
+                        >
+                          <Image
+                            src={src}
+                            alt={`${product.title} Janoshik certificate page ${i + 1}`}
+                            fill
+                            loading="lazy"
+                            className="object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                            sizes="(min-width:640px) 45vw, 90vw"
+                          />
+                        </a>
+                      ))}
                     </div>
                   )}
                 </div>
-
-                <div className="overflow-x-auto">
-                  <table className="w-full text-left text-sm">
-                    <thead className="bg-black/[0.03]">
-                      <tr>
-                        <th className="px-5 py-3 text-[10px] font-bold uppercase tracking-wider text-muted">
-                          Compound
-                        </th>
-                        <th className="px-5 py-3 text-[10px] font-bold uppercase tracking-wider text-muted">
-                          Concentration
-                        </th>
-                        <th className="px-5 py-3 text-[10px] font-bold uppercase tracking-wider text-muted">
-                          Verified Content
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {product.analysis.compounds.map((c) => (
-                        <tr key={c.compound} className="border-t border-black/5">
-                          <td className="px-5 py-3 font-bold text-ink">{c.compound}</td>
-                          <td className="px-5 py-3 text-ink">{c.concentration}</td>
-                          <td className="px-5 py-3 font-semibold text-brand">
-                            {c.verifiedContent}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-
-                <p className="border-t border-black/10 px-5 py-3 text-xs leading-relaxed text-muted">
-                  Concentration is measured per ml; verified content reflects the total assayed
-                  mass across the stated fill volume.
-                </p>
-
-                {product.certificateImages.length > 0 && (
-                  <button
-                    type="button"
-                    onClick={() => setShowCert((v) => !v)}
-                    aria-expanded={showCert}
-                    className="flex w-full items-center justify-between border-t border-black/10 bg-surface px-5 py-3 text-sm font-bold text-brand transition-colors hover:bg-brand hover:text-white"
-                  >
-                    <span className="inline-flex items-center gap-2">
-                      <FileText size={14} aria-hidden="true" />
-                      {showCert ? "Hide certificate images" : "View certificate images"}
-                    </span>
-                    <span aria-hidden="true">{showCert ? "−" : "+"}</span>
-                  </button>
-                )}
-
-                {showCert && (
-                  <div className="grid gap-3 border-t border-black/10 bg-white p-4 sm:grid-cols-2">
-                    {product.certificateImages.map((src, i) => (
-                      <a
-                        key={src}
-                        href={src}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group relative block aspect-[3/4] overflow-hidden rounded-xl ring-1 ring-black/10 transition-all hover:ring-brand"
-                      >
-                        <Image
-                          src={src}
-                          alt={`${product.title} Janoshik certificate page ${i + 1}`}
-                          fill
-                          loading="lazy"
-                          className="object-contain transition-transform duration-300 group-hover:scale-[1.02]"
-                          sizes="(min-width:640px) 45vw, 90vw"
-                        />
-                      </a>
-                    ))}
+              ) : (
+                !product.hideCertNotice && (
+                  <div className="mt-6 flex gap-3 rounded-2xl border border-dashed border-black/15 bg-surface p-4">
+                    <FlaskConical className="mt-0.5 shrink-0 text-muted" size={18} aria-hidden="true" />
+                    <p className="text-sm leading-relaxed text-muted">
+                      <span className="font-bold text-ink">Certificate of analysis pending.</span>{" "}
+                      This batch is awaiting third-party Janoshik verification — check back soon.
+                    </p>
                   </div>
-                )}
-              </div>
+                )
+              )}
 
               {/* Specs */}
               <dl className="mt-7 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-black/10 bg-black/10">

@@ -249,3 +249,22 @@ export function apiNewsletterSubscribe(input: {
     { method: "POST", body: input },
   );
 }
+
+/* Order rows are returned straight from the DB — field casing/shape isn't
+   pinned down in the API docs beyond the examples, so callers read them
+   defensively (see lib/orders.ts `pick`). */
+export type OrderRecord = Record<string, unknown>;
+
+/** `GET /api/user-orders/:orderNumber` — full order + items + payments, no auth. */
+export function apiGetOrderByNumber(orderNumber: string) {
+  return apiFetch<{ order: OrderRecord; items: OrderRecord[]; payments: OrderRecord[] }>(
+    `/api/user-orders/${encodeURIComponent(orderNumber)}`,
+  );
+}
+
+/** `GET /api/user-orders/by-email` — up to 200 orders, newest first, no auth. */
+export function apiGetOrdersByEmail(email: string) {
+  return apiFetch<{ orders: OrderRecord[] }>(
+    `/api/user-orders/by-email?email=${encodeURIComponent(email)}`,
+  );
+}

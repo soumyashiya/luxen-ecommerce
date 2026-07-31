@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
 import { LogoMark } from "@/components/ui/Logo";
 import { ApiError, apiNewsletterSubscribe } from "@/lib/api";
@@ -36,8 +37,20 @@ const SOCIALS = [
   { icon: FacebookIcon, label: "Facebook" },
 ];
 
-const FOOTER_LINKS = ["Home", "About", "Products", "Our Team", "Contact"];
-const UTIL_LINKS = ["Refund Policy", "Terms"];
+const FOOTER_LINKS = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/#about" },
+  { label: "Shop", href: "/shop" },
+  { label: "Our Team", href: "/#team" },
+  { label: "Contact", href: "/#contact" },
+];
+const UTIL_LINKS = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Refund Policy", href: "/refund-policy" },
+  { label: "Shipping Policy", href: "/shipping-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
+  { label: "Press", href: "/press-release" },
+];
 
 function NewsletterForm() {
   const [email, setEmail] = useState("");
@@ -172,19 +185,19 @@ export default function Footer() {
 
               <div className="flex flex-wrap gap-x-7 gap-y-3 border-t border-black/10 pt-6 text-sm font-medium text-ink">
                 {FOOTER_LINKS.map((l) => (
-                  <a key={l} href="#" className="transition-colors hover:text-brand">
-                    {l}
-                  </a>
+                  <Link key={l.label} href={l.href} className="transition-colors hover:text-brand">
+                    {l.label}
+                  </Link>
                 ))}
               </div>
 
               <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-muted">
                 <span>Copyright © 2026 LUXEN</span>
-                <div className="flex gap-6">
+                <div className="flex flex-wrap gap-x-6 gap-y-2">
                   {UTIL_LINKS.map((l) => (
-                    <a key={l} href="#" className="transition-colors hover:text-brand">
-                      {l}
-                    </a>
+                    <Link key={l.label} href={l.href} className="transition-colors hover:text-brand">
+                      {l.label}
+                    </Link>
                   ))}
                 </div>
               </div>

@@ -17,7 +17,7 @@ export default function Hero() {
           the browser picks a tight srcset rung instead of the largest. */}
       <Image
         src={IMG.heroPeople}
-        alt="LUXEN research-grade peptides for laboratory R&D"
+        alt="LUXEN researchgrade peptides for laboratory R&D"
         fill
         priority
         fetchPriority="high"
@@ -65,7 +65,7 @@ export default function Hero() {
               }}
               className="h-display text-white text-[clamp(2.75rem,8vw,5.6rem)]"
             >
-              {["Research-Grade", "Reference Peptides"].map((line) => (
+              {["Research Grade", "Reference Peptides"].map((line) => (
                 <span key={line} className="block overflow-hidden">
                   <motion.span
                     variants={{

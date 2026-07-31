@@ -13,12 +13,12 @@ export default function SiteHeader() {
         <Link href="/" aria-label="LUXEN home">
           <Logo className="text-ink" mark="var(--brand)" />
         </Link>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-3 sm:gap-5">
           <Link
-            href="/#services"
-            className="hidden text-sm font-semibold text-ink transition-colors hover:text-brand sm:inline"
+            href="/shop"
+            className="inline-flex items-center gap-1.5 rounded-full bg-brand px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-brand-dark"
           >
-            Catalog
+            Shop
           </Link>
           <AccountMenu variant="light" />
           <CartButton className="text-ink hover:text-brand" />

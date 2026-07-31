@@ -15,10 +15,10 @@ export default function JanoshikModal({ product }: { product: Product }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined" || !product.analysis) return;
     const t = window.setTimeout(() => setOpen(true), 500);
     return () => window.clearTimeout(t);
-  }, [product.slug]);
+  }, [product.slug, product.analysis]);
 
   useEffect(() => {
     if (!open) return;
@@ -40,6 +40,7 @@ export default function JanoshikModal({ product }: { product: Product }) {
   };
 
   const { analysis } = product;
+  if (!analysis) return null;
 
   return (
     <AnimatePresence>
@@ -151,16 +152,18 @@ export default function JanoshikModal({ product }: { product: Product }) {
 
             {/* CTA */}
             <div className="mt-6 px-6 pb-7 sm:px-8">
-              <a
-                href={product.janoshikUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={close}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand px-6 py-4 text-sm font-bold uppercase tracking-wide text-white transition-all hover:-translate-y-0.5 hover:bg-brand-dark"
-              >
-                View Full Janoshik Report
-                <ExternalLink size={14} aria-hidden="true" />
-              </a>
+              {product.janoshikUrl && (
+                <a
+                  href={product.janoshikUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={close}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand px-6 py-4 text-sm font-bold uppercase tracking-wide text-white transition-all hover:-translate-y-0.5 hover:bg-brand-dark"
+                >
+                  View Full Janoshik Report
+                  <ExternalLink size={14} aria-hidden="true" />
+                </a>
+              )}
               <p className="mt-3 text-center text-[11px] text-muted">
                 Certificate for <span className="font-semibold text-ink">{product.title}</span>
               </p>

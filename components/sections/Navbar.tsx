@@ -76,8 +76,14 @@ export default function Navbar() {
             mark="var(--brand)"
           />
 
-          {/* Right: account + cart */}
-          <div className="flex items-center gap-4 md:gap-6">
+          {/* Right: shop + account + cart */}
+          <div className="flex items-center gap-3 md:gap-6">
+            <Link
+              href="/shop"
+              className="hidden items-center gap-1.5 rounded-full bg-brand px-4 py-2.5 text-[13px] font-bold uppercase tracking-wide text-white transition-colors hover:bg-brand-dark sm:inline-flex"
+            >
+              Shop
+            </Link>
             <AccountMenu variant={scrolled ? "light" : "dark"} />
             <CartButton className={cn(scrolled ? "text-ink" : "text-white", "hover:text-brand")} />
           </div>
@@ -113,7 +119,7 @@ export default function Navbar() {
               initial="hidden"
               animate="show"
               variants={{ show: { transition: { staggerChildren: 0.06, delayChildren: 0.1 } } }}
-              className="container-luxen mt-4 flex flex-col gap-1 pb-[calc(2rem+env(safe-area-inset-bottom))] sm:mt-8 sm:gap-2"
+              className="container-luxen mt-4 flex flex-col gap-1 pb-[calc(4rem+env(safe-area-inset-bottom))] sm:mt-8 sm:gap-2"
             >
               {NAV_LINKS.map((link) => (
                 <motion.a

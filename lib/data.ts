@@ -80,9 +80,13 @@ export type Product = {
   icon: string;
   price: number;
   specs: { label: string; value: string }[];
-  janoshikUrl: string;
-  certificateImages: string[];
-  analysis: ProductAnalysis;
+  /* Omitted until a batch has a real Janoshik report — never fabricate these. */
+  janoshikUrl?: string;
+  certificateImages?: string[];
+  analysis?: ProductAnalysis;
+  /* Suppresses the "certificate pending" notice on the product page for
+     products where that messaging shouldn't show. */
+  hideCertNotice?: boolean;
   packageContents: string[];
   storage: string[];
 };
@@ -137,12 +141,12 @@ export const SERVICES: Product[] = [
     title: "Retatrutide 20mg (R&D Only)",
     desc: "Research reference peptide supplied in a pre-filled analytical device. Batch-characterized for identity, purity, and content by Janoshik Analytical.",
     long: "A 20mg Retatrutide research reference material supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.",
-    img: "/images/retafourty/retafrontnew.jpg",
+    img: "/images/retatwenty/retafront.jpeg",
     gallery: [
-      "/images/retafourty/retafrontnew.jpg",
-      "/images/retafourty/retpen.jpg",
-      "/images/retafourty/retaopen.jpg",
-      "/images/retafourty/retauv.jpg",
+      "/images/retatwenty/retafront.jpeg",
+      "/images/retatwenty/Artboard4copy.jpg",
+      "/images/retatwenty/Artboard4copy3.jpg",
+      "/images/retatwenty/retatwentyuv.jpg",
     ],
     icon: "dna",
     price: 100,
@@ -260,6 +264,67 @@ export const SERVICES: Product[] = [
       "Each Glow 70mg Research kit includes:",
       "2 × Pre-filled Research pens (Each pen contains 5mg BPC-157, 5mg TB-500, 25mg GHK-Cu)",
       "Total contents: 10mg BPC-157, 10mg TB-500, 50mg GHK-Cu",
+    ],
+    storage: [
+      "Store refrigerated (2–8°C). Do not freeze.",
+      "Supplied in fixed-volume sealed format for laboratory analysis.",
+    ],
+  },
+  {
+    slug: "retatrutide-40mg",
+    title: "Retatrutide 40mg (R&D Only)",
+    desc: "Higher-fill Retatrutide research reference material supplied in a pre-filled research device for laboratories that need a larger-volume batch for identity and purity work.",
+    long: "A 40mg Retatrutide research reference material supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.",
+    img: "/images/retafourty/retafrontnew.jpg",
+    gallery: [
+      "/images/retafourty/retafrontnew.jpg",
+      "/images/retafourty/retpen.jpg",
+      "/images/retafourty/retaopen.jpg",
+      "/images/retafourty/retauv.jpg",
+    ],
+    icon: "test-tube",
+    price: 140,
+    specs: [
+      { label: "Quantity", value: "40 mg" },
+      { label: "Purity", value: "≥99% (HPLC)" },
+      { label: "Form", value: "Pre-filled research device" },
+      { label: "Testing", value: "Pending certificate" },
+    ],
+    packageContents: [
+      "Each Retatrutide 40mg Research kit includes:",
+      "Pre-filled Research pen (40mg Retatrutide, 4 doses of 10mg)",
+      "Research information sheet",
+    ],
+    storage: [
+      "Store refrigerated (2–8°C). Do not freeze.",
+      "Supplied in fixed-volume sealed format for laboratory analysis.",
+    ],
+  },
+  {
+    slug: "nad-plus-1000mg",
+    title: "NAD+ 1000mg (R&D Only)",
+    desc: "Nicotinamide adenine dinucleotide (NAD+) research reference material supplied in pre-filled analytical devices for in-vitro laboratory characterization.",
+    long: "A 1000mg NAD+ research reference material supplied across pre-filled research devices, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.",
+    img: "/images/nad/nadfront.jpg",
+    gallery: [
+      "/images/nad/nadfront.jpg",
+      "/images/nad/pennad.jpg",
+      "/images/nad/opennad.jpg",
+      "/images/nad/uvnad.jpg",
+    ],
+    icon: "atom",
+    price: 120,
+    hideCertNotice: true,
+    specs: [
+      { label: "Quantity", value: "1,000 mg" },
+      { label: "Purity", value: "≥99% (HPLC)" },
+      { label: "Form", value: "Pre-filled research device" },
+      { label: "Testing", value: "Pending certificate" },
+    ],
+    packageContents: [
+      "Each NAD+ 1000mg Research kit includes:",
+      "Pre-filled Research pens (100mg NAD+ per pen)",
+      "Research information sheet",
     ],
     storage: [
       "Store refrigerated (2–8°C). Do not freeze.",
