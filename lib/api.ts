@@ -87,11 +87,17 @@ function extractErrorMessage(data: unknown, status: number): string {
   return `Request failed (${status})`;
 }
 
-type FetchOptions = Omit<RequestInit, "body"> & { body?: BodyInit | object | null };
+type FetchOptions = Omit<RequestInit, "body"> & {
+  body?: BodyInit | object | null;
+  /** Aborts the request after this many ms. Default 20s; raise for slow endpoints (e.g. screenshot upload + OCR). */
+  timeoutMs?: number;
+};
+
+const DEFAULT_TIMEOUT_MS = 20_000;
 
 export async function apiFetch<T = unknown>(
   path: string,
-  { body, headers: hIn, ...rest }: FetchOptions = {},
+  { body, headers: hIn, timeoutMs = DEFAULT_TIMEOUT_MS, signal, ...rest }: FetchOptions = {},
 ): Promise<T> {
   const headers = new Headers(hIn);
   const token = getToken();
@@ -113,11 +119,31 @@ export async function apiFetch<T = unknown>(
     finalBody = JSON.stringify(body);
   }
 
-  const res = await fetch(`${API_BASE}${path}`, {
-    ...rest,
-    headers,
-    body: finalBody,
-  });
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  if (signal) {
+    if (signal.aborted) controller.abort();
+    else signal.addEventListener("abort", () => controller.abort());
+  }
+
+  let res: Response;
+  try {
+    res = await fetch(`${API_BASE}${path}`, {
+      ...rest,
+      headers,
+      body: finalBody,
+      signal: controller.signal,
+    });
+  } catch (err) {
+    const aborted = (err instanceof DOMException && err.name === "AbortError") || controller.signal.aborted;
+    throw new ApiError(
+      aborted ? `Request timed out after ${Math.round(timeoutMs / 1000)}s` : err instanceof Error ? err.message : "Network error",
+      0,
+      null,
+    );
+  } finally {
+    clearTimeout(timer);
+  }
 
   const ct = res.headers.get("content-type") || "";
   let data: unknown = null;
@@ -296,11 +322,35 @@ export type CaptureApplyPromoResponse = {
   total: number;
 };
 
+/* Raw response body from the payment-verification microservice (see payment.md),
+   forwarded as-is inside `CaptureUploadResponse.verification`. `null` when that
+   service was unreachable (payment_status "pending" in that case). */
+export type VerificationVerdict = {
+  decision: "approved" | "rejected";
+  probability: number;
+  reasons: string[];
+  extracted: {
+    amount_candidates: number[];
+    best_amount: number | null;
+    expected_total: number;
+    payee_expected: string;
+    sort_code_expected: string;
+    account_number_expected: string;
+    ocr_avg_conf: number;
+  };
+};
+
+export type VerificationResult = {
+  order: { id: number; order_number: string; customer_email: string; total: number };
+  screenshot: { filename: string; path: string };
+  verdict: VerificationVerdict;
+};
+
 export type CaptureUploadResponse = {
   ok: true;
   screenshotUrl: string;
   screenshotFilename: string;
-  verification: unknown;
+  verification: VerificationResult | null;
   payment_status: "received" | "rejected" | "pending";
   verification_error?: string;
 };
@@ -328,6 +378,7 @@ export const paymentCapture = {
     return apiFetch<CaptureUploadResponse>("/api/payment-capture/upload", {
       method: "POST",
       body: formData,
+      timeoutMs: 60_000,
     });
   },
 };
