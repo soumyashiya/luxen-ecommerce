@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useParams } from 'next/navigation';
 import { paymentCapture, type CaptureValidateResponse, ApiError } from '@/lib/api';
-import { formatPrice } from '@/components/providers/CartProvider';
+import { formatUSD } from '@/lib/cart';
 
 type UploadStatus = 'idle' | 'uploading' | 'received' | 'rejected' | 'pending';
 
@@ -112,7 +112,7 @@ export default function PaymentCapturePage() {
         <BankRow label="Reference" value={data.bank.reference} mono />
         <BankRow label="Sort code" value={data.bank.sortCode} mono />
         <BankRow label="Account number" value={data.bank.accountNumber} mono />
-        <BankRow label="Amount" value={formatPrice(total)} highlight />
+        <BankRow label="Amount" value={formatUSD(total)} highlight />
       </div>
 
       {data.allowPromo && (

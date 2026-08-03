@@ -268,3 +268,66 @@ export function apiGetOrdersByEmail(email: string) {
     `/api/user-orders/by-email?email=${encodeURIComponent(email)}`,
   );
 }
+
+/* ---------- Manual payment capture (bank-transfer flow) --------------- */
+/* Token-authorized (no bearer). See API_DOCUMENTATION (3).md §8.        */
+
+export type BankDetails = {
+  payeeName: string;
+  sortCode: string;
+  accountNumber: string;
+  reference: string;
+};
+
+export type CaptureValidateResponse = {
+  ok: true;
+  order: OrderRecord;
+  items: OrderRecord[];
+  payments: OrderRecord[];
+  allowPromo: boolean;
+  bank: BankDetails;
+};
+
+export type CaptureApplyPromoResponse = {
+  ok: true;
+  promoCode: string;
+  promoDiscountPercent: number;
+  discountAmount: number;
+  total: number;
+};
+
+export type CaptureUploadResponse = {
+  ok: true;
+  screenshotUrl: string;
+  screenshotFilename: string;
+  verification: unknown;
+  payment_status: "received" | "rejected" | "pending";
+  verification_error?: string;
+};
+
+export const paymentCapture = {
+  /** `POST /api/payment-capture/validate` */
+  validate(token: string) {
+    return apiFetch<CaptureValidateResponse>("/api/payment-capture/validate", {
+      method: "POST",
+      body: { token },
+    });
+  },
+  /** `POST /api/payment-capture/apply-promo` */
+  applyPromo(token: string, promoCode: string) {
+    return apiFetch<CaptureApplyPromoResponse>("/api/payment-capture/apply-promo", {
+      method: "POST",
+      body: { token, promoCode },
+    });
+  },
+  /** `POST /api/payment-capture/upload` — multipart */
+  upload(token: string, file: File) {
+    const formData = new FormData();
+    formData.append("token", token);
+    formData.append("paymentScreenshot", file);
+    return apiFetch<CaptureUploadResponse>("/api/payment-capture/upload", {
+      method: "POST",
+      body: formData,
+    });
+  },
+};
