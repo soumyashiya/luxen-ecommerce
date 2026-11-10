@@ -17,19 +17,19 @@ export default function CartPageClient() {
     <>
       <SiteHeader />
 
-      <main id="main" className="relative z-10 min-h-[70vh] pt-28 lg:pt-32">
-        <div className="container-luxen pb-24">
+      <main id="main" className="relative z-10 min-h-[70vh] bg-pale pb-20 pt-10">
+        <div className="by-page pb-24">
           {/* Page header */}
-          <div className="flex items-end justify-between border-b border-black/10 pb-8">
+          <div className="flex items-end justify-between border-b border-pink/20 pb-8">
             <div>
-              <p className="text-[0.65rem] uppercase tracking-[0.28em] text-brand">Your Cart</p>
-              <h1 className="h-display mt-2 text-4xl tracking-[-0.02em] text-ink lg:text-5xl">
+              <p className="text-[0.65rem] uppercase tracking-[0.28em] text-pink">Your Cart</p>
+              <h1 className="by-h-product mt-2">
                 {lines.length ? `${count} ${count === 1 ? "item" : "items"}` : "Cart is empty"}
               </h1>
             </div>
             <Link
-              href="/#services"
-              className="hidden text-sm text-brand transition-colors hover:text-brand-dark md:inline-block"
+              href="/shop"
+              className="hidden text-sm text-pink transition-colors hover:text-pink-dark md:inline-block"
             >
               ← Back to Catalog
             </Link>
@@ -37,11 +37,11 @@ export default function CartPageClient() {
 
           {/* Research-only compliance banner */}
           {lines.length > 0 && (
-            <div className="mt-6 rounded-2xl border-l-4 border-brand bg-surface p-4 text-sm leading-relaxed text-ink">
-              <p className="font-bold uppercase tracking-wide text-brand">
+            <div className="mt-6 rounded-[12px] border-l-4 border-pink bg-yellow p-4 text-sm leading-relaxed text-pink">
+              <p className="font-bold uppercase tracking-wide text-pink">
                 Research reference material
               </p>
-              <p className="mt-1 text-muted">
+              <p className="mt-1 text-pink/75">
                 By proceeding with this purchase, you acknowledge that these products are
                 intended solely for laboratory research purposes and are not intended for human
                 or veterinary use. These products are not intended to diagnose, treat, cure, or
@@ -60,14 +60,14 @@ export default function CartPageClient() {
                   {lines.map((l) => (
                     <li
                       key={l.product.slug}
-                      className="flex flex-col gap-4 rounded-[var(--radius-xl2)] border border-black/10 bg-white p-5 sm:flex-row sm:items-center"
+                      className="flex flex-col gap-4 rounded-[var(--radius-xl2)] border border-pink/20 bg-pale p-5 sm:flex-row sm:items-center"
                     >
                       <Link
                         href={`/product/${l.product.slug}`}
-                        className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl bg-surface"
+                        className="relative h-28 w-28 shrink-0 overflow-hidden rounded-[12px] bg-yellow"
                       >
                         <Image
-                          src={l.product.img}
+                          src={l.product.card ?? l.product.img}
                           alt={l.product.title}
                           fill
                           loading="lazy"
@@ -78,28 +78,28 @@ export default function CartPageClient() {
 
                       <div className="flex flex-1 flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
                         <div>
-                          <p className="text-[0.6rem] uppercase tracking-[0.22em] text-muted">
+                          <p className="text-[0.6rem] uppercase tracking-[0.22em] text-pink/75">
                             Research peptide
                           </p>
                           <Link
                             href={`/product/${l.product.slug}`}
-                            className="mt-1 block text-lg font-bold text-ink hover:text-brand"
+                            className="mt-1 block text-lg font-bold text-pink hover:text-pink"
                           >
                             {l.product.title}
                           </Link>
-                          <p className="mt-1 text-xs text-muted">{formatUSD(l.product.price)} each</p>
+                          <p className="mt-1 text-xs text-pink/75">{formatUSD(l.product.price)} each</p>
                         </div>
 
                         <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
                           <div
-                            className="flex items-center rounded-full border border-black/10"
+                            className="flex items-center border border-pink/55"
                             role="group"
                             aria-label={`Quantity for ${l.product.title}`}
                           >
                             <button
                               type="button"
                               onClick={() => setQty(l.product.slug, l.qty - 1)}
-                              className="grid h-10 w-10 place-items-center text-ink hover:text-brand"
+                              className="grid h-10 w-10 place-items-center text-pink hover:text-pink"
                               aria-label="Decrease quantity"
                             >
                               −
@@ -110,19 +110,19 @@ export default function CartPageClient() {
                             <button
                               type="button"
                               onClick={() => setQty(l.product.slug, l.qty + 1)}
-                              className="grid h-10 w-10 place-items-center text-ink hover:text-brand"
+                              className="grid h-10 w-10 place-items-center text-pink hover:text-pink"
                               aria-label="Increase quantity"
                             >
                               +
                             </button>
                           </div>
-                          <p className="w-20 text-right text-base font-bold text-ink">
+                          <p className="w-20 text-right text-base font-bold text-pink">
                             {formatUSD(l.lineTotal)}
                           </p>
                           <button
                             type="button"
                             onClick={() => remove(l.product.slug)}
-                            className="text-xs uppercase tracking-[0.2em] text-muted hover:text-brand"
+                            className="text-xs uppercase tracking-[0.2em] text-pink/75 hover:text-pink"
                             aria-label={`Remove ${l.product.title} from cart`}
                           >
                             Remove
@@ -137,7 +137,7 @@ export default function CartPageClient() {
                   <button
                     type="button"
                     onClick={clear}
-                    className="text-xs uppercase tracking-[0.2em] text-muted hover:text-brand"
+                    className="text-xs uppercase tracking-[0.2em] text-pink/75 hover:text-pink"
                   >
                     Clear cart
                   </button>
@@ -146,41 +146,41 @@ export default function CartPageClient() {
 
               {/* Summary */}
               <aside
-                className="h-fit rounded-[var(--radius-xl2)] border border-black/10 bg-surface p-7 lg:sticky lg:top-28"
+                className="h-fit rounded-[var(--radius-xl2)] border border-pink/20 bg-yellow p-7 lg:sticky lg:top-28"
                 aria-labelledby="order-summary-heading"
               >
-                <h2 id="order-summary-heading" className="text-xl font-bold text-ink">
+                <h2 id="order-summary-heading" className="text-xl font-bold text-pink">
                   Order summary
                 </h2>
 
                 <dl className="mt-6 space-y-3 text-sm">
                   <div className="flex justify-between">
-                    <dt className="text-muted">Subtotal</dt>
-                    <dd className="text-ink">{formatUSD(subtotal)}</dd>
+                    <dt className="text-pink/75">Subtotal</dt>
+                    <dd className="text-pink">{formatUSD(subtotal)}</dd>
                   </div>
-                  <div className="my-4 h-px bg-black/10" role="separator" />
+                  <div className="my-4 h-px bg-pink/15" role="separator" />
                   <div className="flex justify-between text-lg font-bold">
-                    <dt className="text-ink">Total</dt>
-                    <dd className="text-ink">{formatUSD(total)}</dd>
+                    <dt className="text-pink">Total</dt>
+                    <dd className="text-pink">{formatUSD(total)}</dd>
                   </div>
                 </dl>
 
                 <button
                   type="button"
                   onClick={() => router.push("/checkout")}
-                  className="mt-7 w-full rounded-full bg-brand py-3.5 text-sm font-medium text-white transition-all hover:bg-brand-dark hover:shadow-[0_20px_40px_-20px_rgba(0,131,195,0.6)]"
+                  className="by-btn mt-7 w-full"
                 >
                   Checkout
                 </button>
 
                 <Link
-                  href="/#services"
-                  className="mt-4 block text-center text-sm text-brand hover:text-brand-dark"
+                  href="/shop"
+                  className="mt-4 block text-center text-sm text-pink hover:text-pink-dark"
                 >
                   Continue shopping
                 </Link>
 
-                <p className="mt-7 border-t border-black/10 pt-5 text-center text-[0.65rem] uppercase tracking-[0.22em] text-muted">
+                <p className="mt-7 border-t border-pink/20 pt-5 text-center text-[0.65rem] uppercase tracking-[0.22em] text-pink/75">
                   For laboratory research use only · Not for human or veterinary use
                 </p>
               </aside>
@@ -196,8 +196,8 @@ export default function CartPageClient() {
 
 function EmptyCart() {
   return (
-    <div className="mt-16 flex flex-col items-center justify-center rounded-[var(--radius-xl2)] border border-black/10 bg-surface py-20 text-center">
-      <div className="grid h-16 w-16 place-items-center rounded-full bg-white text-brand">
+    <div className="mt-16 flex flex-col items-center justify-center rounded-[var(--radius-xl2)] border border-pink/20 bg-yellow py-20 text-center">
+      <div className="grid h-16 w-16 place-items-center rounded-full bg-pale text-pink">
         <svg
           width="22"
           height="22"
@@ -212,13 +212,13 @@ function EmptyCart() {
           <circle cx="18" cy="20" r="1.5" />
         </svg>
       </div>
-      <p className="mt-5 text-xl font-bold text-ink">No research products yet</p>
-      <p className="mt-2 max-w-sm text-sm text-muted">
+      <p className="mt-5 text-xl font-bold text-pink">No research products yet</p>
+      <p className="mt-2 max-w-sm text-sm text-pink/75">
         Explore our catalogue and add a compound to get started.
       </p>
       <Link
-        href="/#services"
-        className="mt-8 rounded-full bg-brand px-6 py-3 text-sm text-white transition-colors hover:bg-brand-dark"
+        href="/shop"
+        className="by-btn mt-8"
       >
         Continue shopping
       </Link>

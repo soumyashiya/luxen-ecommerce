@@ -1,0 +1,271 @@
+- generic [active] [ref=f30e1]:
+  - link "Skip to main content" [ref=f30e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f30e3]:
+    - generic [ref=f30e5]:
+      - button "Previous announcement" [ref=f30e6]
+      - paragraph [ref=f30e9]: EVERY BATCH INDEPENDENTLY LAB TESTED
+      - button "Next announcement" [ref=f30e10]
+    - generic [ref=f30e14]:
+      - generic [ref=f30e15]:
+        - link "Track Order" [ref=f30e16] [cursor=pointer]:
+          - /url: /track-order
+        - link "Certificates" [ref=f30e17] [cursor=pointer]:
+          - /url: /about
+      - link "LUXEN home" [ref=f30e18] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f30e19]: LUXEN
+      - generic [ref=f30e21]:
+        - button "Search" [ref=f30e22]
+        - button "Open cart" [ref=f30e27]
+    - navigation "Main" [ref=f30e31]:
+      - generic [ref=f30e32]:
+        - link "New In" [ref=f30e33] [cursor=pointer]:
+          - /url: /shop
+        - link "Catalog" [ref=f30e35] [cursor=pointer]:
+          - /url: /shop
+        - link "Verification" [ref=f30e40] [cursor=pointer]:
+          - /url: /about
+        - link "About" [ref=f30e44] [cursor=pointer]:
+          - /url: /about
+        - link "Reviews" [ref=f30e45] [cursor=pointer]:
+          - /url: /about#testimonials
+        - link "Shop All" [ref=f30e46] [cursor=pointer]:
+          - /url: /shop
+  - main [ref=f30e47]:
+    - generic [ref=f30e48]:
+      - navigation "Breadcrumb" [ref=f30e49]:
+        - list [ref=f30e50]:
+          - listitem [ref=f30e51]:
+            - link "Home" [ref=f30e52] [cursor=pointer]:
+              - /url: /
+          - listitem [aria-hidden] [ref=f30e53]: /
+          - listitem [ref=f30e54]:
+            - link "Catalog" [ref=f30e55] [cursor=pointer]:
+              - /url: /shop
+          - listitem [aria-hidden] [ref=f30e58]: /
+          - listitem [ref=f30e59]: BPC-157 & TB-500 40mg (R&D Only)
+      - generic [ref=f30e60]:
+        - generic [ref=f30e61]:
+          - img "BPC-157 & TB-500 40mg (R&D Only) — research-grade peptide" [ref=f30e63]
+          - tablist "Product images" [ref=f30e64]:
+            - tab "Show image 1 of 3" [selected] [ref=f30e65]
+            - tab "Show image 2 of 3" [ref=f30e66]
+            - tab "Show image 3 of 3" [ref=f30e67]
+        - generic [ref=f30e68]:
+          - paragraph [ref=f30e69]: Compound Analysis
+          - heading "BPC-157 & TB-500 40mg (R&D Only)" [level=1] [ref=f30e70]
+          - paragraph [ref=f30e71]:
+            - generic [ref=f30e72]: "Price:"
+            - text: $130USD
+          - paragraph [ref=f30e73]: A 40mg BPC-157 & TB-500 research reference material supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.
+          - paragraph [ref=f30e78]: "Safety Protocol: Produced for laboratory research only. Not for human or veterinary consumption."
+          - link "View Janoshik Analytical Report" [ref=f30e79] [cursor=pointer]:
+            - /url: https://verify.janoshik.com/tests/163218-ALLUVI_BPC157_TB500_40MG_KIT_EAI125ZEF8TB
+          - generic [ref=f30e87]:
+            - generic [ref=f30e88]:
+              - generic [ref=f30e89]:
+                - heading "Janoshik Third-Party Lab Analysis" [level=2] [ref=f30e90]
+                - paragraph [ref=f30e91]: Independently tested and verified by Janoshik Analytical.
+              - button "See assay results" [ref=f30e92] [cursor=pointer]
+            - generic [ref=f30e95]:
+              - generic [ref=f30e96]:
+                - paragraph [ref=f30e97]: Batch Number
+                - paragraph [ref=f30e98]: BP1701FSR
+              - generic [ref=f30e99]:
+                - paragraph [ref=f30e100]: Fill Volume
+                - paragraph [ref=f30e101]: 3 mL
+            - table [ref=f30e103]:
+              - rowgroup [ref=f30e104]:
+                - row [ref=f30e105]:
+                  - columnheader "Compound" [ref=f30e106]
+                  - columnheader "Concentration" [ref=f30e107]
+                  - columnheader "Verified Content" [ref=f30e108]
+              - rowgroup [ref=f30e109]:
+                - row [ref=f30e110]:
+                  - cell "BPC-157" [ref=f30e111]
+                  - cell "7.33 mg/mL" [ref=f30e112]
+                  - cell "21.99 mg" [ref=f30e113]
+                - row [ref=f30e114]:
+                  - cell "TB-500" [ref=f30e115]
+                  - cell "6.53 mg/mL" [ref=f30e116]
+                  - cell "19.59 mg" [ref=f30e117]
+            - paragraph [ref=f30e118]: Concentration is measured per ml; verified content reflects the total assayed mass across the stated fill volume.
+            - button "View certificate images" [ref=f30e119]:
+              - generic [aria-hidden] [ref=f30e124]: +
+          - generic [ref=f30e125]:
+            - generic [ref=f30e126]:
+              - term [ref=f30e127]: Quantity
+              - definition [ref=f30e128]: 40 mg
+            - generic [ref=f30e129]:
+              - term [ref=f30e130]: Purity
+              - definition [ref=f30e131]: ≥99% (HPLC)
+            - generic [ref=f30e132]:
+              - term [ref=f30e133]: Form
+              - definition [ref=f30e134]: Pre-filled research device
+            - generic [ref=f30e135]:
+              - term [ref=f30e136]: Testing
+              - definition [ref=f30e137]: Janoshik third-party
+          - generic [ref=f30e138]:
+            - tablist "Product information" [ref=f30e139]:
+              - tab "Package Contents" [selected] [ref=f30e140]
+              - tab "Storage Logic" [ref=f30e145]
+            - list [ref=f30e159]:
+              - listitem [ref=f30e160]: "Each BPC-157 & TB-500 40mg Research kit includes:"
+              - listitem [ref=f30e161]: Pre-filled Research pen (20mg BPC-157, 20mg TB-500)
+              - listitem [ref=f30e162]: Research information sheet
+          - generic [ref=f30e163]:
+            - group "Quantity selector" [ref=f30e164]:
+              - button "Decrease quantity" [ref=f30e165]
+              - generic [ref=f30e167]: "1"
+              - button "Increase quantity" [ref=f30e168]
+            - button "Add 1 × BPC-157 & TB-500 40mg (R&D Only) to cart" [ref=f30e170] [cursor=pointer]: Add to Cart
+          - paragraph [ref=f30e178]: For research purposes only. Not intended for human or veterinary use. Not intended to diagnose, treat, cure, or prevent any disease. Products are supplied strictly for laboratory and analytical research conducted by qualified professionals.
+          - list [ref=f30e179]:
+            - listitem [ref=f30e180]: ≥99% HPLC purity
+            - listitem [ref=f30e184]: Independently tested
+            - listitem [ref=f30e187]: Batch-level certificates
+          - paragraph [ref=f30e191]: FOR RESEARCH PURPOSES ONLY. Not intended for human or veterinary use. Not intended to diagnose, treat, cure, or prevent any disease. Products are supplied strictly for laboratory and analytical research conducted by qualified professionals.
+      - region "Continue your research" [ref=f30e192]:
+        - generic [ref=f30e193]:
+          - heading "Continue your research" [level=2] [ref=f30e194]
+          - link "View all" [ref=f30e195] [cursor=pointer]:
+            - /url: /shop
+        - list [ref=f30e196]:
+          - listitem [ref=f30e197]:
+            - article [ref=f30e198]:
+              - link "Retatrutide 20mg (R&D Only) Lab Tested" [ref=f30e199] [cursor=pointer]:
+                - /url: /product/retatrutide
+                - img "Retatrutide 20mg (R&D Only)" [ref=f30e200]
+                - generic [ref=f30e201]: Lab Tested
+              - link [ref=f30e202] [cursor=pointer]:
+                - /url: /product/retatrutide
+                - heading "Retatrutide 20mg (R&D Only)" [level=3] [ref=f30e203]
+              - paragraph [ref=f30e204]: $100
+              - button "Add Retatrutide 20mg (R&D Only) to cart" [ref=f30e205] [cursor=pointer]: Add to cart
+          - listitem [ref=f30e206]:
+            - article [ref=f30e207]:
+              - link "Tirzepatide 40mg (R&D Only) Lab Tested" [ref=f30e208] [cursor=pointer]:
+                - /url: /product/tirzepatide
+                - img "Tirzepatide 40mg (R&D Only)" [ref=f30e209]
+                - generic [ref=f30e210]: Lab Tested
+              - link [ref=f30e211] [cursor=pointer]:
+                - /url: /product/tirzepatide
+                - heading "Tirzepatide 40mg (R&D Only)" [level=3] [ref=f30e212]
+              - paragraph [ref=f30e213]: $100
+              - button "Add Tirzepatide 40mg (R&D Only) to cart" [ref=f30e214] [cursor=pointer]: Add to cart
+          - listitem [ref=f30e215]:
+            - article [ref=f30e216]:
+              - link "Glow 70mg (R&D Only) Lab Tested" [ref=f30e217] [cursor=pointer]:
+                - /url: /product/glow-ghk-cu
+                - img "Glow 70mg (R&D Only)" [ref=f30e218]
+                - generic [ref=f30e219]: Lab Tested
+              - link [ref=f30e220] [cursor=pointer]:
+                - /url: /product/glow-ghk-cu
+                - heading "Glow 70mg (R&D Only)" [level=3] [ref=f30e221]
+              - paragraph [ref=f30e222]: $100
+              - button "Add Glow 70mg (R&D Only) to cart" [ref=f30e223] [cursor=pointer]: Add to cart
+          - listitem [ref=f30e224]:
+            - article [ref=f30e225]:
+              - link "Retatrutide 40mg (R&D Only) Cert. Pending" [ref=f30e226] [cursor=pointer]:
+                - /url: /product/retatrutide-40mg
+                - img "Retatrutide 40mg (R&D Only)" [ref=f30e227]
+                - generic [ref=f30e228]: Cert. Pending
+              - link [ref=f30e229] [cursor=pointer]:
+                - /url: /product/retatrutide-40mg
+                - heading "Retatrutide 40mg (R&D Only)" [level=3] [ref=f30e230]
+              - paragraph [ref=f30e231]: $140
+              - button "Add Retatrutide 40mg (R&D Only) to cart" [ref=f30e232] [cursor=pointer]: Add to cart
+  - contentinfo [ref=f30e233]:
+    - generic [ref=f30e235]:
+      - generic [ref=f30e236]:
+        - paragraph [ref=f30e239]: ≥99% Purity
+        - paragraph [ref=f30e240]: HPLC verified, every batch
+      - generic [ref=f30e241]:
+        - paragraph [ref=f30e247]: Free Delivery
+        - paragraph [ref=f30e248]: On orders over $250
+      - generic [ref=f30e249]:
+        - paragraph [ref=f30e253]: Third-Party Tested
+        - paragraph [ref=f30e254]: Certificate with every lot
+    - generic [ref=f30e256]:
+      - generic [ref=f30e257]:
+        - generic [ref=f30e258]:
+          - heading "Customer Care" [level=2] [ref=f30e259]
+          - list [ref=f30e260]:
+            - listitem [ref=f30e261]:
+              - link "Track Order" [ref=f30e262] [cursor=pointer]:
+                - /url: /track-order
+            - listitem [ref=f30e263]:
+              - link "Shipping Policy" [ref=f30e264] [cursor=pointer]:
+                - /url: /shipping-policy
+            - listitem [ref=f30e265]:
+              - link "Refund Policy" [ref=f30e266] [cursor=pointer]:
+                - /url: /refund-policy
+            - listitem [ref=f30e267]:
+              - link "Contact Us" [ref=f30e268] [cursor=pointer]:
+                - /url: /about#contact
+        - generic [ref=f30e269]:
+          - heading "Company Info" [level=2] [ref=f30e270]
+          - list [ref=f30e271]:
+            - listitem [ref=f30e272]:
+              - link "About Us" [ref=f30e273] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f30e274]:
+              - link "Privacy Policy" [ref=f30e275] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=f30e276]:
+              - link "Terms of Service" [ref=f30e277] [cursor=pointer]:
+                - /url: /terms-of-service
+            - listitem [ref=f30e278]:
+              - link "Press Release" [ref=f30e279] [cursor=pointer]:
+                - /url: /press-release
+        - generic [ref=f30e280]:
+          - heading "More Info" [level=2] [ref=f30e281]
+          - list [ref=f30e282]:
+            - listitem [ref=f30e283]:
+              - link "Our Process" [ref=f30e284] [cursor=pointer]:
+                - /url: /about#process
+            - listitem [ref=f30e285]:
+              - link "Research Team" [ref=f30e286] [cursor=pointer]:
+                - /url: /about#team
+            - listitem [ref=f30e287]:
+              - link "Reviews" [ref=f30e288] [cursor=pointer]:
+                - /url: /about#testimonials
+        - generic [ref=f30e289]:
+          - heading "Shop" [level=2] [ref=f30e290]
+          - list [ref=f30e291]:
+            - listitem [ref=f30e292]:
+              - link "Shop All" [ref=f30e293] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=f30e294]:
+              - link "Retatrutide" [ref=f30e295] [cursor=pointer]:
+                - /url: /product/retatrutide
+            - listitem [ref=f30e296]:
+              - link "Tirzepatide" [ref=f30e297] [cursor=pointer]:
+                - /url: /product/tirzepatide
+            - listitem [ref=f30e298]:
+              - link "BPC-157 & TB-500" [ref=f30e299] [cursor=pointer]:
+                - /url: /product/bpc-157-tb-500
+            - listitem [ref=f30e300]:
+              - link "NAD+" [ref=f30e301] [cursor=pointer]:
+                - /url: /product/nad-plus-1000mg
+      - generic [ref=f30e303]:
+        - paragraph [ref=f30e304]: "Lab updates from LUXEN: new lots, certificates and restocks"
+        - generic [ref=f30e305]:
+          - generic [ref=f30e306]: Email
+          - textbox "Email" [ref=f30e307]
+          - button "Subscribe" [ref=f30e308]
+        - generic [ref=f30e311] [cursor=pointer]:
+          - checkbox "I agree to receive occasional updates from LUXEN." [checked] [ref=f30e312]
+          - text: I agree to receive occasional updates from LUXEN.
+      - paragraph [ref=f30e313]: Independently tested research reference material, supplied for laboratory and analytical use only. Not intended to diagnose, treat, cure, or prevent any disease. Not for human or veterinary use.
+    - generic [ref=f30e315]:
+      - paragraph [ref=f30e316]: © 2026 LUXEN
+      - generic [ref=f30e317]:
+        - link "X" [ref=f30e318] [cursor=pointer]:
+          - /url: https://twitter.com/luxenlabs
+        - link "LinkedIn" [ref=f30e321] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/luxen
+        - link "Facebook" [ref=f30e324] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=f30e332] [cursor=pointer]

@@ -1,0 +1,237 @@
+- generic [active] [ref=f32e1]:
+  - link "Skip to main content" [ref=f32e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f32e3]:
+    - generic [ref=f32e5]:
+      - button "Previous announcement" [ref=f32e6]
+      - paragraph [ref=f32e9]: EVERY BATCH INDEPENDENTLY LAB TESTED
+      - button "Next announcement" [ref=f32e10]
+    - generic [ref=f32e14]:
+      - generic [ref=f32e15]:
+        - link "Track Order" [ref=f32e16] [cursor=pointer]:
+          - /url: /track-order
+        - link "Certificates" [ref=f32e17] [cursor=pointer]:
+          - /url: /about
+      - link "LUXEN home" [ref=f32e18] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f32e19]: LUXEN
+      - generic [ref=f32e21]:
+        - button "Search" [ref=f32e22]
+        - button "Open cart" [ref=f32e27]
+    - navigation "Main" [ref=f32e31]:
+      - generic [ref=f32e32]:
+        - link "New In" [ref=f32e33] [cursor=pointer]:
+          - /url: /shop
+        - link "Catalog" [ref=f32e35] [cursor=pointer]:
+          - /url: /shop
+        - link "Verification" [ref=f32e40] [cursor=pointer]:
+          - /url: /about
+        - link "About" [ref=f32e44] [cursor=pointer]:
+          - /url: /about
+        - link "Reviews" [ref=f32e45] [cursor=pointer]:
+          - /url: /about#testimonials
+        - link "Shop All" [ref=f32e46] [cursor=pointer]:
+          - /url: /shop
+  - main [ref=f32e47]:
+    - generic [ref=f32e48]:
+      - navigation "Breadcrumb" [ref=f32e49]:
+        - list [ref=f32e50]:
+          - listitem [ref=f32e51]:
+            - link "Home" [ref=f32e52] [cursor=pointer]:
+              - /url: /
+          - listitem [aria-hidden] [ref=f32e53]: /
+          - listitem [ref=f32e54]:
+            - link "Catalog" [ref=f32e55] [cursor=pointer]:
+              - /url: /shop
+          - listitem [aria-hidden] [ref=f32e58]: /
+          - listitem [ref=f32e59]: NAD+ 1000mg (R&D Only)
+      - generic [ref=f32e60]:
+        - generic [ref=f32e61]:
+          - img "NAD+ 1000mg (R&D Only) — research-grade peptide" [ref=f32e63]
+          - tablist "Product images" [ref=f32e64]:
+            - tab "Show image 1 of 2" [selected] [ref=f32e65]
+            - tab "Show image 2 of 2" [ref=f32e66]
+        - generic [ref=f32e67]:
+          - paragraph [ref=f32e68]: Compound Analysis
+          - heading "NAD+ 1000mg (R&D Only)" [level=1] [ref=f32e69]
+          - paragraph [ref=f32e70]:
+            - generic [ref=f32e71]: "Price:"
+            - text: $120USD
+          - paragraph [ref=f32e72]: A 1000mg NAD+ research reference material supplied across pre-filled research devices, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.
+          - paragraph [ref=f32e77]: "Safety Protocol: Produced for laboratory research only. Not for human or veterinary consumption."
+          - generic [ref=f32e78]:
+            - generic [ref=f32e79]:
+              - term [ref=f32e80]: Quantity
+              - definition [ref=f32e81]: 1,000 mg
+            - generic [ref=f32e82]:
+              - term [ref=f32e83]: Purity
+              - definition [ref=f32e84]: ≥99% (HPLC)
+            - generic [ref=f32e85]:
+              - term [ref=f32e86]: Form
+              - definition [ref=f32e87]: Pre-filled research device
+            - generic [ref=f32e88]:
+              - term [ref=f32e89]: Testing
+              - definition [ref=f32e90]: Pending certificate
+          - generic [ref=f32e91]:
+            - tablist "Product information" [ref=f32e92]:
+              - tab "Package Contents" [selected] [ref=f32e93]
+              - tab "Storage Logic" [ref=f32e98]
+            - list [ref=f32e112]:
+              - listitem [ref=f32e113]: "Each NAD+ 1000mg Research kit includes:"
+              - listitem [ref=f32e114]: Pre-filled Research pens (100mg NAD+ per pen)
+              - listitem [ref=f32e115]: Research information sheet
+          - generic [ref=f32e116]:
+            - group "Quantity selector" [ref=f32e117]:
+              - button "Decrease quantity" [ref=f32e118]
+              - generic [ref=f32e120]: "1"
+              - button "Increase quantity" [ref=f32e121]
+            - button "Add 1 × NAD+ 1000mg (R&D Only) to cart" [ref=f32e123] [cursor=pointer]: Add to Cart
+          - paragraph [ref=f32e131]: For research purposes only. Not intended for human or veterinary use. Not intended to diagnose, treat, cure, or prevent any disease. Products are supplied strictly for laboratory and analytical research conducted by qualified professionals.
+          - list [ref=f32e132]:
+            - listitem [ref=f32e133]: ≥99% HPLC purity
+            - listitem [ref=f32e137]: Independently tested
+            - listitem [ref=f32e140]: Batch-level certificates
+          - paragraph [ref=f32e144]: FOR RESEARCH PURPOSES ONLY. Not intended for human or veterinary use. Not intended to diagnose, treat, cure, or prevent any disease. Products are supplied strictly for laboratory and analytical research conducted by qualified professionals.
+      - region "Continue your research" [ref=f32e145]:
+        - generic [ref=f32e146]:
+          - heading "Continue your research" [level=2] [ref=f32e147]
+          - link "View all" [ref=f32e148] [cursor=pointer]:
+            - /url: /shop
+        - list [ref=f32e149]:
+          - listitem [ref=f32e150]:
+            - article [ref=f32e151]:
+              - link "BPC-157 & TB-500 40mg (R&D Only) Lab Tested" [ref=f32e152] [cursor=pointer]:
+                - /url: /product/bpc-157-tb-500
+                - img "BPC-157 & TB-500 40mg (R&D Only)" [ref=f32e153]
+                - generic [ref=f32e154]: Lab Tested
+              - link [ref=f32e155] [cursor=pointer]:
+                - /url: /product/bpc-157-tb-500
+                - heading "BPC-157 & TB-500 40mg (R&D Only)" [level=3] [ref=f32e156]
+              - paragraph [ref=f32e157]: $130
+              - button "Add BPC-157 & TB-500 40mg (R&D Only) to cart" [ref=f32e158] [cursor=pointer]: Add to cart
+          - listitem [ref=f32e159]:
+            - article [ref=f32e160]:
+              - link "Retatrutide 20mg (R&D Only) Lab Tested" [ref=f32e161] [cursor=pointer]:
+                - /url: /product/retatrutide
+                - img "Retatrutide 20mg (R&D Only)" [ref=f32e162]
+                - generic [ref=f32e163]: Lab Tested
+              - link [ref=f32e164] [cursor=pointer]:
+                - /url: /product/retatrutide
+                - heading "Retatrutide 20mg (R&D Only)" [level=3] [ref=f32e165]
+              - paragraph [ref=f32e166]: $100
+              - button "Add Retatrutide 20mg (R&D Only) to cart" [ref=f32e167] [cursor=pointer]: Add to cart
+          - listitem [ref=f32e168]:
+            - article [ref=f32e169]:
+              - link "Tirzepatide 40mg (R&D Only) Lab Tested" [ref=f32e170] [cursor=pointer]:
+                - /url: /product/tirzepatide
+                - img "Tirzepatide 40mg (R&D Only)" [ref=f32e171]
+                - generic [ref=f32e172]: Lab Tested
+              - link [ref=f32e173] [cursor=pointer]:
+                - /url: /product/tirzepatide
+                - heading "Tirzepatide 40mg (R&D Only)" [level=3] [ref=f32e174]
+              - paragraph [ref=f32e175]: $100
+              - button "Add Tirzepatide 40mg (R&D Only) to cart" [ref=f32e176] [cursor=pointer]: Add to cart
+          - listitem [ref=f32e177]:
+            - article [ref=f32e178]:
+              - link "Glow 70mg (R&D Only) Lab Tested" [ref=f32e179] [cursor=pointer]:
+                - /url: /product/glow-ghk-cu
+                - img "Glow 70mg (R&D Only)" [ref=f32e180]
+                - generic [ref=f32e181]: Lab Tested
+              - link [ref=f32e182] [cursor=pointer]:
+                - /url: /product/glow-ghk-cu
+                - heading "Glow 70mg (R&D Only)" [level=3] [ref=f32e183]
+              - paragraph [ref=f32e184]: $100
+              - button "Add Glow 70mg (R&D Only) to cart" [ref=f32e185] [cursor=pointer]: Add to cart
+  - contentinfo [ref=f32e186]:
+    - generic [ref=f32e188]:
+      - generic [ref=f32e189]:
+        - paragraph [ref=f32e192]: ≥99% Purity
+        - paragraph [ref=f32e193]: HPLC verified, every batch
+      - generic [ref=f32e194]:
+        - paragraph [ref=f32e200]: Free Delivery
+        - paragraph [ref=f32e201]: On orders over $250
+      - generic [ref=f32e202]:
+        - paragraph [ref=f32e206]: Third-Party Tested
+        - paragraph [ref=f32e207]: Certificate with every lot
+    - generic [ref=f32e209]:
+      - generic [ref=f32e210]:
+        - generic [ref=f32e211]:
+          - heading "Customer Care" [level=2] [ref=f32e212]
+          - list [ref=f32e213]:
+            - listitem [ref=f32e214]:
+              - link "Track Order" [ref=f32e215] [cursor=pointer]:
+                - /url: /track-order
+            - listitem [ref=f32e216]:
+              - link "Shipping Policy" [ref=f32e217] [cursor=pointer]:
+                - /url: /shipping-policy
+            - listitem [ref=f32e218]:
+              - link "Refund Policy" [ref=f32e219] [cursor=pointer]:
+                - /url: /refund-policy
+            - listitem [ref=f32e220]:
+              - link "Contact Us" [ref=f32e221] [cursor=pointer]:
+                - /url: /about#contact
+        - generic [ref=f32e222]:
+          - heading "Company Info" [level=2] [ref=f32e223]
+          - list [ref=f32e224]:
+            - listitem [ref=f32e225]:
+              - link "About Us" [ref=f32e226] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f32e227]:
+              - link "Privacy Policy" [ref=f32e228] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=f32e229]:
+              - link "Terms of Service" [ref=f32e230] [cursor=pointer]:
+                - /url: /terms-of-service
+            - listitem [ref=f32e231]:
+              - link "Press Release" [ref=f32e232] [cursor=pointer]:
+                - /url: /press-release
+        - generic [ref=f32e233]:
+          - heading "More Info" [level=2] [ref=f32e234]
+          - list [ref=f32e235]:
+            - listitem [ref=f32e236]:
+              - link "Our Process" [ref=f32e237] [cursor=pointer]:
+                - /url: /about#process
+            - listitem [ref=f32e238]:
+              - link "Research Team" [ref=f32e239] [cursor=pointer]:
+                - /url: /about#team
+            - listitem [ref=f32e240]:
+              - link "Reviews" [ref=f32e241] [cursor=pointer]:
+                - /url: /about#testimonials
+        - generic [ref=f32e242]:
+          - heading "Shop" [level=2] [ref=f32e243]
+          - list [ref=f32e244]:
+            - listitem [ref=f32e245]:
+              - link "Shop All" [ref=f32e246] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=f32e247]:
+              - link "Retatrutide" [ref=f32e248] [cursor=pointer]:
+                - /url: /product/retatrutide
+            - listitem [ref=f32e249]:
+              - link "Tirzepatide" [ref=f32e250] [cursor=pointer]:
+                - /url: /product/tirzepatide
+            - listitem [ref=f32e251]:
+              - link "BPC-157 & TB-500" [ref=f32e252] [cursor=pointer]:
+                - /url: /product/bpc-157-tb-500
+            - listitem [ref=f32e253]:
+              - link "NAD+" [ref=f32e254] [cursor=pointer]:
+                - /url: /product/nad-plus-1000mg
+      - generic [ref=f32e256]:
+        - paragraph [ref=f32e257]: "Lab updates from LUXEN: new lots, certificates and restocks"
+        - generic [ref=f32e258]:
+          - generic [ref=f32e259]: Email
+          - textbox "Email" [ref=f32e260]
+          - button "Subscribe" [ref=f32e261]
+        - generic [ref=f32e264] [cursor=pointer]:
+          - checkbox "I agree to receive occasional updates from LUXEN." [checked] [ref=f32e265]
+          - text: I agree to receive occasional updates from LUXEN.
+      - paragraph [ref=f32e266]: Independently tested research reference material, supplied for laboratory and analytical use only. Not intended to diagnose, treat, cure, or prevent any disease. Not for human or veterinary use.
+    - generic [ref=f32e268]:
+      - paragraph [ref=f32e269]: © 2026 LUXEN
+      - generic [ref=f32e270]:
+        - link "X" [ref=f32e271] [cursor=pointer]:
+          - /url: https://twitter.com/luxenlabs
+        - link "LinkedIn" [ref=f32e274] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/luxen
+        - link "Facebook" [ref=f32e277] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=f32e285] [cursor=pointer]

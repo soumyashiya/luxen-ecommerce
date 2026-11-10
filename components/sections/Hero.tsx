@@ -1,149 +1,82 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { FlaskConical, Star } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import Link from "next/link";
 import { IMG } from "@/lib/data";
-import { EASE } from "@/lib/motion";
 
-const AVATARS = [IMG.av1, IMG.av2, IMG.av4];
+/* ---------------------------------------------------------------------------
+   Hero — the reference's lead `responsive_image_banner`.
 
+   The banner is a 1600×574 (~2.79:1) field: NAD+ and Glow cartons on the left, a
+   clean teal wash on the right. The lockup therefore sits in the right-hand
+   field and the type is blue — on this teal (#14cfc1) blue clears 6.8:1 where
+   the brand pink only reaches 2.2:1. At 1440px the natural ratio lands at
+   ~520px tall, matching the reference's banner height.
+
+   The pen tip reaches ~62% of the artwork's width, so from `lg` the copy is
+   offset to 63vw rather than constrained by `.by-page` — the container caps
+   at 1600px while the full-bleed image keeps scaling, and a percentage of the
+   capped container would drift back over the product on wide displays.
+
+   Below `lg` the copy moves under the photo rather than over it: a narrow
+   viewport crops away the clean field entirely. One `<Image>` serves both
+   layouts so there's a single LCP fetch.
+--------------------------------------------------------------------------- */
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-[100svh] w-full overflow-hidden bg-navy">
-      {/* Background image — LCP. Let next/image negotiate AVIF/WebP,
-          give it `priority` + high fetchPriority, and size accurately so
-          the browser picks a tight srcset rung instead of the largest. */}
-      <Image
-        src={IMG.heroPeople}
-        alt="LUXEN researchgrade peptides for laboratory R&D"
-        fill
-        priority
-        fetchPriority="high"
-        sizes="100vw"
-        quality={80}
-        className="object-cover object-center"
-      />
-      {/* Neutral fade at the bottom only — no blue shade — so the white
-          headline stays readable over the photo. */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
+    <section
+      id="home"
+      /* Matches the artwork's teal field so the band blends on ultrawide. */
+      className="relative overflow-hidden bg-[#14cfc1]"
+      aria-label="Featured research reference peptides"
+    >
+      <div className="relative flex flex-col lg:block">
+        {/* Media — cropped toward the product on narrow viewports. */}
+        <div className="relative order-1 aspect-[4/3] w-full sm:aspect-[16/9] lg:order-none lg:aspect-[1600/574]">
+          <Image
+            src={IMG.heroBanner}
+            alt=""
+            fill
+            priority
+            fetchPriority="high"
+            sizes="100vw"
+            className="object-cover object-[30%_center] lg:object-center"
+          />
+        </div>
 
-      {/* Floating lab-verified badge */}
-      <motion.div
-        initial={{ opacity: 0, y: 30, rotate: -6 }}
-        animate={{ opacity: 1, y: 0, rotate: -8 }}
-        transition={{ delay: 0.6, duration: 0.9, ease: EASE }}
-        className="absolute left-[4%] top-[26%] hidden md:block"
-      >
-        <motion.div
-          animate={{ y: [0, -10, 0] }}
-          transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-          className="flex items-center gap-3 rounded-2xl bg-white/95 px-4 py-3 shadow-2xl backdrop-blur"
-        >
-          <span className="grid h-10 w-10 place-items-center rounded-full bg-brand text-white">
-            <FlaskConical size={18} />
-          </span>
-          <div className="leading-tight">
-            <div className="text-lg font-extrabold text-ink">≥99% Purity</div>
-            <div className="text-xs font-medium text-muted">Independently lab tested</div>
-          </div>
-        </motion.div>
-      </motion.div>
+        {/* Lockup — in flow below the photo on small screens, overlaid on the
+            clean right field from `lg` up. */}
+        <div className="by-page py-10 lg:absolute lg:inset-0 lg:flex lg:max-w-none lg:items-center lg:px-0 lg:py-0">
+          <div className="lg:ml-[63vw] lg:w-[33vw]">
+            <span className="by-badge inline-block italic">New</span>
 
-      {/* Bottom content */}
-      <div className="container-luxen absolute inset-x-0 bottom-0 pb-12 sm:pb-16">
-        <div className="flex flex-col gap-7 sm:gap-10 lg:flex-row lg:items-end lg:justify-between">
-          {/* Heading + CTAs */}
-          <div className="max-w-2xl">
-            <motion.h1
-              initial="hidden"
-              animate="show"
-              variants={{
-                hidden: {},
-                show: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
-              }}
-              className="h-display text-white text-[clamp(2.75rem,8vw,5.6rem)]"
-            >
-              {["Research Grade", "Reference Peptides"].map((line) => (
-                <span key={line} className="block overflow-hidden">
-                  <motion.span
-                    variants={{
-                      hidden: { y: "110%" },
-                      show: { y: "0%", transition: { duration: 0.9, ease: EASE } },
-                    }}
-                    className="block"
-                  >
-                    {line}
-                  </motion.span>
-                </span>
-              ))}
-            </motion.h1>
+            <h1 className="mt-4 text-[clamp(34px,5.4vw,64px)] font-bold uppercase leading-[0.95] tracking-[0.6px] text-blue lg:text-[clamp(26px,2.6vw,46px)]">
+              <span className="block">Research Grade</span>
+              <span className="block">Reference Peptides</span>
+            </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.7, ease: EASE }}
-              className="mt-6 flex flex-wrap gap-3 sm:mt-8 sm:gap-4"
-            >
-              <Button href="#services" variant="primary">
-                BROWSE CATALOG
-              </Button>
-              <Button href="#about" variant="white" withArrow>
-                ABOUT LUXEN
-              </Button>
-            </motion.div>
-          </div>
-
-          {/* Supporting block */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.8, ease: EASE }}
-            className="max-w-sm lg:pb-2"
-          >
-            <p className="text-[15px] leading-relaxed text-white/85 sm:text-[17px]">
-              Premium research reference peptides for laboratory and in-vitro analytical work 
-              independently tested and documented to the milligram. For research use only; not
-              for human or veterinary use.
+            {/* Rule-flanked strapline */}
+            <p className="mt-5 flex items-center gap-3 text-[clamp(13px,1.5vw,19px)] font-bold uppercase tracking-[1px] text-blue lg:text-[clamp(12px,1.1vw,17px)]">
+              <span aria-hidden className="h-px w-8 shrink-0 bg-blue" />
+              Verified to the milligram
+              <span aria-hidden className="h-px w-8 shrink-0 bg-blue" />
             </p>
-            <div className="mt-5 flex items-center gap-4 sm:mt-6 sm:gap-6">
-              <div className="shrink-0">
-                <div className="flex gap-0.5 text-amber-400">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={15} fill="currentColor" strokeWidth={0} />
-                  ))}
-                </div>
-                <div className="mt-1 text-2xl font-extrabold text-white sm:text-3xl">
-                  4.9 <span className="text-sm font-medium text-white/60 sm:text-base">/4.9</span>
-                </div>
-              </div>
-              <div className="h-10 w-px shrink-0 bg-white/20 sm:h-12" />
-              <div className="flex items-center gap-3">
-                <div className="flex -space-x-3">
-                  {AVATARS.map((a) => (
-                    <span
-                      key={a}
-                      className="relative h-9 w-9 overflow-hidden rounded-full ring-2 ring-navy sm:h-10 sm:w-10"
-                    >
-                      <Image src={a} alt="" fill className="object-cover" sizes="40px" />
-                    </span>
-                  ))}
-                  <span className="grid h-9 w-9 place-items-center rounded-full bg-brand text-lg font-bold text-white ring-2 ring-navy sm:h-10 sm:w-10">
-                    +
-                  </span>
-                </div>
-                <span className="max-w-[8.5rem] text-xs leading-snug text-white/75 sm:max-w-none sm:text-sm">
-                  Trusted by 500+ research labs globally
-                </span>
-              </div>
-            </div>
-          </motion.div>
+
+            <Link
+              href="/shop"
+              className="by-btn mt-7 min-h-[54px] px-10 text-[clamp(15px,1.5vw,20px)]"
+            >
+              Shop now
+            </Link>
+
+            <p className="mt-6 max-w-sm text-[11px] leading-relaxed tracking-[0.4px] text-blue lg:max-w-none">
+              *Every batch independently characterised by Janoshik Analytical for
+              identity, purity and content. For laboratory and in-vitro research use
+              only — not for human or veterinary use.
+            </p>
+          </div>
         </div>
       </div>
-
-      {/* Checker ribbon */}
-      <div className="checker absolute inset-x-0 bottom-0" />
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Urbanist } from "next/font/google";
+import { Jost } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
@@ -15,10 +15,13 @@ import {
   TWITTER_HANDLE,
 } from "@/lib/seo";
 
-const urbanist = Urbanist({
-  variable: "--font-urbanist",
+/* The reference ships Cera Pro, a commercial typeface we can't redistribute.
+   Jost is the closest freely-licensed match: same geometric construction,
+   double-storey `a`, near-identical cap height and round bowls. */
+const jost = Jost({
+  variable: "--font-jost",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
   preload: true,
   fallback: [
@@ -111,8 +114,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#082238" },
+    { media: "(prefers-color-scheme: light)", color: "#e31d93" },
+    { media: "(prefers-color-scheme: dark)", color: "#e31d93" },
   ],
   colorScheme: "light",
   width: "device-width",
@@ -160,16 +163,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${urbanist.variable} antialiased`}>
+    <html lang="en" className={`${jost.variable} antialiased`}>
       <head>
         {/* Warm up the connection used by next/image for CDN'd variants. */}
         <link rel="dns-prefetch" href="//images.unsplash.com" />
       </head>
-      <body className="bg-white text-ink">
+      <body className="bg-pale text-pink">
         {/* Bypass hidden by default; visible only on keyboard focus. */}
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-[7px] focus:bg-pink focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:uppercase focus:tracking-[1px] focus:text-yellow"
         >
           Skip to main content
         </a>

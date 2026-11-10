@@ -23,7 +23,7 @@ const COUNTRIES = [
 ];
 
 const INPUT =
-  "w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-ink placeholder:text-muted/60 transition-colors focus:border-brand focus:outline-none";
+  "by-field placeholder:text-pink/50";
 
 type OrderResult = {
   orderNumber: string;
@@ -212,28 +212,28 @@ export default function CheckoutPage() {
     <>
       <SiteHeader />
 
-      <main className="relative z-10 pt-28 lg:pt-32">
-        <div className="container-luxen pb-24">
+      <main className="relative z-10 bg-pale pb-20 pt-10">
+        <div className="by-page pb-24">
           {/* Header */}
-          <div className="border-b border-black/10 pb-8">
-            <p className="text-[0.65rem] uppercase tracking-[0.28em] text-brand">Checkout</p>
-            <h1 className="h-display mt-2 text-4xl tracking-[-0.02em] text-ink lg:text-5xl">
+          <div className="border-b border-pink/20 pb-8">
+            <p className="text-[0.65rem] uppercase tracking-[0.28em] text-pink">Checkout</p>
+            <h1 className="by-h-product mt-2">
               Complete your order
             </h1>
             <Link
               href="/cart"
-              className="mt-3 inline-block text-sm text-brand hover:text-brand-dark"
+              className="mt-3 inline-block text-sm text-pink hover:text-pink-dark"
             >
               ← Back to cart
             </Link>
           </div>
 
           {/* Research-only compliance banner */}
-          <div className="mt-6 rounded-2xl border-l-4 border-brand bg-surface p-4 text-sm leading-relaxed text-ink">
-            <p className="font-bold uppercase tracking-wide text-brand">
+          <div className="mt-6 rounded-[12px] border-l-4 border-pink bg-yellow p-4 text-sm leading-relaxed text-pink">
+            <p className="font-bold uppercase tracking-wide text-pink">
               Research reference material
             </p>
-            <p className="mt-1 text-muted">
+            <p className="mt-1 text-pink/75">
               By proceeding with this purchase, you acknowledge that these products are intended
               solely for laboratory research purposes and are not intended for human or veterinary
               use. These products are not intended to diagnose, treat, cure, or prevent any
@@ -245,7 +245,7 @@ export default function CheckoutPage() {
             {/* Left — form */}
             <div className="flex flex-col gap-10">
               <section>
-                <h2 className="text-xl font-bold text-ink">Contact</h2>
+                <h2 className="text-xl font-bold text-pink">Contact</h2>
                 <div className="mt-5 grid gap-4 sm:grid-cols-2">
                   <input
                     className={INPUT}
@@ -285,7 +285,7 @@ export default function CheckoutPage() {
               </section>
 
               <section>
-                <h2 className="text-xl font-bold text-ink">Delivery address</h2>
+                <h2 className="text-xl font-bold text-pink">Delivery address</h2>
                 <div className="mt-5 grid gap-4">
                   <input
                     className={INPUT}
@@ -334,37 +334,37 @@ export default function CheckoutPage() {
                 </div>
               </section>
 
-              <p className="text-xs text-muted">
+              <p className="text-xs text-pink/75">
                 For laboratory R&amp;D use only · Not for human or veterinary consumption.
               </p>
             </div>
 
             {/* Right — summary */}
-            <aside className="h-fit rounded-[var(--radius-xl2)] border border-black/10 bg-surface p-7 lg:sticky lg:top-28">
-              <h2 className="text-xl font-bold text-ink">Order summary</h2>
+            <aside className="h-fit rounded-[var(--radius-xl2)] border border-pink/20 bg-yellow p-7 lg:sticky lg:top-28">
+              <h2 className="text-xl font-bold text-pink">Order summary</h2>
 
-              <ul className="mt-6 flex flex-col gap-4 border-b border-black/10 pb-6">
+              <ul className="mt-6 flex flex-col gap-4 border-b border-pink/20 pb-6">
                 {lines.map((l) => (
                   <li key={l.product.slug} className="flex items-center gap-4">
                     <div className="relative h-16 w-16 shrink-0">
-                      <div className="h-full w-full overflow-hidden rounded-xl border border-black/10 bg-white">
+                      <div className="h-full w-full overflow-hidden rounded-[7px] border border-pink/20 bg-pale">
                         <Image
-                          src={l.product.img}
+                          src={l.product.card ?? l.product.img}
                           alt={l.product.title}
                           width={64}
                           height={64}
                           className="h-full w-full object-contain p-1.5"
                         />
                       </div>
-                      <span className="absolute -right-2 -top-2 z-10 grid h-5 min-w-[1.25rem] place-items-center rounded-full bg-ink px-1 text-[0.65rem] font-semibold text-white shadow-sm ring-2 ring-surface">
+                      <span className="absolute -right-2 -top-2 z-10 grid h-5 min-w-[1.25rem] place-items-center rounded-full bg-ink px-1 text-[0.65rem] font-semibold text-yellow shadow-sm ring-2 ring-surface">
                         {l.qty}
                       </span>
                     </div>
                     <div className="flex-1">
-                      <p className="text-sm font-bold text-ink">{l.product.title}</p>
-                      <p className="text-xs text-muted">Research peptide</p>
+                      <p className="text-sm font-bold text-pink">{l.product.title}</p>
+                      <p className="text-xs text-pink/75">Research peptide</p>
                     </div>
-                    <p className="text-sm text-ink">{formatUSD(l.lineTotal)}</p>
+                    <p className="text-sm text-pink">{formatUSD(l.lineTotal)}</p>
                   </li>
                 ))}
               </ul>
@@ -372,15 +372,15 @@ export default function CheckoutPage() {
               {/* Discount */}
               <div className="mt-5">
                 {promo ? (
-                  <div className="flex items-center justify-between rounded-2xl border border-brand/30 bg-white px-4 py-3 text-sm">
-                    <span className="text-ink">
+                  <div className="flex items-center justify-between rounded-[12px] border border-pink/30 bg-pale px-4 py-3 text-sm">
+                    <span className="text-pink">
                       <span className="font-semibold">{promo.code}</span>{" "}
-                      <span className="text-muted">· {promo.percent}% off</span>
+                      <span className="text-pink/75">· {promo.percent}% off</span>
                     </span>
                     <button
                       type="button"
                       onClick={removePromo}
-                      className="text-xs uppercase tracking-[0.2em] text-muted hover:text-brand"
+                      className="text-xs uppercase tracking-[0.2em] text-pink/75 hover:text-pink"
                     >
                       Remove
                     </button>
@@ -403,7 +403,7 @@ export default function CheckoutPage() {
                       type="button"
                       onClick={applyPromo}
                       disabled={promoBusy}
-                      className="rounded-2xl border border-black/10 bg-white px-5 text-sm text-ink transition-colors hover:border-brand/40 disabled:opacity-60"
+                      className="rounded-[12px] border border-pink/20 bg-pale px-5 text-sm text-pink transition-colors hover:border-pink/40 disabled:opacity-60"
                     >
                       {promoBusy ? "…" : "Apply"}
                     </button>
@@ -412,7 +412,7 @@ export default function CheckoutPage() {
                 {promoMsg && (
                   <p
                     className={`mt-2 text-xs ${
-                      promoMsg.tone === "ok" ? "text-brand" : "text-red-600"
+                      promoMsg.tone === "ok" ? "text-pink" : "text-red-600"
                     }`}
                   >
                     {promoMsg.text}
@@ -423,29 +423,29 @@ export default function CheckoutPage() {
               {/* Totals */}
               <dl className="mt-6 space-y-3 text-sm">
                 <div className="flex justify-between">
-                  <dt className="text-muted">Subtotal</dt>
-                  <dd className="text-ink">{formatUSD(subtotal)}</dd>
+                  <dt className="text-pink/75">Subtotal</dt>
+                  <dd className="text-pink">{formatUSD(subtotal)}</dd>
                 </div>
                 {discount > 0 && (
                   <div className="flex justify-between">
-                    <dt className="text-muted">Discount</dt>
-                    <dd className="text-brand">−{formatUSD(discount)}</dd>
+                    <dt className="text-pink/75">Discount</dt>
+                    <dd className="text-pink">−{formatUSD(discount)}</dd>
                   </div>
                 )}
-                <div className="my-4 h-px bg-black/10" />
+                <div className="my-4 h-px bg-pink/15" />
                 <div className="flex justify-between text-lg font-bold">
-                  <dt className="text-ink">Total</dt>
-                  <dd className="text-ink">{formatUSD(total)}</dd>
+                  <dt className="text-pink">Total</dt>
+                  <dd className="text-pink">{formatUSD(total)}</dd>
                 </div>
               </dl>
 
               {error && (
-                <p className="mt-4 rounded-2xl border border-red-300 bg-red-50 px-4 py-2 text-xs text-red-700">
+                <p className="mt-4 rounded-[12px] border border-red-300 bg-red-50 px-4 py-2 text-xs text-red-700">
                   {error}
                 </p>
               )}
 
-              <p className="mt-6 text-[11px] leading-relaxed text-muted">
+              <p className="mt-6 text-[11px] leading-relaxed text-pink/75">
                 By placing this order you acknowledge that these products are research reference
                 material, intended solely for laboratory research and not for human or veterinary
                 use. They are not intended to diagnose, treat, cure, or prevent any disease.
@@ -454,14 +454,14 @@ export default function CheckoutPage() {
               <button
                 type="submit"
                 disabled={placing || lines.length === 0}
-                className="mt-4 w-full rounded-full bg-brand py-3.5 text-sm font-medium text-white transition-all hover:bg-brand-dark hover:shadow-[0_20px_40px_-20px_rgba(0,131,195,0.6)] disabled:opacity-70"
+                className="by-btn mt-4 w-full"
               >
                 {placing ? "Placing order…" : "Place Order"}
               </button>
 
               <Link
                 href="/cart"
-                className="mt-4 block text-center text-sm text-brand hover:text-brand-dark"
+                className="mt-4 block text-center text-sm text-pink hover:text-pink-dark"
               >
                 Back to cart
               </Link>
@@ -489,38 +489,38 @@ export default function CheckoutPage() {
               exit={{ opacity: 0, scale: 0.95, y: 10 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-md overflow-hidden rounded-[var(--radius-xl2)] bg-white p-8 text-center shadow-[0_40px_80px_-20px_rgba(0,131,195,0.35)]"
+              className="relative w-full max-w-md overflow-hidden rounded-[var(--radius-xl2)] bg-pale p-8 text-center shadow-[0_40px_80px_-20px_rgba(0,131,195,0.35)]"
             >
-              <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-brand text-white">
+              <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-pink text-yellow">
                 <Check size={28} strokeWidth={3} />
               </div>
-              <h3 className="h-display mt-6 text-2xl tracking-[-0.02em] text-ink">Order placed</h3>
-              <p className="mt-2 text-sm text-muted">
+              <h3 className="by-h-section mt-6">Order placed</h3>
+              <p className="mt-2 text-sm text-pink/75">
                 Thanks {orderResult.customerName.split(" ")[0] || "researcher"} — we&apos;ve received
                 your order. A confirmation will be sent to{" "}
-                <span className="text-ink">{orderResult.customerEmail || "your inbox"}</span>.
+                <span className="text-pink">{orderResult.customerEmail || "your inbox"}</span>.
               </p>
 
-              <div className="mt-6 rounded-2xl border border-black/10 bg-surface p-4 text-left">
-                <div className="flex items-center justify-between text-xs uppercase tracking-[0.22em] text-muted">
+              <div className="mt-6 rounded-[12px] border border-pink/20 bg-yellow p-4 text-left">
+                <div className="flex items-center justify-between text-xs uppercase tracking-[0.22em] text-pink/75">
                   <span>Order #</span>
-                  <span className="text-ink">{orderResult.orderNumber}</span>
+                  <span className="text-pink">{orderResult.orderNumber}</span>
                 </div>
                 <div className="mt-3 flex items-center justify-between text-base font-bold">
-                  <span className="text-ink">Order total</span>
-                  <span className="text-ink">{formatUSD(orderResult.total)}</span>
+                  <span className="text-pink">Order total</span>
+                  <span className="text-pink">{formatUSD(orderResult.total)}</span>
                 </div>
               </div>
 
               <button
                 type="button"
                 onClick={closeAndContinue}
-                className="mt-7 w-full rounded-full bg-brand py-3.5 text-sm font-medium text-white transition-colors hover:bg-brand-dark"
+                className="by-btn mt-7 w-full"
               >
                 Continue shopping
               </button>
 
-              <p className="mt-5 text-[0.65rem] uppercase tracking-[0.22em] text-muted">
+              <p className="mt-5 text-[0.65rem] uppercase tracking-[0.22em] text-pink/75">
                 For laboratory R&amp;D use only
               </p>
             </motion.div>

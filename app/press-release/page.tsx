@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function PressReleasePage() {
   return (
     <LegalLayout eyebrow="Press" title={`${SITE_NAME} Expands Research Peptide Catalog`}>
-      <p className="text-xs font-bold uppercase tracking-wider text-brand">
+      <p className="text-xs font-bold uppercase tracking-wider text-pink">
         For Immediate Release — July 31, 2026
       </p>
 
@@ -46,7 +46,7 @@ export default function PressReleasePage() {
 
       <LegalSection title="Media Contact">
         <p>
-          <a href="mailto:support@luxen.co" className="font-semibold text-brand hover:underline">
+          <a href="mailto:support@luxen.co" className="font-semibold text-pink hover:underline">
             support@luxen.co
           </a>
         </p>

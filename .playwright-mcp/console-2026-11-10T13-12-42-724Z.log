@@ -1,0 +1,203 @@
+[     119ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     332ms] [LOG] [Fast Refresh] done in 314ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     525ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     562ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   23132ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   23149ms] [LOG] [Fast Refresh] done in 130ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   29835ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   29840ms] [LOG] [Fast Refresh] done in 107ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1290360ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1290492ms] [LOG] [Fast Refresh] done in 239ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1402079ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1402336ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1402405ms] [LOG] [Fast Refresh] done in 436ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1402551ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1402741ms] [LOG] [Fast Refresh] done in 296ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1402850ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1403340ms] [LOG] [Fast Refresh] done in 598ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1404316ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1404360ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1408997ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1409274ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1409288ms] [LOG] [Fast Refresh] done in 371ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1409404ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1409514ms] [LOG] [Fast Refresh] done in 226ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1409638ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1410265ms] [LOG] [Fast Refresh] done in 735ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1410802ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1410845ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1415980ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1416220ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1416231ms] [LOG] [Fast Refresh] done in 372ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1416340ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1416470ms] [LOG] [Fast Refresh] done in 239ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1416625ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1417388ms] [LOG] [Fast Refresh] done in 874ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1418014ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1418041ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1422704ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1422946ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1422959ms] [LOG] [Fast Refresh] done in 330ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1423066ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1423195ms] [LOG] [Fast Refresh] done in 235ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1423316ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1423965ms] [LOG] [Fast Refresh] done in 762ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1424508ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1424531ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1429629ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1429911ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1429926ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1430035ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1430220ms] [LOG] [Fast Refresh] done in 293ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1430349ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1430996ms] [LOG] [Fast Refresh] done in 763ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1432013ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1432049ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1436407ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1436598ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1436683ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1436687ms] [LOG] [Fast Refresh] done in 386ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1436817ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1436964ms] [LOG] [Fast Refresh] done in 251ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1437087ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1437682ms] [LOG] [Fast Refresh] done in 710ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1438444ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1438506ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1452330ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1452346ms] [LOG] [Fast Refresh] done in 128ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1452518ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1452534ms] [LOG] [Fast Refresh] done in 126ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1458401ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1458402ms] [LOG] [Fast Refresh] done in 102ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1532110ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1532112ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1549063ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1549064ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1563665ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1563826ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1564174ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1564179ms] [LOG] [Fast Refresh] done in 679ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1564331ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1564570ms] [LOG] [Fast Refresh] done in 354ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1565728ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1565862ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1566221ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1566411ms] Error: Internal Next.js error: Router action dispatched before initialization.
+    at dispatchAppRouterAction (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:916:37)
+    at http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:11923:61
+    at startTransition (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_0apqnrp._.js:1279:31)
+    at Object.hmrRefresh (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:11922:40)
+    at http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:14090:64
+    at startTransition (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_0apqnrp._.js:1279:31)
+    at processMessage (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:14089:44)
+    at WebSocket.handleMessage (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:13458:52)
+[ 1566480ms] Error: Internal Next.js error: Router action dispatched before initialization.
+    at dispatchAppRouterAction (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:916:37)
+    at http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:11923:61
+    at startTransition (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_0apqnrp._.js:1279:31)
+    at Object.hmrRefresh (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:11922:40)
+    at http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:14090:64
+    at startTransition (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_0apqnrp._.js:1279:31)
+    at processMessage (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:14089:44)
+    at WebSocket.handleMessage (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:13458:52)
+[ 1566490ms] Error: Internal Next.js error: Router action dispatched before initialization.
+    at dispatchAppRouterAction (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:916:37)
+    at http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:11923:61
+    at startTransition (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_0apqnrp._.js:1279:31)
+    at Object.hmrRefresh (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:11922:40)
+    at http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:14090:64
+    at startTransition (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_0apqnrp._.js:1279:31)
+    at processMessage (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:14089:44)
+    at WebSocket.handleMessage (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:13458:52)
+[ 1566490ms] Error: Internal Next.js error: Router action dispatched before initialization.
+    at dispatchAppRouterAction (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:916:37)
+    at http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:11923:61
+    at startTransition (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_0apqnrp._.js:1279:31)
+    at Object.hmrRefresh (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:11922:40)
+    at http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:14090:64
+    at startTransition (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_0apqnrp._.js:1279:31)
+    at processMessage (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:14089:44)
+    at WebSocket.handleMessage (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:13458:52)
+[ 1566574ms] Error: Internal Next.js error: Router action dispatched before initialization.
+    at dispatchAppRouterAction (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:916:37)
+    at http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:11923:61
+    at startTransition (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_0apqnrp._.js:1279:31)
+    at Object.hmrRefresh (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:11922:40)
+    at http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:14090:64
+    at startTransition (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_0apqnrp._.js:1279:31)
+    at processMessage (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:14089:44)
+    at WebSocket.handleMessage (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:13458:52)
+[ 1566575ms] [LOG] [Fast Refresh] done in 468ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1569874ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1570295ms] [LOG] [Fast Refresh] done in 530ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1570548ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1570549ms] [LOG] [Fast Refresh] done in 103ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1570763ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1571105ms] [LOG] [Fast Refresh] done in 459ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1571219ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1571325ms] [LOG] [Fast Refresh] done in 216ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1571439ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1571650ms] [LOG] [Fast Refresh] done in 319ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478

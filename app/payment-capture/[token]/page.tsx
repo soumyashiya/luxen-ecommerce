@@ -33,7 +33,7 @@ import { cn } from '@/lib/utils';
 type UploadStatus = 'idle' | 'uploading' | 'received' | 'rejected' | 'pending';
 
 const INPUT =
-  'w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-ink placeholder:text-muted/60 transition-colors focus:border-brand focus:outline-none';
+  'w-full rounded-[12px] border border-pink/20 bg-pale px-4 py-3 text-sm text-pink placeholder:text-pink/60 transition-colors focus:border-pink focus:outline-none';
 
 export default function PaymentCapturePage() {
   const params = useParams<{ token: string }>();
@@ -124,9 +124,9 @@ export default function PaymentCapturePage() {
     return (
       <>
         <SiteHeader />
-        <main className="relative z-10 pt-28 lg:pt-32">
-          <div className="container-luxen flex min-h-[50vh] items-center justify-center py-24">
-            <Loader2 className="h-7 w-7 animate-spin text-brand" strokeWidth={2.4} />
+        <main className="relative z-10 bg-pale pb-20 pt-10">
+          <div className="by-page flex min-h-[50vh] items-center justify-center py-24">
+            <Loader2 className="h-7 w-7 animate-spin text-pink" strokeWidth={2.4} />
           </div>
         </main>
         <Footer />
@@ -138,13 +138,13 @@ export default function PaymentCapturePage() {
     return (
       <>
         <SiteHeader />
-        <main className="relative z-10 pt-28 lg:pt-32">
-          <div className="container-luxen flex min-h-[50vh] flex-col items-center justify-center py-24 text-center">
+        <main className="relative z-10 bg-pale pb-20 pt-10">
+          <div className="by-page flex min-h-[50vh] flex-col items-center justify-center py-24 text-center">
             <div className="grid h-16 w-16 place-items-center rounded-full bg-red-50">
               <AlertCircle className="h-8 w-8 text-red-500" strokeWidth={2} />
             </div>
-            <h1 className="h-display mt-6 text-3xl text-ink lg:text-4xl">Link unavailable</h1>
-            <p className="mt-3 max-w-md text-sm text-muted">
+            <h1 className="by-h-product mt-6">Link unavailable</h1>
+            <p className="mt-3 max-w-md text-sm text-pink/75">
               {loadError || 'Payment link not found.'}
             </p>
           </div>
@@ -162,16 +162,16 @@ export default function PaymentCapturePage() {
     return (
       <>
         <SiteHeader />
-        <main className="relative z-10 pt-28 lg:pt-32">
-          <div className="container-luxen flex min-h-[55vh] flex-col items-center justify-center py-24 text-center">
-            <div className="grid h-16 w-16 place-items-center rounded-full bg-brand/10">
-              <CheckCircle2 className="h-8 w-8 text-brand" strokeWidth={2} />
+        <main className="relative z-10 bg-pale pb-20 pt-10">
+          <div className="by-page flex min-h-[55vh] flex-col items-center justify-center py-24 text-center">
+            <div className="grid h-16 w-16 place-items-center rounded-full bg-pink/10">
+              <CheckCircle2 className="h-8 w-8 text-pink" strokeWidth={2} />
             </div>
-            <p className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-brand">
+            <p className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-pink">
               Order {orderNumber}
             </p>
-            <h1 className="h-display mt-2 text-4xl text-ink lg:text-5xl">Payment confirmed</h1>
-            <p className="mt-4 max-w-md text-sm text-muted">
+            <h1 className="by-h-product mt-2">Payment confirmed</h1>
+            <p className="mt-4 max-w-md text-sm text-pink/75">
               Thank you — your transfer was verified and your order is being prepared.
             </p>
             {screenshotUrl && (
@@ -179,7 +179,7 @@ export default function PaymentCapturePage() {
                 href={screenshotUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 text-xs text-brand underline underline-offset-4 hover:text-brand-dark"
+                className="mt-3 text-xs text-pink underline underline-offset-4 hover:text-pink-dark"
               >
                 View uploaded screenshot ↗
               </a>
@@ -187,13 +187,13 @@ export default function PaymentCapturePage() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="/track-order"
-                className="rounded-full bg-brand px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-brand-dark"
+                className="by-btn"
               >
                 Track order
               </Link>
               <Link
                 href="/"
-                className="rounded-full border border-black/15 px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-ink transition-colors hover:border-brand/40"
+                className="by-btn by-btn-soft"
               >
                 Back to home
               </Link>
@@ -209,17 +209,17 @@ export default function PaymentCapturePage() {
     <>
       <SiteHeader />
 
-      <main className="relative z-10 pt-28 lg:pt-32">
-        <div className="container-luxen pb-24">
+      <main className="relative z-10 bg-pale pb-20 pt-10">
+        <div className="by-page pb-24">
           <Reveal>
-            <div className="border-b border-black/10 pb-8">
-              <p className="text-[0.65rem] uppercase tracking-[0.28em] text-brand">
+            <div className="border-b border-pink/20 pb-8">
+              <p className="text-[0.65rem] uppercase tracking-[0.28em] text-pink">
                 Complete payment
               </p>
-              <h1 className="h-display mt-2 text-4xl tracking-[-0.02em] text-ink lg:text-5xl">
+              <h1 className="by-h-product mt-2">
                 Order {orderNumber}
               </h1>
-              <p className="mt-3 max-w-xl text-sm text-muted">
+              <p className="mt-3 max-w-xl text-sm text-pink/75">
                 Transfer the total below to the account, then upload a screenshot of your
                 transfer so we can confirm it.
               </p>
@@ -230,37 +230,37 @@ export default function PaymentCapturePage() {
             {/* Left — order summary + amount + bank details */}
             <div className="flex flex-col gap-6">
               {data.items.length > 0 && (
-                <Reveal className="rounded-[var(--radius-xl2)] border border-black/10 bg-white p-6">
-                  <h2 className="flex items-center gap-2 text-sm font-bold text-ink">
-                    <Package size={15} className="text-brand" /> Order summary
+                <Reveal className="rounded-[var(--radius-xl2)] border border-pink/20 bg-pale p-6">
+                  <h2 className="flex items-center gap-2 text-sm font-bold text-pink">
+                    <Package size={15} className="text-pink" /> Order summary
                   </h2>
                   <ul className="mt-4 flex flex-col divide-y divide-black/5">
                     {data.items.map((it, i) => (
                       <li key={i} className="flex items-center justify-between gap-4 py-3">
                         <div className="min-w-0">
-                          <p className="truncate text-sm font-semibold text-ink">
+                          <p className="truncate text-sm font-semibold text-pink">
                             {pickString(it, 'name', 'title')}
                           </p>
-                          <p className="text-xs text-muted">
+                          <p className="text-xs text-pink/75">
                             Qty {pickNumber(it, 'quantity', 'qty') || 1} ·{' '}
                             {formatUSD(pickNumber(it, 'unit_price', 'unitPrice', 'price'))} each
                           </p>
                         </div>
-                        <p className="shrink-0 text-sm text-ink">
+                        <p className="shrink-0 text-sm text-pink">
                           {formatUSD(pickNumber(it, 'line_total', 'lineTotal') || pickNumber(it, 'unit_price', 'unitPrice', 'price') * (pickNumber(it, 'quantity', 'qty') || 1))}
                         </p>
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-1 flex flex-col gap-2 border-t border-black/10 pt-4 text-sm">
+                  <div className="mt-1 flex flex-col gap-2 border-t border-pink/20 pt-4 text-sm">
                     {pick(order, 'subtotal') != null && (
-                      <div className="flex justify-between text-muted">
+                      <div className="flex justify-between text-pink/75">
                         <span>Subtotal</span>
                         <span>{formatUSD(pickNumber(order, 'subtotal'))}</span>
                       </div>
                     )}
                     {pickNumber(order, 'discount_amount', 'discountAmount') > 0 && (
-                      <div className="flex justify-between text-muted">
+                      <div className="flex justify-between text-pink/75">
                         <span>Discount</span>
                         <span>−{formatUSD(pickNumber(order, 'discount_amount', 'discountAmount'))}</span>
                       </div>
@@ -274,9 +274,9 @@ export default function PaymentCapturePage() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.3 }}
-                className="rounded-[var(--radius-xl2)] bg-brand p-7 text-white"
+                className="rounded-[var(--radius-xl2)] bg-pink p-7 text-yellow"
               >
-                <p className="flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-white/70">
+                <p className="flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-yellow/70">
                   <Wallet size={14} strokeWidth={2.4} /> Amount due
                 </p>
                 <p className="mt-3 text-4xl font-extrabold tracking-tight">{formatUSD(total)}</p>
@@ -287,7 +287,7 @@ export default function PaymentCapturePage() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.2 }}
-                className="flex flex-col gap-3 rounded-[var(--radius-xl2)] border border-black/10 bg-surface p-6"
+                className="flex flex-col gap-3 rounded-[var(--radius-xl2)] border border-pink/20 bg-yellow p-6"
               >
                 <BankRow
                   icon={Building2}
@@ -323,9 +323,9 @@ export default function PaymentCapturePage() {
               </motion.div>
 
               {data.allowPromo && (
-                <Reveal className="rounded-[var(--radius-xl2)] border border-black/10 bg-white p-6">
-                  <h2 className="flex items-center gap-2 text-sm font-bold text-ink">
-                    <Tag size={15} className="text-brand" /> Promo code
+                <Reveal className="rounded-[var(--radius-xl2)] border border-pink/20 bg-pale p-6">
+                  <h2 className="flex items-center gap-2 text-sm font-bold text-pink">
+                    <Tag size={15} className="text-pink" /> Promo code
                   </h2>
                   <div className="mt-4 flex gap-2">
                     <input
@@ -347,7 +347,7 @@ export default function PaymentCapturePage() {
                       type="button"
                       onClick={applyPromo}
                       disabled={promoLoading}
-                      className="shrink-0 rounded-2xl border border-black/10 bg-white px-5 text-sm font-semibold text-ink transition-colors hover:border-brand/40 disabled:opacity-60"
+                      className="shrink-0 rounded-[12px] border border-pink/20 bg-pale px-5 text-sm font-semibold text-pink transition-colors hover:border-pink/40 disabled:opacity-60"
                     >
                       {promoLoading ? '…' : 'Apply'}
                     </button>
@@ -358,11 +358,11 @@ export default function PaymentCapturePage() {
             </div>
 
             {/* Right — upload proof */}
-            <Reveal className="h-fit rounded-[var(--radius-xl2)] border border-black/10 bg-surface p-7 lg:sticky lg:top-28">
-              <h2 className="flex items-center gap-2 text-xl font-bold text-ink">
-                <UploadCloud size={20} className="text-brand" /> Upload payment screenshot
+            <Reveal className="h-fit rounded-[var(--radius-xl2)] border border-pink/20 bg-yellow p-7 lg:sticky lg:top-28">
+              <h2 className="flex items-center gap-2 text-xl font-bold text-pink">
+                <UploadCloud size={20} className="text-pink" /> Upload payment screenshot
               </h2>
-              <p className="mt-2 text-sm text-muted">PNG, JPG, or PDF · max 25 MB.</p>
+              <p className="mt-2 text-sm text-pink/75">PNG, JPG, or PDF · max 25 MB.</p>
 
               <label
                 onDragOver={(e) => {
@@ -376,23 +376,23 @@ export default function PaymentCapturePage() {
                   pickFile(e.dataTransfer.files?.[0]);
                 }}
                 className={cn(
-                  'mt-5 flex cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed px-6 py-10 text-center transition-colors',
-                  dragOver ? 'border-brand bg-brand/5' : 'border-black/15 bg-white hover:border-brand/40',
+                  'mt-5 flex cursor-pointer flex-col items-center justify-center gap-2 rounded-[12px] border-2 border-dashed px-6 py-10 text-center transition-colors',
+                  dragOver ? 'border-pink bg-pink/5' : 'border-pink/25 bg-pale hover:border-pink/40',
                 )}
               >
                 <UploadCloud
                   size={28}
                   strokeWidth={1.6}
-                  className={dragOver ? 'text-brand' : 'text-muted'}
+                  className={dragOver ? 'text-pink' : 'text-pink/75'}
                 />
                 {file ? (
-                  <p className="text-sm font-semibold text-ink">{file.name}</p>
+                  <p className="text-sm font-semibold text-pink">{file.name}</p>
                 ) : (
                   <>
-                    <p className="text-sm font-semibold text-ink">
+                    <p className="text-sm font-semibold text-pink">
                       Drop your screenshot here, or browse
                     </p>
-                    <p className="text-xs text-muted">Click to select a file</p>
+                    <p className="text-xs text-pink/75">Click to select a file</p>
                   </>
                 )}
                 <input
@@ -435,7 +435,7 @@ export default function PaymentCapturePage() {
                 type="button"
                 onClick={uploadScreenshot}
                 disabled={!file || uploadStatus === 'uploading'}
-                className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-brand py-4 text-sm font-bold uppercase tracking-wide text-white shadow-[0_8px_24px_-10px_rgba(0,131,195,0.7)] transition-colors hover:bg-brand-dark disabled:cursor-not-allowed disabled:opacity-60 disabled:shadow-none"
+                className="by-btn mt-6 w-full"
               >
                 {uploadStatus === 'uploading' ? (
                   <>
@@ -473,15 +473,15 @@ function BankRow({
   return (
     <motion.div
       variants={fadeUp}
-      className="flex items-center justify-between gap-4 rounded-2xl border border-black/10 bg-white px-4 py-3.5"
+      className="flex items-center justify-between gap-4 rounded-[12px] border border-pink/20 bg-pale px-4 py-3.5"
     >
       <div className="flex min-w-0 items-center gap-3">
-        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-surface text-brand">
+        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-yellow text-pink">
           <Icon size={16} strokeWidth={2.2} />
         </span>
         <div className="min-w-0">
-          <p className="text-[10px] uppercase tracking-wider text-muted">{label}</p>
-          <p className={cn('truncate text-sm font-semibold text-ink', mono && 'font-mono tracking-wide')}>
+          <p className="text-[10px] uppercase tracking-wider text-pink/75">{label}</p>
+          <p className={cn('truncate text-sm font-semibold text-pink', mono && 'font-mono tracking-wide')}>
             {value}
           </p>
         </div>
@@ -490,9 +490,9 @@ function BankRow({
         type="button"
         onClick={onCopy}
         aria-label={`Copy ${label}`}
-        className="grid h-8 w-8 shrink-0 place-items-center rounded-full text-muted transition-colors hover:bg-surface hover:text-brand"
+        className="grid h-8 w-8 shrink-0 place-items-center rounded-full text-pink/75 transition-colors hover:bg-yellow hover:text-pink"
       >
-        {copied ? <Check size={15} className="text-brand" /> : <Copy size={15} />}
+        {copied ? <Check size={15} className="text-pink" /> : <Copy size={15} />}
       </button>
     </motion.div>
   );
@@ -508,18 +508,18 @@ function StatusBanner({
   children: React.ReactNode;
 }) {
   const styles = {
-    success: 'border-brand/30 bg-brand/5 text-ink',
-    pending: 'border-amber-400/40 bg-amber-50 text-ink',
+    success: 'border-pink/30 bg-pink/5 text-pink',
+    pending: 'border-amber-400/40 bg-amber-50 text-pink',
     error: 'border-red-300 bg-red-50 text-red-700',
   } as const;
   const iconColor = {
-    success: 'text-brand',
+    success: 'text-pink',
     pending: 'text-amber-500',
     error: 'text-red-500',
   } as const;
 
   return (
-    <div className={cn('mt-4 flex items-start gap-2.5 rounded-2xl border px-4 py-3 text-[13px] font-medium', styles[tone])}>
+    <div className={cn('mt-4 flex items-start gap-2.5 rounded-[12px] border px-4 py-3 text-[13px] font-medium', styles[tone])}>
       <Icon size={16} className={cn('mt-0.5 shrink-0', iconColor[tone])} />
       <span>{children}</span>
     </div>

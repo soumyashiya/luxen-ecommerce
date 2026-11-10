@@ -67,12 +67,12 @@ function OrderDetailCard({ detail, onBack }: { detail: OrderDetail; onBack?: () 
   const lastPayment = payments?.[0];
 
   return (
-    <div className="mt-8 rounded-[28px] border border-black/10 bg-white p-6 sm:p-8">
+    <div className="mt-8 rounded-[12px] border border-pink/20 bg-pale p-6 sm:p-8">
       {onBack && (
         <button
           type="button"
           onClick={onBack}
-          className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-muted transition-colors hover:text-brand"
+          className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-pink/75 transition-colors hover:text-pink"
         >
           <ArrowLeft size={15} /> Back to results
         </button>
@@ -80,9 +80,9 @@ function OrderDetailCard({ detail, onBack }: { detail: OrderDetail; onBack?: () 
 
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <p className="text-xs font-bold uppercase tracking-wide text-muted">Order</p>
-          <h2 className="text-2xl font-extrabold text-ink">#{orderNumber}</h2>
-          {date && <p className="mt-1 text-sm text-muted">Placed {date}</p>}
+          <p className="text-xs font-bold uppercase tracking-wide text-pink/75">Order</p>
+          <h2 className="text-2xl font-extrabold text-pink">#{orderNumber}</h2>
+          {date && <p className="mt-1 text-sm text-pink/75">Placed {date}</p>}
         </div>
         <div className="flex flex-wrap gap-2">
           <StatusPill status={status} />
@@ -91,41 +91,41 @@ function OrderDetailCard({ detail, onBack }: { detail: OrderDetail; onBack?: () 
       </div>
 
       {tracking && (
-        <div className="mt-5 flex items-center gap-3 rounded-2xl bg-surface p-4">
-          <Truck size={18} className="shrink-0 text-brand" />
+        <div className="mt-5 flex items-center gap-3 rounded-[12px] bg-yellow p-4">
+          <Truck size={18} className="shrink-0 text-pink" />
           <div>
-            <p className="text-xs font-bold uppercase tracking-wide text-muted">
+            <p className="text-xs font-bold uppercase tracking-wide text-pink/75">
               Tracking number
             </p>
-            <p className="text-sm font-bold text-ink">{tracking}</p>
+            <p className="text-sm font-bold text-pink">{tracking}</p>
           </div>
         </div>
       )}
 
       {items?.length > 0 && (
-        <div className="mt-6 overflow-hidden rounded-2xl ring-1 ring-black/10">
+        <div className="mt-6 overflow-hidden rounded-[12px] ring-1 ring-pink/20">
           <table className="w-full text-left text-sm">
-            <thead className="bg-surface">
+            <thead className="bg-yellow">
               <tr>
-                <th className="px-4 py-3 text-[10px] font-bold uppercase tracking-wider text-muted">
+                <th className="px-4 py-3 text-[10px] font-bold uppercase tracking-wider text-pink/75">
                   Item
                 </th>
-                <th className="px-4 py-3 text-[10px] font-bold uppercase tracking-wider text-muted">
+                <th className="px-4 py-3 text-[10px] font-bold uppercase tracking-wider text-pink/75">
                   Qty
                 </th>
-                <th className="px-4 py-3 text-right text-[10px] font-bold uppercase tracking-wider text-muted">
+                <th className="px-4 py-3 text-right text-[10px] font-bold uppercase tracking-wider text-pink/75">
                   Price
                 </th>
               </tr>
             </thead>
             <tbody>
               {items.map((it, i) => (
-                <tr key={i} className="border-t border-black/5">
-                  <td className="px-4 py-3 font-semibold text-ink">
+                <tr key={i} className="border-t border-pink/15">
+                  <td className="px-4 py-3 font-semibold text-pink">
                     {pickString(it, "name", "title") || "Item"}
                   </td>
-                  <td className="px-4 py-3 text-ink">{pickNumber(it, "quantity", "qty") || 1}</td>
-                  <td className="px-4 py-3 text-right font-semibold text-ink">
+                  <td className="px-4 py-3 text-pink">{pickNumber(it, "quantity", "qty") || 1}</td>
+                  <td className="px-4 py-3 text-right font-semibold text-pink">
                     {formatMoney(
                       pickNumber(it, "line_total", "total_price", "unit_price", "unitPrice"),
                       currency,
@@ -140,22 +140,22 @@ function OrderDetailCard({ detail, onBack }: { detail: OrderDetail; onBack?: () 
 
       <div className="mt-6 grid gap-6 sm:grid-cols-2">
         <div className="space-y-1 text-sm">
-          <p className="flex justify-between text-muted">
+          <p className="flex justify-between text-pink/75">
             <span>Subtotal</span>
-            <span className="font-semibold text-ink">{formatMoney(subtotal, currency)}</span>
+            <span className="font-semibold text-pink">{formatMoney(subtotal, currency)}</span>
           </p>
           {discount > 0 && (
-            <p className="flex justify-between text-muted">
+            <p className="flex justify-between text-pink/75">
               <span>Discount</span>
-              <span className="font-semibold text-ink">-{formatMoney(discount, currency)}</span>
+              <span className="font-semibold text-pink">-{formatMoney(discount, currency)}</span>
             </p>
           )}
-          <p className="flex justify-between border-t border-black/10 pt-2 text-base font-bold text-ink">
+          <p className="flex justify-between border-t border-pink/20 pt-2 text-base font-bold text-pink">
             <span>Total</span>
             <span>{formatMoney(total, currency)}</span>
           </p>
           {lastPayment && (
-            <p className="pt-1 text-xs text-muted">
+            <p className="pt-1 text-xs text-pink/75">
               Payment via {pickString(lastPayment, "provider", "payment_method") || "manual"}
             </p>
           )}
@@ -163,13 +163,13 @@ function OrderDetailCard({ detail, onBack }: { detail: OrderDetail; onBack?: () 
 
         {(name || address || city) && (
           <div className="space-y-1 text-sm">
-            <p className="flex items-center gap-1.5 font-bold text-ink">
-              <MapPin size={14} className="text-muted" /> Shipping to
+            <p className="flex items-center gap-1.5 font-bold text-pink">
+              <MapPin size={14} className="text-pink/75" /> Shipping to
             </p>
-            {name && <p className="text-ink">{name}</p>}
-            {email && <p className="text-muted">{email}</p>}
-            {address && <p className="text-muted">{address}</p>}
-            <p className="text-muted">
+            {name && <p className="text-pink">{name}</p>}
+            {email && <p className="text-pink/75">{email}</p>}
+            {address && <p className="text-pink/75">{address}</p>}
+            <p className="text-pink/75">
               {[city, postcode, country].filter(Boolean).join(", ")}
             </p>
           </div>
@@ -245,17 +245,17 @@ export default function TrackOrderPageClient() {
     <>
       <SiteHeader />
 
-      <main id="main" className="pb-24 pt-28">
-        <div className="container-luxen max-w-2xl">
+      <main id="main" className="bg-pale pb-20 pt-10">
+        <div className="by-page max-w-2xl">
           <Eyebrow>Account</Eyebrow>
-          <h1 className="h-display mt-4 text-[clamp(2rem,4vw,3.2rem)]">Track Your Order</h1>
-          <p className="mt-4 text-[15px] leading-relaxed text-muted">
+          <h1 className="by-h-product mt-4">Track Your Order</h1>
+          <p className="mt-4 text-[15px] leading-relaxed text-pink/75">
             Look up your order status, tracking number, and shipment details using your order
             number, or find every order tied to your email address.
           </p>
 
           {/* Mode toggle */}
-          <div className="mt-6 inline-flex rounded-full border border-black/10 bg-surface p-1">
+          <div className="mt-6 inline-flex border border-pink/40 bg-yellow">
             {(
               [
                 { id: "number" as const, label: "Order Number" },
@@ -271,7 +271,7 @@ export default function TrackOrderPageClient() {
                   reset();
                 }}
                 className={`rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wide transition-colors ${
-                  mode === t.id ? "bg-brand text-white" : "text-muted hover:text-ink"
+                  mode === t.id ? "bg-pink text-yellow" : "text-pink/75 hover:text-pink"
                 }`}
               >
                 {t.label}
@@ -283,7 +283,7 @@ export default function TrackOrderPageClient() {
             <div className="relative flex-1">
               <Search
                 size={17}
-                className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted"
+                className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-pink/75"
               />
               <input
                 type={mode === "email" ? "email" : "text"}
@@ -292,13 +292,13 @@ export default function TrackOrderPageClient() {
                 placeholder={mode === "number" ? "e.g. ORD-1001" : "you@example.com"}
                 aria-label={mode === "number" ? "Order number" : "Email address"}
                 required
-                className="w-full rounded-full border border-black/10 bg-white py-3.5 pl-11 pr-4 text-sm text-ink outline-none transition-colors placeholder:text-muted focus:border-brand/40"
+                className="by-field pl-11"
               />
             </div>
             <button
               type="submit"
               disabled={loading}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-brand-dark disabled:opacity-60"
+              className="by-btn"
             >
               {loading && <Loader2 size={16} className="animate-spin" />}
               {mode === "number" ? "Track Order" : "Find Orders"}
@@ -306,7 +306,7 @@ export default function TrackOrderPageClient() {
           </form>
 
           {error && (
-            <div className="mt-5 flex items-start gap-2 rounded-2xl bg-red-50 p-4 text-sm text-red-700 ring-1 ring-red-600/20">
+            <div className="mt-5 flex items-start gap-2 rounded-[12px] bg-red-50 p-4 text-sm text-red-700 ring-1 ring-red-600/20">
               <AlertCircle size={16} className="mt-0.5 shrink-0" />
               <p>{error}</p>
             </div>
@@ -334,20 +334,20 @@ export default function TrackOrderPageClient() {
                     key={num || i}
                     type="button"
                     onClick={() => loadOrder(num)}
-                    className="flex w-full items-center justify-between gap-4 rounded-2xl border border-black/10 bg-white p-5 text-left transition-colors hover:border-brand/40"
+                    className="flex w-full items-center justify-between gap-4 rounded-[12px] border border-pink/20 bg-pale p-5 text-left transition-colors hover:border-pink/40"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-surface text-brand">
+                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-[7px] bg-yellow text-pink">
                         <Package size={18} />
                       </span>
                       <div>
-                        <p className="font-bold text-ink">#{num}</p>
-                        {date && <p className="text-xs text-muted">{date}</p>}
+                        <p className="font-bold text-pink">#{num}</p>
+                        {date && <p className="text-xs text-pink/75">{date}</p>}
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
                       <StatusPill status={status} />
-                      <span className="font-bold text-ink">{formatMoney(total, currency)}</span>
+                      <span className="font-bold text-pink">{formatMoney(total, currency)}</span>
                     </div>
                   </button>
                 );
@@ -356,13 +356,13 @@ export default function TrackOrderPageClient() {
           )}
 
           {/* Fallback contact CTA */}
-          <div className="mt-10 flex flex-col items-start gap-3 rounded-2xl border border-dashed border-black/15 p-5">
-            <p className="text-sm text-muted">
+          <div className="mt-10 flex flex-col items-start gap-3 rounded-[12px] border border-dashed border-pink/25 p-5">
+            <p className="text-sm text-pink/75">
               Can't find your order, or something looks off? Our support team can help directly.
             </p>
             <a
               href="mailto:support@luxen.co"
-              className="inline-flex items-center gap-2 text-sm font-bold text-brand hover:underline"
+              className="inline-flex items-center gap-2 text-sm font-bold text-pink hover:underline"
             >
               <Mail size={15} /> support@luxen.co
             </a>
@@ -370,7 +370,7 @@ export default function TrackOrderPageClient() {
 
           <Link
             href="/cart"
-            className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-muted transition-colors hover:text-brand"
+            className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-pink/75 transition-colors hover:text-pink"
           >
             <ArrowLeft size={14} /> Back to your cart
           </Link>

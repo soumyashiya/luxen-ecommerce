@@ -1,30 +1,70 @@
 @import "tailwindcss";
 
 /* ----------------------------------------------------------------------------
-   LUXEN — design system (recreated 1:1 from reference)
-   Font: Urbanist · Primary #0083C3 · Surface #EFF8FD · Ink #010101
+   ALLUVI — design system recreated 1:1 from uk.byoma.com
+
+   Palette      Pink #E31D93 · Yellow #FCF298 · Pale #FFEEF7 · Blue #000F9F
+   Type         Cera Pro (commercial) → Jost, the closest free geometric match
+   Geometry     7px button radius · 0px media radius · 40px badge pills
+   Motion       cubic-bezier(0, 0, .3, 1) at .2s / .3s / .5s / .6s
+   Measurements lifted from the live theme's computed styles, not eyeballed.
 ---------------------------------------------------------------------------- */
 
 :root {
-  --background: #ffffff;
-  --foreground: #010101;
+  /* --- Core palette ------------------------------------------------------ */
+  --pink: #e31d93;
+  --pink-dark: #c4197e;
+  --pink-soft: #ff6fbb;
+  --yellow: #fcf298;
+  --yellow-deep: #f6e86a;
+  --pale: #ffeef7;
+  --blue: #000f9f;
+  --black: #121212;
 
-  --brand: #0083c3;
-  --brand-dark: #006fa8;
-  --brand-light: #329dd2;
-  --accent-light: #8dd9ff;
-  --surface: #eff8fd;
-  --ink: #010101;
-  --muted: #6e7276;
-  --muted-2: #757575;
-  --navy: #082238;
-  --navy-2: #0a2c49;
-  --line: rgba(1, 1, 1, 0.1);
+  /* --- Semantic aliases (legacy token names kept so every existing
+         component re-skins without a rewrite) -------------------------- */
+  --background: var(--pale);
+  --foreground: var(--pink);
+
+  --brand: var(--pink);
+  --brand-dark: var(--pink-dark);
+  --brand-light: var(--pink-soft);
+  --accent-light: var(--yellow);
+  --surface: var(--pale);
+  --ink: var(--pink);
+  --muted: #e85cb0;
+  --muted-2: #e85cb0;
+  --navy: var(--blue);
+  --navy-2: var(--blue);
+  --line: rgba(227, 29, 147, 0.25);
+
+  /* --- Motion ------------------------------------------------------------ */
+  --ease: cubic-bezier(0, 0, 0.3, 1);
+  --dur-short: 0.1s;
+  --dur: 0.2s;
+  --dur-medium: 0.3s;
+  --dur-long: 0.5s;
+  --dur-xl: 0.6s;
+
+  /* --- Geometry ---------------------------------------------------------- */
+  --btn-radius: 7px;
+  --badge-radius: 40px;
+  --page-max: 1600px;
+  --page-pad: 50px;
+  --grid-gap: 8px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-pink: var(--pink);
+  --color-pink-dark: var(--pink-dark);
+  --color-pink-soft: var(--pink-soft);
+  --color-yellow: var(--yellow);
+  --color-yellow-deep: var(--yellow-deep);
+  --color-pale: var(--pale);
+  --color-blue: var(--blue);
 
   --color-brand: var(--brand);
   --color-brand-dark: var(--brand-dark);
@@ -36,10 +76,12 @@
   --color-navy: var(--navy);
   --color-navy-2: var(--navy-2);
 
-  --font-sans: var(--font-urbanist);
+  --font-sans: var(--font-jost);
 
-  --radius-card: 16px;
-  --radius-xl2: 32px;
+  --radius-card: 7px;
+  --radius-xl2: 12px;
+
+  --ease-byoma: cubic-bezier(0, 0, 0.3, 1);
 }
 
 * {
@@ -49,10 +91,6 @@
 html {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-}
-
-html {
-  /* Prevent iOS text auto-resize in landscape. */
   -webkit-text-size-adjust: 100%;
   /* `clip` stops horizontal overflow WITHOUT creating a scroll container,
      so (unlike `hidden`) it doesn't break `position: sticky` on descendants. */
@@ -62,13 +100,14 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-urbanist), system-ui, sans-serif;
+  font-family: var(--font-jost), "Jost", system-ui, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  /* 1.8 line-height + .6px tracking is the reference's body rhythm. */
+  line-height: 1.8;
+  letter-spacing: 0.6px;
   overflow-x: clip;
 }
 
-/* Media never overflows its container and stays crisp on hi-dpi displays. */
 img,
 video,
 canvas,
@@ -94,8 +133,8 @@ svg {
 
 /* Visible keyboard focus for accessibility (not shown for mouse/touch). */
 :focus-visible {
-  outline: 2px solid var(--brand);
-  outline-offset: 2px;
+  outline: 2px solid var(--pink);
+  outline-offset: 3px;
 }
 
 /* Lenis smooth scroll */
@@ -114,48 +153,352 @@ html.lenis body {
 }
 
 @layer components {
-  /* Reusable layout container — reference uses 1600px max with comfortable gutters */
-  .container-luxen {
+  /* ---------------------------------------------------------------------
+     Layout — the reference's `.page-width`: 1600px cap, 50px gutters
+     (20px under 750px, mirroring its mobile breakpoint).
+  --------------------------------------------------------------------- */
+  .container-luxen,
+  .by-page {
     width: 100%;
-    max-width: 1320px;
+    max-width: var(--page-max);
     margin-inline: auto;
-    /* Respect device safe areas (notch/rounded corners) in landscape. */
-    padding-inline: max(24px, env(safe-area-inset-left)) max(24px, env(safe-area-inset-right));
+    padding-inline: max(var(--page-pad), env(safe-area-inset-left))
+      max(var(--page-pad), env(safe-area-inset-right));
   }
-  @media (min-width: 1536px) {
-    .container-luxen {
-      max-width: 1440px;
-    }
-  }
-  @media (min-width: 1920px) {
-    .container-luxen {
-      max-width: 1600px;
-    }
-  }
-  @media (max-width: 640px) {
-    .container-luxen {
-      padding-inline: max(18px, env(safe-area-inset-left)) max(18px, env(safe-area-inset-right));
+  @media (max-width: 989px) {
+    .container-luxen,
+    .by-page {
+      padding-inline: max(30px, env(safe-area-inset-left))
+        max(30px, env(safe-area-inset-right));
     }
   }
 
-  /* Eyebrow label */
+  /* Full-bleed colour band that still constrains its content. */
+  .by-band {
+    width: 100%;
+  }
+
+  /* ---------------------------------------------------------------------
+     Typography
+  --------------------------------------------------------------------- */
+
+  /* Section heading — "HOLIDAY", "BESTSELLERS". 35px / 1.3 / 3px tracking. */
+  .by-h-section {
+    font-size: clamp(24px, 4vw, 35px);
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--pink);
+  }
+
+  /* Centred band heading — "WELCOME TO ALLUVI". 40px / 1.3 / .6px. */
+  .by-h-band {
+    font-size: clamp(26px, 4.4vw, 40px);
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--pink);
+  }
+
+  /* Product / page title — 40px bold uppercase, 1.06px tracking. */
+  .by-h-product {
+    font-size: clamp(28px, 4.4vw, 40px);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 1.06px;
+    text-transform: uppercase;
+    color: var(--pink);
+  }
+
+  /* Card title — blue, 17.5px, 500, 1px tracking. */
+  .by-card-title {
+    font-size: 17.5px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+
+  /* Price — 16px bold, 1px tracking, pink. */
+  .by-price {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: var(--pink);
+  }
+
+  .by-price-compare {
+    text-decoration: line-through;
+    opacity: 0.6;
+    font-weight: 400;
+  }
+
+  /* Nav + footer heading — 18px uppercase, .6px tracking. */
+  .by-nav-link {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+
+  /* Footer link — 16px bold uppercase, 1px tracking, underlined. */
+  .by-footer-link {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }
+
+  /* Legacy aliases so untouched components keep rendering sensibly. */
   .eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--ink);
+    color: var(--blue);
   }
-
-  /* Section display headings */
   .h-display {
     font-weight: 700;
-    letter-spacing: -0.01em;
-    line-height: 1.05;
+    letter-spacing: 1.06px;
+    line-height: 1.3;
+    text-transform: uppercase;
   }
+
+  /* ---------------------------------------------------------------------
+     Buttons — 47px tall, 7px radius, 15px/700 uppercase, 1px tracking.
+     Hover inverts fill and text, exactly like the reference's `.button`.
+  --------------------------------------------------------------------- */
+  .by-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 47px;
+    padding-inline: 30px;
+    border: 1px solid var(--pink);
+    border-radius: var(--btn-radius);
+    background: var(--pink);
+    color: var(--yellow);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transition:
+      background-color var(--dur) var(--ease),
+      color var(--dur) var(--ease),
+      border-color var(--dur) var(--ease),
+      transform var(--dur) var(--ease);
+  }
+  .by-btn:hover {
+    background: var(--yellow);
+    color: var(--pink);
+  }
+  .by-btn:active {
+    transform: scale(0.98);
+  }
+  .by-btn[disabled],
+  .by-btn[aria-disabled="true"] {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  /* Secondary — pale fill, pink text. The reference's PDP add-to-cart. */
+  .by-btn-soft {
+    background: var(--pale);
+    color: var(--pink);
+    border-color: var(--pink);
+  }
+  .by-btn-soft:hover {
+    background: var(--pink);
+    color: var(--yellow);
+  }
+
+  /* On a pink surface: yellow fill, pink text. */
+  .by-btn-yellow {
+    background: var(--yellow);
+    color: var(--pink);
+    border-color: var(--yellow);
+  }
+  .by-btn-yellow:hover {
+    background: var(--pink);
+    color: var(--yellow);
+    border-color: var(--yellow);
+  }
+
+  /* Text link that underlines on hover, 0.3rem offset — the theme default. */
+  .by-link {
+    transition: color var(--dur) var(--ease);
+  }
+  .by-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }
+
+  /* ---------------------------------------------------------------------
+     Badge pill — 12px, 1px tracking, 40px radius, 5/13/6 padding.
+  --------------------------------------------------------------------- */
+  .by-badge {
+    display: inline-block;
+    padding: 5px 13px 6px;
+    border: 1px solid rgba(252, 242, 152, 0.1);
+    border-radius: var(--badge-radius);
+    background: var(--pink);
+    color: var(--yellow);
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .by-badge-yellow {
+    background: var(--yellow);
+    color: var(--pink);
+    border-color: rgba(227, 29, 147, 0.15);
+  }
+
+  /* ---------------------------------------------------------------------
+     Inputs — square corners, 1px pink border at 55% alpha.
+  --------------------------------------------------------------------- */
+  .by-field {
+    width: 100%;
+    min-height: 47px;
+    padding: 12px 16px;
+    border: 1px solid rgba(227, 29, 147, 0.55);
+    border-radius: 0;
+    background: transparent;
+    color: var(--pink);
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    transition: border-color var(--dur) var(--ease);
+  }
+  .by-field::placeholder {
+    color: rgba(227, 29, 147, 0.55);
+  }
+  .by-field:focus {
+    border-color: var(--pink);
+    outline: none;
+  }
+  /* On the pink footer the field flips to yellow ink. A 1px yellow hairline
+     on pink needs full opacity to read as a box at all — at 55% (what the
+     pink-on-pale fields use) the outline effectively disappears. */
+  .by-field-on-pink {
+    border-color: var(--yellow);
+    color: var(--yellow);
+  }
+  .by-field-on-pink::placeholder {
+    color: rgba(252, 242, 152, 0.6);
+  }
+  .by-field-on-pink:focus {
+    border-color: var(--yellow);
+  }
+
+  /* ---------------------------------------------------------------------
+     Product grid — 8px gutters desktop, 4px mobile.
+  --------------------------------------------------------------------- */
+  .by-grid {
+    display: grid;
+    gap: var(--grid-gap);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media (max-width: 749px) {
+    .by-grid {
+      gap: 4px;
+    }
+  }
+  @media (min-width: 990px) {
+    .by-grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .by-grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   Scroll reveal — the reference's `slideIn`: 2rem rise + fade over .6s.
+   Driven by IntersectionObserver via `components/ui/Reveal`.
+---------------------------------------------------------------------------- */
+@keyframes bySlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes byFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes byMenuOpen {
+  0% {
+    opacity: 0;
+    transform: translateY(-1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes byAnnouncementIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.by-reveal {
+  opacity: 0;
+}
+.by-reveal.is-in {
+  animation: bySlideIn var(--dur-xl) var(--ease) forwards;
+}
+.by-menu-open {
+  animation: byMenuOpen var(--dur-medium) var(--ease);
+}
+.by-announcement-in {
+  animation: byAnnouncementIn var(--dur-long) var(--ease);
+}
+
+/* Icon buttons scale a touch on hover — the theme's `.header__icon:hover`. */
+.by-icon {
+  transition: transform var(--dur) var(--ease);
+}
+.by-icon:hover {
+  transform: scale(1.07);
+}
+
+/* Media zoom on card hover. */
+.by-media-zoom {
+  transition: transform var(--dur-long) var(--ease);
+}
+.by-card:hover .by-media-zoom {
+  transform: scale(1.04);
 }
 
 /* Hide scrollbars on horizontal sliders */
@@ -167,25 +510,7 @@ html.lenis body {
   scrollbar-width: none;
 }
 
-/* Checkerboard ribbon (hero + process dividers) */
-.checker {
-  height: 18px;
-  background-image:
-    linear-gradient(45deg, #010101 25%, transparent 25%, transparent 75%, #010101 75%, #010101),
-    linear-gradient(45deg, #010101 25%, transparent 25%, transparent 75%, #010101 75%, #010101);
-  background-size: 26px 26px;
-  background-position: 0 0, 13px 13px;
-  background-color: #ffffff;
-}
-
-/* Faint blueprint grid (hero left) */
-.blueprint {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 46px 46px;
-}
-
+/* Marquee ribbon */
 @keyframes luxen-marquee {
   0% {
     transform: translateX(0);
@@ -205,5 +530,18 @@ html.lenis body {
   .animate-marquee,
   .animate-marquee-slow {
     animation: none;
+  }
+  .by-reveal,
+  .by-reveal.is-in {
+    opacity: 1;
+    animation: none;
+  }
+  .by-menu-open,
+  .by-announcement-in {
+    animation: none;
+  }
+  .by-icon:hover,
+  .by-card:hover .by-media-zoom {
+    transform: none;
   }
 }

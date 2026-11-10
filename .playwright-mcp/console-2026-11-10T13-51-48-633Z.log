@@ -1,0 +1,97 @@
+[     155ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     437ms] [LOG] [Fast Refresh] done in 395ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     667ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     764ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[    1001ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[    1054ms] [LOG] [Fast Refresh] done in 159ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   28583ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   28754ms] [LOG] [Fast Refresh] done in 245ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   28870ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   28970ms] [LOG] [Fast Refresh] done in 216ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   41835ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   42567ms] [WARNING] [HMR] Invalid message: {"isTrusted":true}
+TypeError: Cannot convert undefined or null to object
+    at Object.keys (<anonymous>)
+    at extractModulesFromTurbopackMessage (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:13754:39)
+    at TurbopackHmr.onTurbopackMessage (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:13701:32)
+    at processMessage (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:14059:30)
+    at WebSocket.handleMessage (http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:13458:52) @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   42620ms] [LOG] [Fast Refresh] done in 858ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   42755ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   42765ms] [LOG] [Fast Refresh] done in 123ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   42878ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   42972ms] [LOG] [Fast Refresh] done in 200ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   43091ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   43272ms] [LOG] [Fast Refresh] done in 285ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   44027ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   44108ms] [LOG] [Fast Refresh] done in 192ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   44224ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   44417ms] [LOG] [Fast Refresh] done in 305ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   44529ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   44535ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  131666ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  131770ms] [LOG] [Fast Refresh] done in 206ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  131883ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  132086ms] [LOG] [Fast Refresh] done in 315ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  144817ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  144962ms] [LOG] [Fast Refresh] done in 255ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  335739ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  335820ms] [LOG] [Fast Refresh] done in 135ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  335934ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  336156ms] [LOG] [Fast Refresh] done in 331ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  343488ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  343572ms] [LOG] [Fast Refresh] done in 176ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  343678ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  343784ms] [LOG] [Fast Refresh] done in 210ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  343892ms] ReferenceError: hoverImages is not defined
+    at eval (http://localhost:3000/_next/static/chunks/ecommerce-alluvi_luxen_1wikyj-._.js?id=%255Bproject%255D%252Fecommerce-alluvi%252Fluxen%252Fcomponents%252Fsections%252FCollectionRow.tsx+%255Bapp-client%255D+%2528ecmascript%2529:60:47)
+    at Array.map (<anonymous>)
+    at CollectionRow (http://localhost:3000/_next/static/chunks/ecommerce-alluvi_luxen_1wikyj-._.js?id=%255Bproject%255D%252Fecommerce-alluvi%252Fluxen%252Fcomponents%252Fsections%252FCollectionRow.tsx+%255Bapp-client%255D+%2528ecmascript%2529:54:44)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:15037:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:4620:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:6081:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:6691:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:9555:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:9449:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:9433:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:9061:186)
+    at performSyncWorkOnRoot (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:10179:316)
+    at processRootScheduleInMicrotask (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:10200:106)
+    at http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:10274:158
+[  349447ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  349536ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  349722ms] [LOG] [Fast Refresh] done in 190ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  349839ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  350443ms] [LOG] [Fast Refresh] done in 705ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  350575ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  350672ms] [LOG] [Fast Refresh] done in 207ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  351405ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  351474ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  367910ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  368140ms] [LOG] [Fast Refresh] done in 319ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  368258ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  368406ms] [LOG] [Fast Refresh] done in 264ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  368675ms] ReferenceError: hoverSrc is not defined
+    at ProductCard (http://localhost:3000/_next/static/chunks/ecommerce-alluvi_luxen_1wikyj-._.js?id=%255Bproject%255D%252Fecommerce-alluvi%252Fluxen%252Fcomponents%252Fproduct%252FProductCard.tsx+%255Bapp-client%255D+%2528ecmascript%2529:75:31)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:15037:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:4620:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:6081:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:6691:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:9555:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:9449:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:9433:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:9061:186)
+    at performSyncWorkOnRoot (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:10179:316)
+    at processRootScheduleInMicrotask (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:10200:106)
+    at http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-dom_1ylzcx0._.js:10274:158
+[  374060ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  374303ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  374510ms] [LOG] [Fast Refresh] done in 344ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  374622ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  375170ms] [LOG] [Fast Refresh] done in 659ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  375418ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  375464ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478

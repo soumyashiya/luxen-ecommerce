@@ -18,7 +18,7 @@ export default function Blog() {
               <Eyebrow>RESEARCH NOTES</Eyebrow>
             </Reveal>
             <Reveal variants={blurUp}>
-              <h2 className="h-display mt-5 text-[clamp(2.2rem,4.4vw,3.2rem)]">
+              <h2 className="by-h-section mt-5">
                 From the lab:
                 <br /> notes &amp; insights
               </h2>

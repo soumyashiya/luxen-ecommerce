@@ -82,7 +82,7 @@ export default async function ProductPage({ params }: PageProps) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
-      { "@type": "ListItem", position: 2, name: "Catalog", item: absoluteUrl("/#services") },
+      { "@type": "ListItem", position: 2, name: "Catalog", item: absoluteUrl("/shop") },
       {
         "@type": "ListItem",
         position: 3,

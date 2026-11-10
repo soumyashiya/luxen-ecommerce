@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { SITE_NAME } from "@/lib/seo";
 import ShopPageClient from "./ShopPageClient";
 
@@ -17,5 +18,11 @@ export const metadata: Metadata = {
 };
 
 export default function ShopPage() {
-  return <ShopPageClient />;
+  /* ShopPageClient seeds its filter from `?q=`, so it needs a Suspense
+     boundary to stay statically prerenderable. */
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-pale" />}>
+      <ShopPageClient />
+    </Suspense>
+  );
 }

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Minus, Plus, ShoppingBag, Trash2, X } from "lucide-react";
 import { useCart, formatUSD } from "@/lib/cart";
+import { EASE, DUR } from "@/lib/motion";
 
 export default function CartDrawer() {
   const { isOpen, closeCart, lines, count, subtotal, setQty, remove } = useCart();
@@ -16,99 +17,108 @@ export default function CartDrawer() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.25 }}
+          transition={{ duration: DUR.medium, ease: EASE }}
           className="fixed inset-0 z-[80]"
         >
           {/* Backdrop */}
-          <div className="absolute inset-0 bg-navy/50 backdrop-blur-sm" onClick={closeCart} />
+          <div className="absolute inset-0 bg-blue/45" onClick={closeCart} />
 
-          {/* Panel */}
+          {/* Panel — square corners and a pale-pink field, per the reference. */}
           <motion.aside
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ type: "spring", stiffness: 260, damping: 30 }}
-            className="absolute right-0 top-0 flex h-full w-full max-w-md flex-col bg-white shadow-2xl"
+            transition={{ duration: DUR.long, ease: EASE }}
+            className="absolute right-0 top-0 flex h-full w-full max-w-md flex-col bg-pale"
           >
             {/* Header */}
-            <div className="flex items-center justify-between border-b border-black/10 px-6 py-5">
-              <h2 className="flex items-center gap-2 text-lg font-bold text-ink">
-                <ShoppingBag size={20} className="text-brand" />
+            <div className="flex items-center justify-between bg-pink px-6 py-5">
+              <h2 className="flex items-center gap-2.5 text-lg font-bold uppercase tracking-[1px] text-yellow">
+                <ShoppingBag size={20} aria-hidden />
                 Your Cart
-                {count > 0 && (
-                  <span className="rounded-full bg-brand px-2 py-0.5 text-xs text-white">{count}</span>
-                )}
+                {count > 0 && <span className="by-badge by-badge-yellow">{count}</span>}
               </h2>
               <button
                 onClick={closeCart}
                 aria-label="Close cart"
-                className="grid h-9 w-9 place-items-center rounded-full bg-surface text-ink transition-colors hover:bg-black/10"
+                className="by-icon grid h-10 w-10 place-items-center text-yellow"
               >
-                <X size={18} />
+                <X size={20} />
               </button>
             </div>
 
             {lines.length === 0 ? (
-              <div className="flex flex-1 flex-col items-center justify-center gap-4 px-6 text-center">
-                <span className="grid h-16 w-16 place-items-center rounded-full bg-surface text-muted">
-                  <ShoppingBag size={28} />
-                </span>
-                <p className="text-sm text-muted">Your cart is empty.</p>
-                <Link
-                  href="/#services"
-                  onClick={closeCart}
-                  className="rounded-xl bg-brand px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-brand-dark"
-                >
+              <div className="flex flex-1 flex-col items-center justify-center gap-5 px-6 text-center">
+                <ShoppingBag size={36} className="text-pink/50" aria-hidden />
+                <p className="text-[15px] uppercase tracking-[1px] text-pink">
+                  Your cart is empty.
+                </p>
+                <Link href="/shop" onClick={closeCart} className="by-btn">
                   Browse Catalog
                 </Link>
               </div>
             ) : (
               <>
-                <div className="flex-1 space-y-4 overflow-y-auto px-6 py-5">
+                <div className="flex-1 divide-y divide-pink/15 overflow-y-auto px-6">
                   {lines.map((l) => (
-                    <div key={l.product.slug} className="flex gap-4">
-                      <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl">
+                    <div key={l.product.slug} className="flex gap-4 py-5">
+                      <Link
+                        href={`/product/${l.product.slug}`}
+                        onClick={closeCart}
+                        className="relative h-24 w-20 shrink-0"
+                      >
                         <Image
-                          src={l.product.img}
+                          src={l.product.card ?? l.product.img}
                           alt={l.product.title}
                           fill
                           className="object-contain p-1.5"
                           sizes="80px"
                         />
-                      </div>
+                      </Link>
+
                       <div className="flex flex-1 flex-col">
                         <div className="flex items-start justify-between gap-2">
-                          <h3 className="text-sm font-bold leading-snug text-ink">
+                          <Link
+                            href={`/product/${l.product.slug}`}
+                            onClick={closeCart}
+                            className="by-card-title text-[15px] leading-snug hover:underline hover:underline-offset-[0.3rem]"
+                          >
                             {l.product.title}
-                          </h3>
+                          </Link>
                           <button
                             onClick={() => remove(l.product.slug)}
                             aria-label={`Remove ${l.product.title}`}
-                            className="text-muted transition-colors hover:text-brand"
+                            className="by-icon shrink-0 text-pink"
                           >
                             <Trash2 size={16} />
                           </button>
                         </div>
-                        <span className="text-xs text-muted">{formatUSD(l.product.price)} each</span>
-                        <div className="mt-auto flex items-center justify-between pt-2">
-                          <div className="flex items-center gap-1 rounded-full border border-black/10">
+
+                        <span className="mt-1 text-xs tracking-[0.6px] text-pink/70">
+                          {formatUSD(l.product.price)} each
+                        </span>
+
+                        <div className="mt-auto flex items-center justify-between gap-3 pt-3">
+                          <div className="flex items-center border border-pink/55">
                             <button
                               onClick={() => setQty(l.product.slug, l.qty - 1)}
                               aria-label="Decrease quantity"
-                              className="grid h-7 w-7 place-items-center rounded-full text-ink hover:bg-surface"
+                              className="grid h-9 w-9 place-items-center text-pink transition-colors hover:bg-pink hover:text-yellow"
                             >
                               <Minus size={14} />
                             </button>
-                            <span className="w-6 text-center text-sm font-semibold">{l.qty}</span>
+                            <span className="w-9 text-center text-sm font-bold text-pink">
+                              {l.qty}
+                            </span>
                             <button
                               onClick={() => setQty(l.product.slug, l.qty + 1)}
                               aria-label="Increase quantity"
-                              className="grid h-7 w-7 place-items-center rounded-full text-ink hover:bg-surface"
+                              className="grid h-9 w-9 place-items-center text-pink transition-colors hover:bg-pink hover:text-yellow"
                             >
                               <Plus size={14} />
                             </button>
                           </div>
-                          <span className="text-sm font-bold text-ink">{formatUSD(l.lineTotal)}</span>
+                          <span className="by-price">{formatUSD(l.lineTotal)}</span>
                         </div>
                       </div>
                     </div>
@@ -116,21 +126,19 @@ export default function CartDrawer() {
                 </div>
 
                 {/* Footer */}
-                <div className="border-t border-black/10 px-6 py-5">
+                <div className="border-t border-pink/20 px-6 py-5">
                   <div className="mb-4 flex items-center justify-between">
-                    <span className="text-sm text-muted">Subtotal</span>
-                    <span className="text-xl font-extrabold text-ink">{formatUSD(subtotal)}</span>
+                    <span className="text-sm uppercase tracking-[1px] text-pink">
+                      Subtotal
+                    </span>
+                    <span className="by-price text-lg">{formatUSD(subtotal)}</span>
                   </div>
-                  <Link
-                    href="/checkout"
-                    onClick={closeCart}
-                    className="block w-full rounded-xl bg-brand py-4 text-center text-sm font-bold uppercase tracking-wide text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5"
-                  >
+                  <Link href="/checkout" onClick={closeCart} className="by-btn w-full">
                     Checkout
                   </Link>
                   <button
                     onClick={closeCart}
-                    className="mt-2 w-full rounded-xl py-2 text-sm font-semibold text-muted transition-colors hover:text-ink"
+                    className="by-link mt-3 w-full text-[13px] font-bold uppercase tracking-[1px] text-pink"
                   >
                     Continue shopping
                   </button>

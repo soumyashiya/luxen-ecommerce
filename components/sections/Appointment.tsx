@@ -9,7 +9,7 @@ import { SERVICES, IMG } from "@/lib/data";
 import { revealLeft, revealRight } from "@/lib/motion";
 
 const field =
-  "w-full rounded-xl border border-black/10 bg-white px-5 py-4 text-[15px] text-ink placeholder:text-muted/70 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20";
+  "by-field placeholder:text-pink/50";
 
 type FormState = { product: string; name: string; email: string; quantity: number; notes: string };
 const EMPTY: FormState = { product: "", name: "", email: "", quantity: 1, notes: "" };
@@ -37,36 +37,36 @@ export default function Appointment() {
   };
 
   return (
-    <section id="appointment" className="bg-white py-24">
-      <div className="container-luxen grid items-stretch gap-8 lg:grid-cols-2">
+    <section id="appointment" className="bg-pale py-16 sm:py-20">
+      <div className="by-page grid items-stretch gap-2 lg:grid-cols-2">
         {/* Form */}
         <Reveal variants={revealLeft}>
-          <div className="flex h-full flex-col rounded-[28px] bg-surface p-8 sm:p-10">
+          <div className="flex h-full flex-col rounded-[12px] bg-yellow p-8 sm:p-10">
             {submitted ? (
               <div className="flex flex-1 flex-col items-center justify-center py-8 text-center">
-                <span className="grid h-20 w-20 place-items-center rounded-full bg-brand text-white">
+                <span className="grid h-20 w-20 place-items-center rounded-full bg-pink text-yellow">
                   <Check size={36} strokeWidth={3} />
                 </span>
-                <h2 className="h-display mt-6 text-[clamp(1.6rem,3vw,2.2rem)]">
+                <h2 className="by-h-band mt-6">
                   Request received{form.name ? `, ${form.name.split(" ")[0]}` : ""}!
                 </h2>
-                <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
+                <p className="mt-3 max-w-sm text-sm leading-relaxed tracking-[0.6px] text-pink">
                   Thanks for your interest. Our team will confirm batch availability and pricing
                   by email shortly.
                 </p>
                 <button
                   onClick={reset}
-                  className="mt-7 rounded-xl bg-brand px-6 py-3 text-[15px] font-bold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5"
+                  className="by-btn mt-7"
                 >
                   Submit another request
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
-                <SplitReveal as="h2" className="h-display text-[clamp(2rem,3.4vw,2.6rem)]">
+                <SplitReveal as="h2" className="by-h-section">
                   Request A Quote
                 </SplitReveal>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
+                <p className="mt-3 text-sm leading-relaxed tracking-[0.6px] text-pink">
                   Research reference material — for laboratory and analytical use only. Not
                   intended to diagnose, treat, cure, or prevent any disease. Not for human or
                   veterinary use.
@@ -90,7 +90,7 @@ export default function Appointment() {
                       </select>
                       <ChevronDown
                         size={18}
-                        className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-muted"
+                        className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-pink"
                       />
                     </div>
                   </Labeled>
@@ -122,7 +122,7 @@ export default function Appointment() {
 
                   <button
                     type="submit"
-                    className="w-full rounded-xl bg-brand py-4 text-[15px] font-bold text-white transition-all hover:bg-brand-dark hover:-translate-y-0.5"
+                    className="by-btn w-full"
                   >
                     Submit Request
                   </button>
@@ -134,7 +134,7 @@ export default function Appointment() {
 
         {/* Image */}
         <Reveal variants={revealRight} className="relative">
-          <div className="relative h-full min-h-[480px] w-full overflow-hidden rounded-[28px]">
+          <div className="relative h-full min-h-[480px] w-full overflow-hidden rounded-[12px]">
             <Image
               src={IMG.quoteRight}
               alt="LUXEN laboratory preparing a research order"
@@ -152,7 +152,7 @@ export default function Appointment() {
 function Labeled({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <span className="mb-2 block text-[15px] font-medium text-ink">{label}</span>
+      <span className="mb-2 block text-[13px] font-bold uppercase tracking-[1px] text-pink">{label}</span>
       {children}
     </label>
   );

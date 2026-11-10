@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
+import { SITE_NAME } from "@/lib/seo";
 
-/* LUXEN leaf-swoosh mark (echoes the reference's leaf logo) + wordmark */
+/* Standalone mark — a ringed slash, echoing the reference's Ø-for-O glyph. */
 export function LogoMark({
   className,
   color = "currentColor",
@@ -10,35 +11,42 @@ export function LogoMark({
 }) {
   return (
     <svg viewBox="0 0 40 40" className={className} fill="none" aria-hidden>
+      <circle cx="20" cy="20" r="14" stroke={color} strokeWidth="5.5" />
       <path
-        d="M6 30c0-11 9-20 20-20 3 0 6 .6 8 1.6-1 9-8.6 16-18 16-2 0-4-.4-6-1.2-2.4 1.6-4 4-4 4z"
-        fill={color}
-      />
-      <path
-        d="M9 31c5-9 13-15 22-17"
-        stroke="#fff"
-        strokeWidth="1.6"
+        d="M27.5 12.5 12.5 27.5"
+        stroke={color}
+        strokeWidth="5.5"
         strokeLinecap="round"
-        opacity="0.85"
       />
     </svg>
   );
 }
 
+/* Wordmark. The reference's logo is purely typographic: a heavy geometric
+   sans, set large, uppercase and centred, in yellow on the pink header. */
 export function Logo({
   className,
   textClassName,
-  mark = "currentColor",
+  mark,
 }: {
   className?: string;
   textClassName?: string;
+  /* Accepted for API compatibility with existing call sites. */
   mark?: string;
 }) {
+  void mark;
   return (
-    <span className={cn("inline-flex items-center gap-2", className)}>
-      <LogoMark className="h-8 w-8" color={mark} />
-      <span className={cn("text-2xl font-extrabold tracking-tight", textClassName)}>
-        LUXEN
+    <span className={cn("inline-flex items-center", className)}>
+      <span
+        className={cn(
+          "font-bold uppercase leading-none",
+          /* Starts small enough to clear the icon cluster at 360px, then
+             scales up to the reference's 44px lockup on desktop. */
+          "text-[22px] tracking-[0.02em] sm:text-[clamp(26px,4.4vw,44px)]",
+          textClassName,
+        )}
+      >
+        {SITE_NAME}
       </span>
     </span>
   );

@@ -59,21 +59,19 @@ export default function Solutions() {
   });
 
   return (
-    <section id="services" className="overflow-hidden bg-surface py-24">
-      <div className="container-luxen">
+    <section id="services" className="overflow-hidden bg-pale py-16 sm:py-20">
+      <div className="by-page">
         <Reveal className="flex flex-col items-center text-center">
-          <Eyebrow center>RESEARCH CATALOG</Eyebrow>
-          <SplitReveal as="h2" className="h-display mt-5 text-[clamp(2.4rem,5vw,3.6rem)]">
-            Engineered for
-            <br />
-            Research Precision.
+          <Eyebrow center>Research catalog</Eyebrow>
+          <SplitReveal as="h2" className="by-h-band mt-4">
+            Engineered for research precision
           </SplitReveal>
         </Reveal>
       </div>
 
       {/* Auto-scrolling carousel */}
       <div
-        className="mt-14 cursor-grab overflow-hidden active:cursor-grabbing"
+        className="mt-10 cursor-grab overflow-hidden active:cursor-grabbing"
         onPointerEnter={() => setPaused(true)}
         onPointerLeave={() => setPaused(false)}
       >
@@ -85,40 +83,38 @@ export default function Solutions() {
           dragElastic={0.05}
           onDragStart={() => setPaused(true)}
           onDragEnd={() => setPaused(false)}
-          className="flex w-max gap-6 px-[max(24px,calc((100vw-1320px)/2))]"
+          className="flex w-max gap-2 px-[max(30px,calc((100vw-1600px)/2))]"
         >
           {items.map((s, i) => {
             const Icon = ICONS[s.icon] ?? FlaskConical;
             return (
               <motion.article
                 key={`${s.title}-${i}`}
-                className="group grid w-[88vw] shrink-0 grid-cols-1 gap-6 rounded-[28px] bg-white p-5 sm:w-[640px] sm:grid-cols-[260px_1fr] sm:p-6"
+                className="by-card group grid w-[84vw] shrink-0 grid-cols-1 gap-6 rounded-[12px] bg-yellow p-5 sm:w-[620px] sm:grid-cols-[240px_1fr] sm:p-6"
               >
-                <div className="relative aspect-square overflow-hidden rounded-2xl">
+                <div className="relative aspect-square overflow-hidden rounded-[12px] bg-pale">
                   <Image
                     src={s.img}
                     alt={s.title}
                     fill
                     draggable={false}
-                    className="object-contain p-4 transition-transform duration-700 group-hover:scale-105"
-                    sizes="260px"
+                    className="by-media-zoom object-contain p-4"
+                    sizes="240px"
                   />
                 </div>
                 <div className="flex flex-col">
-                  <span className="grid h-12 w-12 place-items-center rounded-xl text-brand">
-                    <Icon size={34} strokeWidth={1.6} />
-                  </span>
-                  <h3 className="mt-3 text-2xl font-bold text-ink">{s.title}</h3>
-                  <p className="mt-3 text-[15px] leading-relaxed text-muted">{s.desc}</p>
+                  <Icon size={32} strokeWidth={1.6} aria-hidden className="text-pink" />
+                  <h3 className="by-card-title mt-3 text-left text-[19px]">{s.title}</h3>
+                  <p className="mt-3 text-[15px] leading-relaxed tracking-[0.6px] text-pink">
+                    {s.desc}
+                  </p>
                   <Link
                     href={`/product/${s.slug}`}
                     draggable={false}
-                    className="group/btn mt-auto inline-flex w-fit items-center gap-2 rounded-full border border-black/10 py-2 pl-5 pr-2 text-sm font-semibold text-ink transition-colors hover:border-brand/40"
+                    className="by-btn mt-auto w-fit pt-0"
                   >
-                    Explore More
-                    <span className="grid h-9 w-9 place-items-center rounded-full bg-brand text-white transition-transform duration-300 group-hover/btn:rotate-45">
-                      <ArrowUpRight size={18} strokeWidth={2.4} />
-                    </span>
+                    Explore more
+                    <ArrowUpRight size={16} strokeWidth={2.6} aria-hidden />
                   </Link>
                 </div>
               </motion.article>

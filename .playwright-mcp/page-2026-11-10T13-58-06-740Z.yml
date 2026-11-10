@@ -1,0 +1,359 @@
+- generic [active] [ref=f35e1]:
+  - link "Skip to main content" [ref=f35e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f35e3]:
+    - generic [ref=f35e5]:
+      - button "Previous announcement" [ref=f35e6]
+      - paragraph [ref=f35e9]: EVERY BATCH INDEPENDENTLY LAB TESTED
+      - button "Next announcement" [ref=f35e10]
+    - generic [ref=f35e14]:
+      - generic [ref=f35e15]:
+        - link "Track Order" [ref=f35e16] [cursor=pointer]:
+          - /url: /track-order
+        - link "Certificates" [ref=f35e17] [cursor=pointer]:
+          - /url: /about
+      - link "LUXEN home" [ref=f35e18] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f35e19]: LUXEN
+      - generic [ref=f35e21]:
+        - button "Search" [ref=f35e22]
+        - button "Open cart" [ref=f35e27]
+    - navigation "Main" [ref=f35e31]:
+      - generic [ref=f35e32]:
+        - link "New In" [ref=f35e33] [cursor=pointer]:
+          - /url: /shop
+        - link "Catalog" [ref=f35e35] [cursor=pointer]:
+          - /url: /shop
+        - link "Verification" [ref=f35e40] [cursor=pointer]:
+          - /url: /about
+        - link "About" [ref=f35e44] [cursor=pointer]:
+          - /url: /about
+        - link "Reviews" [ref=f35e45] [cursor=pointer]:
+          - /url: /about#testimonials
+        - link "Shop All" [ref=f35e46] [cursor=pointer]:
+          - /url: /shop
+  - main [ref=f35e47]:
+    - region "Featured research reference peptides" [ref=f35e48]:
+      - generic [ref=f35e52]:
+        - generic [ref=f35e53]: New
+        - heading "Research Grade Reference Peptides" [level=1] [ref=f35e54]:
+          - generic [ref=f35e55]: Research Grade
+          - generic [ref=f35e56]: Reference Peptides
+        - paragraph [ref=f35e57]: Verified to the milligram
+        - link "Shop now" [ref=f35e60] [cursor=pointer]:
+          - /url: /shop
+        - paragraph [ref=f35e61]: "*Every batch independently characterised by Janoshik Analytical for identity, purity and content. For laboratory and in-vitro research use only — not for human or veterinary use."
+    - generic [ref=f35e63]:
+      - generic [ref=f35e64]:
+        - heading "Bestsellers" [level=2] [ref=f35e65]
+        - link "View all" [ref=f35e66] [cursor=pointer]:
+          - /url: /shop
+      - list [ref=f35e68]:
+        - listitem [ref=f35e69]:
+          - article [ref=f35e70]:
+            - link "Glow 70mg (R&D Only) Lab Tested" [ref=f35e71] [cursor=pointer]:
+              - /url: /product/glow-ghk-cu
+              - img "Glow 70mg (R&D Only)" [ref=f35e72]
+              - generic [ref=f35e74]: Lab Tested
+            - link [ref=f35e75] [cursor=pointer]:
+              - /url: /product/glow-ghk-cu
+              - heading "Glow 70mg (R&D Only)" [level=3] [ref=f35e76]
+            - paragraph [ref=f35e77]: $100
+            - button "Add Glow 70mg (R&D Only) to cart" [ref=f35e78] [cursor=pointer]: Add to cart
+        - listitem [ref=f35e79]:
+          - article [ref=f35e80]:
+            - link "Tesamorelin 20mg (R&D Only) Cert. Pending" [ref=f35e81] [cursor=pointer]:
+              - /url: /product/tesamorelin-20mg
+              - img "Tesamorelin 20mg (R&D Only)" [ref=f35e82]
+              - generic [ref=f35e84]: Cert. Pending
+            - link [ref=f35e85] [cursor=pointer]:
+              - /url: /product/tesamorelin-20mg
+              - heading "Tesamorelin 20mg (R&D Only)" [level=3] [ref=f35e86]
+            - paragraph [ref=f35e87]: $100
+            - button "Add Tesamorelin 20mg (R&D Only) to cart" [ref=f35e88] [cursor=pointer]: Add to cart
+        - listitem [ref=f35e89]:
+          - article [ref=f35e90]:
+            - link "Retatrutide 40mg (R&D Only) Cert. Pending" [ref=f35e91] [cursor=pointer]:
+              - /url: /product/retatrutide-40mg
+              - img "Retatrutide 40mg (R&D Only)" [ref=f35e92]
+              - generic [ref=f35e94]: Cert. Pending
+            - link [ref=f35e95] [cursor=pointer]:
+              - /url: /product/retatrutide-40mg
+              - heading "Retatrutide 40mg (R&D Only)" [level=3] [ref=f35e96]
+            - paragraph [ref=f35e97]: $140
+            - button "Add Retatrutide 40mg (R&D Only) to cart" [ref=f35e98] [cursor=pointer]: Add to cart
+        - listitem [ref=f35e99]:
+          - article [ref=f35e100]:
+            - link "CJC-1295 10mg (R&D Only) Cert. Pending" [ref=f35e101] [cursor=pointer]:
+              - /url: /product/cjc-1295-10mg
+              - img "CJC-1295 10mg (R&D Only)" [ref=f35e102]
+              - generic [ref=f35e104]: Cert. Pending
+            - link [ref=f35e105] [cursor=pointer]:
+              - /url: /product/cjc-1295-10mg
+              - heading "CJC-1295 10mg (R&D Only)" [level=3] [ref=f35e106]
+            - paragraph [ref=f35e107]: $100
+            - button "Add CJC-1295 10mg (R&D Only) to cart" [ref=f35e108] [cursor=pointer]: Add to cart
+    - generic [ref=f35e109]:
+      - img "Glow GHK-CU research reference carton beside a pre-filled analytical pen" [ref=f35e110]
+      - generic [ref=f35e113]:
+        - generic [ref=f35e114]: New
+        - heading "Welcome to the lab" [level=2] [ref=f35e115]:
+          - generic [ref=f35e116]: Welcome to
+          - generic [ref=f35e117]: the lab
+        - paragraph [ref=f35e118]: Every batch, independently verified
+        - link "Shop now" [ref=f35e121] [cursor=pointer]:
+          - /url: /shop
+        - paragraph [ref=f35e122]: "*Every lot ships with a third-party certificate of analysis covering identity, purity and content."
+    - generic [ref=f35e124]:
+      - generic [ref=f35e125]:
+        - heading "Research Catalog" [level=2] [ref=f35e126]
+        - link "View all" [ref=f35e127] [cursor=pointer]:
+          - /url: /shop
+      - list [ref=f35e129]:
+        - listitem [ref=f35e130]:
+          - article [ref=f35e131]:
+            - link "Tirzepatide 40mg (R&D Only) Lab Tested" [ref=f35e132] [cursor=pointer]:
+              - /url: /product/tirzepatide
+              - img "Tirzepatide 40mg (R&D Only)" [ref=f35e133]
+              - generic [ref=f35e135]: Lab Tested
+            - link [ref=f35e136] [cursor=pointer]:
+              - /url: /product/tirzepatide
+              - heading "Tirzepatide 40mg (R&D Only)" [level=3] [ref=f35e137]
+            - paragraph [ref=f35e138]: $100
+            - button "Add Tirzepatide 40mg (R&D Only) to cart" [ref=f35e139] [cursor=pointer]: Add to cart
+        - listitem [ref=f35e140]:
+          - article [ref=f35e141]:
+            - link "Glow 70mg (R&D Only) Lab Tested" [ref=f35e142] [cursor=pointer]:
+              - /url: /product/glow-ghk-cu
+              - img "Glow 70mg (R&D Only)" [ref=f35e143]
+              - generic [ref=f35e145]: Lab Tested
+            - link [ref=f35e146] [cursor=pointer]:
+              - /url: /product/glow-ghk-cu
+              - heading "Glow 70mg (R&D Only)" [level=3] [ref=f35e147]
+            - paragraph [ref=f35e148]: $100
+            - button "Add Glow 70mg (R&D Only) to cart" [ref=f35e149] [cursor=pointer]: Add to cart
+        - listitem [ref=f35e150]:
+          - article [ref=f35e151]:
+            - link "Retatrutide 40mg (R&D Only) Cert. Pending" [ref=f35e152] [cursor=pointer]:
+              - /url: /product/retatrutide-40mg
+              - img "Retatrutide 40mg (R&D Only)" [ref=f35e153]
+              - generic [ref=f35e155]: Cert. Pending
+            - link [ref=f35e156] [cursor=pointer]:
+              - /url: /product/retatrutide-40mg
+              - heading "Retatrutide 40mg (R&D Only)" [level=3] [ref=f35e157]
+            - paragraph [ref=f35e158]: $140
+            - button "Add Retatrutide 40mg (R&D Only) to cart" [ref=f35e159] [cursor=pointer]: Add to cart
+        - listitem [ref=f35e160]:
+          - article [ref=f35e161]:
+            - link "NAD+ 1000mg (R&D Only) Cert. Pending" [ref=f35e162] [cursor=pointer]:
+              - /url: /product/nad-plus-1000mg
+              - img "NAD+ 1000mg (R&D Only)" [ref=f35e163]
+              - generic [ref=f35e165]: Cert. Pending
+            - link [ref=f35e166] [cursor=pointer]:
+              - /url: /product/nad-plus-1000mg
+              - heading "NAD+ 1000mg (R&D Only)" [level=3] [ref=f35e167]
+            - paragraph [ref=f35e168]: $120
+            - button "Add NAD+ 1000mg (R&D Only) to cart" [ref=f35e169] [cursor=pointer]: Add to cart
+    - generic [ref=f35e171]:
+      - img "Retatrutide 40mg research reference carton" [ref=f35e173]
+      - generic [ref=f35e174]:
+        - generic [ref=f35e175]: New
+        - heading "Retatrutide 40mg" [level=2] [ref=f35e176]:
+          - generic [ref=f35e177]: Retatrutide
+          - generic [ref=f35e178]: 40mg
+        - paragraph [ref=f35e179]: Higher-fill lots for identity & purity work
+        - link "Shop now" [ref=f35e180] [cursor=pointer]:
+          - /url: /product/retatrutide-40mg
+    - generic [ref=f35e182]:
+      - img "Research reference carton with matching pre-filled pen" [ref=f35e184]
+      - generic [ref=f35e185]:
+        - heading "Buy more, save more" [level=2] [ref=f35e186]:
+          - generic [ref=f35e187]: Buy more,
+          - generic [ref=f35e188]: save more
+        - paragraph [ref=f35e189]: Volume pricing on 4+ research kits
+        - link "Shop all" [ref=f35e190] [cursor=pointer]:
+          - /url: /shop
+    - generic [ref=f35e192]:
+      - generic [ref=f35e193]:
+        - heading "Research Kits" [level=2] [ref=f35e194]
+        - link "View all" [ref=f35e195] [cursor=pointer]:
+          - /url: /shop
+      - list [ref=f35e197]:
+        - listitem [ref=f35e198]:
+          - article [ref=f35e199]:
+            - link "Retatrutide 40mg (R&D Only) Cert. Pending" [ref=f35e200] [cursor=pointer]:
+              - /url: /product/retatrutide-40mg
+              - img "Retatrutide 40mg (R&D Only)" [ref=f35e201]
+              - generic [ref=f35e202]: Cert. Pending
+            - link [ref=f35e203] [cursor=pointer]:
+              - /url: /product/retatrutide-40mg
+              - heading "Retatrutide 40mg (R&D Only)" [level=3] [ref=f35e204]
+            - paragraph [ref=f35e205]: $140
+            - button "Add Retatrutide 40mg (R&D Only) to cart" [ref=f35e206] [cursor=pointer]: Add to cart
+        - listitem [ref=f35e207]:
+          - article [ref=f35e208]:
+            - link "BPC-157 & TB-500 40mg (R&D Only) Lab Tested" [ref=f35e209] [cursor=pointer]:
+              - /url: /product/bpc-157-tb-500
+              - img "BPC-157 & TB-500 40mg (R&D Only)" [ref=f35e210]
+              - generic [ref=f35e211]: Lab Tested
+            - link [ref=f35e212] [cursor=pointer]:
+              - /url: /product/bpc-157-tb-500
+              - heading "BPC-157 & TB-500 40mg (R&D Only)" [level=3] [ref=f35e213]
+            - paragraph [ref=f35e214]: $130
+            - button "Add BPC-157 & TB-500 40mg (R&D Only) to cart" [ref=f35e215] [cursor=pointer]: Add to cart
+        - listitem [ref=f35e216]:
+          - article [ref=f35e217]:
+            - link "NAD+ 1000mg (R&D Only) Cert. Pending" [ref=f35e218] [cursor=pointer]:
+              - /url: /product/nad-plus-1000mg
+              - img "NAD+ 1000mg (R&D Only)" [ref=f35e219]
+              - generic [ref=f35e220]: Cert. Pending
+            - link [ref=f35e221] [cursor=pointer]:
+              - /url: /product/nad-plus-1000mg
+              - heading "NAD+ 1000mg (R&D Only)" [level=3] [ref=f35e222]
+            - paragraph [ref=f35e223]: $120
+            - button "Add NAD+ 1000mg (R&D Only) to cart" [ref=f35e224] [cursor=pointer]: Add to cart
+        - listitem [ref=f35e225]:
+          - article [ref=f35e226]:
+            - link "Retatrutide 20mg (R&D Only) Lab Tested" [ref=f35e227] [cursor=pointer]:
+              - /url: /product/retatrutide
+              - img "Retatrutide 20mg (R&D Only)" [ref=f35e228]
+              - generic [ref=f35e229]: Lab Tested
+            - link [ref=f35e230] [cursor=pointer]:
+              - /url: /product/retatrutide
+              - heading "Retatrutide 20mg (R&D Only)" [level=3] [ref=f35e231]
+            - paragraph [ref=f35e232]: $100
+            - button "Add Retatrutide 20mg (R&D Only) to cart" [ref=f35e233] [cursor=pointer]: Add to cart
+    - generic [ref=f35e235]:
+      - link "Metabolic Research" [ref=f35e236] [cursor=pointer]:
+        - /url: /product/retatrutide
+      - link "Repair & Recovery" [ref=f35e239] [cursor=pointer]:
+        - /url: /product/bpc-157-tb-500
+      - link "Longevity" [ref=f35e242] [cursor=pointer]:
+        - /url: /product/nad-plus-1000mg
+      - link "Cellular Research" [ref=f35e245] [cursor=pointer]:
+        - /url: /product/glow-ghk-cu
+    - generic [ref=f35e249]:
+      - generic [ref=f35e250]:
+        - generic [ref=f35e251]: Our scientists
+        - heading "Meet the people behind the science" [level=2] [ref=f35e253]
+        - paragraph [ref=f35e255]: Our chemists and quality specialists oversee synthesis, analytical testing, and compliance — so every reference compound that leaves the lab meets research-grade standards for identity and purity.
+        - link "More of the team" [ref=f35e257] [cursor=pointer]:
+          - /url: /about
+      - generic [ref=f35e258]:
+        - article [ref=f35e259]:
+          - paragraph [ref=f35e261]: Head of Peptide Synthesis
+          - heading "Dr. Elena Voss" [level=3] [ref=f35e262]
+        - article [ref=f35e263]:
+          - paragraph [ref=f35e265]: Analytical Chemistry Lead
+          - heading "Dr. Marcus Hale" [level=3] [ref=f35e266]
+        - article [ref=f35e267]:
+          - paragraph [ref=f35e269]: Quality & Compliance Director
+          - heading "Dr. Priya Nair" [level=3] [ref=f35e270]
+        - article [ref=f35e271]:
+          - paragraph [ref=f35e273]: Research Operations Lead
+          - heading "Dr. Adrian Kovač" [level=3] [ref=f35e274]
+    - generic [ref=f35e276]:
+      - heading "Welcome to LUXEN" [level=2] [ref=f35e277]
+      - paragraph [ref=f35e278]: Meet LUXEN. Research reference peptides, characterised by accredited third-party laboratories and documented to the milligram. Every lot ships with a certificate of analysis covering identity, purity and content — so your analytical work stays reproducible.
+      - link "About LUXEN" [ref=f35e279] [cursor=pointer]:
+        - /url: /about
+    - generic [ref=f35e281]:
+      - heading "Sign up for lab updates & new lots" [level=2] [ref=f35e282]
+      - paragraph [ref=f35e283]: Be the first to hear about new batches, published certificates of analysis and restocks when you join our mailing list.
+      - generic [ref=f35e284]:
+        - generic [ref=f35e285]: Email
+        - textbox "Email" [ref=f35e286]
+        - button "Subscribe" [ref=f35e287]
+  - contentinfo [ref=f35e290]:
+    - generic [ref=f35e292]:
+      - generic [ref=f35e293]:
+        - paragraph [ref=f35e296]: ≥99% Purity
+        - paragraph [ref=f35e297]: HPLC verified, every batch
+      - generic [ref=f35e298]:
+        - paragraph [ref=f35e304]: Free Delivery
+        - paragraph [ref=f35e305]: On orders over $250
+      - generic [ref=f35e306]:
+        - paragraph [ref=f35e310]: Third-Party Tested
+        - paragraph [ref=f35e311]: Certificate with every lot
+    - generic [ref=f35e313]:
+      - generic [ref=f35e314]:
+        - generic [ref=f35e315]:
+          - heading "Customer Care" [level=2] [ref=f35e316]
+          - list [ref=f35e317]:
+            - listitem [ref=f35e318]:
+              - link "Track Order" [ref=f35e319] [cursor=pointer]:
+                - /url: /track-order
+            - listitem [ref=f35e320]:
+              - link "Shipping Policy" [ref=f35e321] [cursor=pointer]:
+                - /url: /shipping-policy
+            - listitem [ref=f35e322]:
+              - link "Refund Policy" [ref=f35e323] [cursor=pointer]:
+                - /url: /refund-policy
+            - listitem [ref=f35e324]:
+              - link "Contact Us" [ref=f35e325] [cursor=pointer]:
+                - /url: /about#contact
+        - generic [ref=f35e326]:
+          - heading "Company Info" [level=2] [ref=f35e327]
+          - list [ref=f35e328]:
+            - listitem [ref=f35e329]:
+              - link "About Us" [ref=f35e330] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f35e331]:
+              - link "Privacy Policy" [ref=f35e332] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=f35e333]:
+              - link "Terms of Service" [ref=f35e334] [cursor=pointer]:
+                - /url: /terms-of-service
+            - listitem [ref=f35e335]:
+              - link "Press Release" [ref=f35e336] [cursor=pointer]:
+                - /url: /press-release
+        - generic [ref=f35e337]:
+          - heading "More Info" [level=2] [ref=f35e338]
+          - list [ref=f35e339]:
+            - listitem [ref=f35e340]:
+              - link "Our Process" [ref=f35e341] [cursor=pointer]:
+                - /url: /about#process
+            - listitem [ref=f35e342]:
+              - link "Research Team" [ref=f35e343] [cursor=pointer]:
+                - /url: /about#team
+            - listitem [ref=f35e344]:
+              - link "Reviews" [ref=f35e345] [cursor=pointer]:
+                - /url: /about#testimonials
+        - generic [ref=f35e346]:
+          - heading "Shop" [level=2] [ref=f35e347]
+          - list [ref=f35e348]:
+            - listitem [ref=f35e349]:
+              - link "Shop All" [ref=f35e350] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=f35e351]:
+              - link "Retatrutide" [ref=f35e352] [cursor=pointer]:
+                - /url: /product/retatrutide
+            - listitem [ref=f35e353]:
+              - link "Tirzepatide" [ref=f35e354] [cursor=pointer]:
+                - /url: /product/tirzepatide
+            - listitem [ref=f35e355]:
+              - link "BPC-157 & TB-500" [ref=f35e356] [cursor=pointer]:
+                - /url: /product/bpc-157-tb-500
+            - listitem [ref=f35e357]:
+              - link "NAD+" [ref=f35e358] [cursor=pointer]:
+                - /url: /product/nad-plus-1000mg
+      - generic [ref=f35e360]:
+        - paragraph [ref=f35e361]: "Lab updates from LUXEN: new lots, certificates and restocks"
+        - generic [ref=f35e362]:
+          - generic [ref=f35e363]: Email
+          - textbox "Email" [ref=f35e364]
+          - button "Subscribe" [ref=f35e365]
+        - generic [ref=f35e368] [cursor=pointer]:
+          - checkbox "I agree to receive occasional updates from LUXEN." [checked] [ref=f35e369]
+          - text: I agree to receive occasional updates from LUXEN.
+      - paragraph [ref=f35e370]: Independently tested research reference material, supplied for laboratory and analytical use only. Not intended to diagnose, treat, cure, or prevent any disease. Not for human or veterinary use.
+    - generic [ref=f35e372]:
+      - paragraph [ref=f35e373]: © 2026 LUXEN
+      - generic [ref=f35e374]:
+        - link "X" [ref=f35e375] [cursor=pointer]:
+          - /url: https://twitter.com/luxenlabs
+        - link "LinkedIn" [ref=f35e378] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/luxen
+        - link "Facebook" [ref=f35e381] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=f35e389] [cursor=pointer]

@@ -10,17 +10,22 @@ import { EASE, inView, stagger } from "@/lib/motion";
 type Step = (typeof PROCESS)[number];
 
 const cardClass =
-  "relative flex min-h-[200px] w-full flex-col rounded-[24px] bg-white px-6 py-8 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.35)] ring-1 ring-black/5 sm:px-7";
+  "relative flex min-h-[200px] w-full flex-col rounded-[12px] bg-yellow px-6 py-8 text-left sm:px-7";
 
 function CardBody({ p }: { p: Step }) {
   return (
     <>
-      <span className="pointer-events-none absolute right-6 top-4 text-7xl font-extrabold text-black/[0.06]">
+      <span
+        aria-hidden
+        className="pointer-events-none absolute right-5 top-3 text-7xl font-bold leading-none text-pink/15"
+      >
         {p.num}
       </span>
-      <span className="text-sm font-medium text-muted">{p.step}</span>
-      <h3 className="mt-1 text-xl font-bold text-ink">{p.title}</h3>
-      <p className="mt-3 text-sm leading-relaxed text-muted">{p.desc}</p>
+      <span className="text-[13px] font-bold uppercase tracking-[1px] text-pink">
+        {p.step}
+      </span>
+      <h3 className="by-card-title mt-1">{p.title}</h3>
+      <p className="mt-3 text-sm leading-relaxed tracking-[0.6px] text-pink">{p.desc}</p>
     </>
   );
 }
@@ -28,17 +33,17 @@ function CardBody({ p }: { p: Step }) {
 function Header() {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={inView}
-      transition={{ duration: 0.7, ease: EASE }}
+      transition={{ duration: 0.6, ease: EASE }}
     >
       <Eyebrow light center>
-        OUR PROCESS
+        Our process
       </Eyebrow>
-      <h2 className="h-display mt-4 text-white text-[clamp(2rem,4.6vw,3.4rem)]">
-        From Order to Lab
-        <br /> Step by Step
+      <h2 className="by-h-band mt-4 text-yellow">
+        From order to lab
+        <br /> step by step
       </h2>
     </motion.div>
   );
@@ -72,16 +77,13 @@ function StaticCard({ p }: { p: Step }) {
   );
 }
 
+/* Flat blue field with the lab photo held well back — the reference uses
+   solid colour bands, never textures or glows. */
 function Backdrop() {
   return (
-    <>
-      <div className="absolute inset-0 opacity-40 mix-blend-screen">
-        <Image src={IMG.process} alt="" fill className="object-cover" sizes="100vw" />
-      </div>
-      <div className="absolute inset-0 blueprint opacity-50" />
-      <div className="absolute left-1/2 top-1/2 h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand/25 blur-[120px]" />
-      <div className="checker absolute inset-x-0 bottom-0" />
-    </>
+    <div aria-hidden className="absolute inset-0 opacity-20 mix-blend-luminosity">
+      <Image src={IMG.process} alt="" fill className="object-cover" sizes="100vw" />
+    </div>
   );
 }
 
@@ -93,12 +95,12 @@ function DesktopProcess() {
 
   return (
     // Tall track = scroll room to reveal all three cards before release.
-    <section ref={ref} className="relative h-[320vh] bg-navy">
-      <div className="sticky top-0 h-screen overflow-hidden bg-navy">
+    <section ref={ref} className="relative h-[320vh] bg-blue">
+      <div className="sticky top-0 h-screen overflow-hidden bg-blue">
         <Backdrop />
-        <div className="container-luxen relative flex h-full flex-col items-center justify-center text-center">
+        <div className="by-page relative flex h-full flex-col items-center justify-center text-center">
           <Header />
-          <div className="mt-14 grid w-full max-w-5xl gap-6 lg:grid-cols-3">
+          <div className="mt-10 grid w-full max-w-5xl gap-2 lg:grid-cols-3">
             {PROCESS.map((p, i) => (
               <ProcessCard key={p.num} p={p} i={i} progress={smoothProgress} />
             ))}
@@ -112,16 +114,16 @@ function DesktopProcess() {
 // Mobile / tablet: plain stacked section that can never clip.
 function MobileProcess() {
   return (
-    <section className="relative overflow-hidden bg-navy">
+    <section className="relative overflow-hidden bg-blue">
       <Backdrop />
-      <div className="container-luxen relative flex flex-col items-center py-20 text-center sm:py-24">
+      <div className="by-page relative flex flex-col items-center py-20 text-center sm:py-24">
         <Header />
         <motion.div
           variants={stagger(0.14)}
           initial="hidden"
           whileInView="show"
           viewport={inView}
-          className="mt-12 grid w-full max-w-xl gap-6 sm:grid-cols-2"
+          className="mt-10 grid w-full max-w-xl gap-2 sm:grid-cols-2"
         >
           {PROCESS.map((p) => (
             <StaticCard key={p.num} p={p} />

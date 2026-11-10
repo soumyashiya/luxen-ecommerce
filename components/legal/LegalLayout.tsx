@@ -21,17 +21,17 @@ export default function LegalLayout({
     <>
       <SiteHeader />
 
-      <main id="main" className="pb-24 pt-28">
-        <div className="container-luxen max-w-3xl">
+      <main id="main" className="bg-pale pb-20 pt-10">
+        <div className="by-page max-w-3xl">
           <nav aria-label="Breadcrumb">
-            <ol className="flex items-center gap-2 text-sm font-semibold text-muted">
+            <ol className="flex items-center gap-2 text-sm font-semibold text-pink/75">
               <li>
-                <Link href="/" className="transition-colors hover:text-brand">
+                <Link href="/" className="transition-colors hover:text-pink">
                   Home
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li aria-current="page" className="truncate text-ink">
+              <li aria-current="page" className="truncate text-pink">
                 {title}
               </li>
             </ol>
@@ -39,11 +39,11 @@ export default function LegalLayout({
 
           <div className="mt-8">
             <Eyebrow>{eyebrow}</Eyebrow>
-            <h1 className="h-display mt-4 text-[clamp(2rem,4vw,3.2rem)]">{title}</h1>
-            {updated && <p className="mt-3 text-sm text-muted">Last updated: {updated}</p>}
+            <h1 className="by-h-product mt-4">{title}</h1>
+            {updated && <p className="mt-3 text-sm text-pink/75">Last updated: {updated}</p>}
           </div>
 
-          <div className="mt-10 space-y-10 text-[15px] leading-relaxed text-muted">
+          <div className="mt-10 space-y-10 text-[15px] leading-relaxed text-pink/75">
             {children}
           </div>
         </div>
@@ -57,8 +57,8 @@ export default function LegalLayout({
 export function LegalSection({ title, children }: { title: string; children: ReactNode }) {
   return (
     <section>
-      <h2 className="text-xl font-bold text-ink">{title}</h2>
-      <div className="mt-3 space-y-3 [&_ul]:list-disc [&_ul]:space-y-1.5 [&_ul]:pl-5 [&_strong]:text-ink">
+      <h2 className="text-xl font-bold text-pink">{title}</h2>
+      <div className="mt-3 space-y-3 [&_ul]:list-disc [&_ul]:space-y-1.5 [&_ul]:pl-5 [&_strong]:text-pink">
         {children}
       </div>
     </section>

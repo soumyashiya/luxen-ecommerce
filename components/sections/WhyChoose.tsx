@@ -6,7 +6,7 @@ import Reveal from "@/components/ui/Reveal";
 import Eyebrow from "@/components/ui/Eyebrow";
 import SplitReveal from "@/components/ui/SplitReveal";
 import { WHY } from "@/lib/data";
-import { blurUp, inView, stagger } from "@/lib/motion";
+import { fadeUp, inView, stagger } from "@/lib/motion";
 
 const ICONS: Record<string, LucideIcon> = {
   flask: FlaskConical,
@@ -17,46 +17,52 @@ const ICONS: Record<string, LucideIcon> = {
 
 export default function WhyChoose() {
   return (
-    <section className="bg-white py-24">
-      <div className="container-luxen">
-        <div className="grid items-end gap-8 lg:grid-cols-[1.5fr_1fr]">
+    <section className="bg-pale py-16 sm:py-20">
+      <div className="by-page">
+        <div className="grid items-end gap-6 lg:grid-cols-[1.5fr_1fr]">
           <div>
             <Reveal>
-              <Eyebrow>WHY CHOOSE US</Eyebrow>
+              <Eyebrow>Why choose us</Eyebrow>
             </Reveal>
-            <SplitReveal as="h2" className="h-display mt-5 text-[clamp(2.2rem,4.6vw,3.5rem)]">
+            <SplitReveal as="h2" className="by-h-section mt-4">
               Your trusted partner in
               <br className="hidden sm:block" /> research reference peptides
             </SplitReveal>
           </div>
           <Reveal>
-            <p className="text-[15px] leading-relaxed text-muted lg:pb-3">
+            <p className="text-[15px] leading-relaxed tracking-[0.6px] text-pink lg:pb-2">
               Independently tested and documented to the milligram — built for laboratories
               that need reproducible reference material for analytical work.
             </p>
           </Reveal>
         </div>
 
+        {/* Four yellow tiles on an 8px gutter, matching the reference's grid. */}
         <motion.div
-          variants={stagger(0.12)}
+          variants={stagger(0.08)}
           initial="hidden"
           whileInView="show"
           viewport={inView}
-          className="mt-12 grid grid-cols-1 overflow-hidden rounded-[24px] border border-black/10 sm:grid-cols-2 lg:grid-cols-4"
+          className="mt-10 grid grid-cols-1 gap-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-2"
         >
           {WHY.map((f) => {
             const Icon = ICONS[f.icon] ?? FlaskConical;
             return (
               <motion.div
                 key={f.title}
-                variants={blurUp}
-                className="group border-black/10 p-8 transition-colors hover:bg-surface/60 sm:[&:nth-child(odd)]:border-r lg:border-r lg:last:border-r-0 lg:[&:nth-child(odd)]:border-r [&:not(:last-child)]:border-b sm:[&:nth-child(-n+2)]:border-b sm:[&:nth-child(n+3)]:border-b-0 lg:border-b-0"
+                variants={fadeUp}
+                className="group rounded-[12px] bg-yellow p-7"
               >
-                <span className="grid h-16 w-16 place-items-center rounded-2xl text-brand transition-transform duration-500 group-hover:-translate-y-1">
-                  <Icon size={40} strokeWidth={1.5} />
-                </span>
-                <h3 className="mt-12 text-xl font-bold text-ink">{f.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">{f.desc}</p>
+                <Icon
+                  size={40}
+                  strokeWidth={1.6}
+                  aria-hidden
+                  className="text-pink transition-transform duration-[var(--dur-long)] ease-[var(--ease)] group-hover:-translate-y-1"
+                />
+                <h3 className="by-card-title mt-7">{f.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed tracking-[0.6px] text-pink">
+                  {f.desc}
+                </p>
               </motion.div>
             );
           })}

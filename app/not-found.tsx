@@ -16,17 +16,17 @@ export default function NotFound() {
       <SiteHeader />
       <main
         id="main"
-        className="container-luxen flex min-h-[70vh] flex-col items-center justify-center gap-5 text-center"
+        className="by-page flex min-h-[70vh] flex-col items-center justify-center gap-5 text-center"
       >
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-brand">404</p>
-        <h1 className="h-display text-[clamp(2rem,5vw,3.5rem)]">Page not found</h1>
-        <p className="max-w-md text-muted">
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-pink">404</p>
+        <h1 className="by-h-product">Page not found</h1>
+        <p className="max-w-md text-pink/75">
           The page you were looking for doesn&apos;t exist or has moved. Head back to the catalog
           to continue browsing.
         </p>
         <Link
-          href="/#services"
-          className="mt-2 rounded-xl bg-brand px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-brand-dark"
+          href="/shop"
+          className="by-btn mt-2"
         >
           Browse Catalog
         </Link>

@@ -8,6 +8,9 @@
 /* All imagery is saved locally under /public/images and themed to the
    research-peptide / laboratory vertical. */
 export const IMG = {
+  /* 2086×754 (~2.77:1) banner: carton and pen on the left, clean teal field
+     on the right for the hero lockup. */
+  heroBanner: "/images/hero2 (1).png",
   heroPeople: "/images/hero-webp.webp",
   discover: "/images/about-webp.webp",
   alex: "/images/scientists.webp",
@@ -44,6 +47,58 @@ export const NAV_LINKS = [
   { label: "Contact", href: "#contact" },
 ];
 
+/* Rotating announcement bar messages. */
+export const ANNOUNCEMENTS = [
+  "EVERY BATCH INDEPENDENTLY LAB TESTED",
+  "FREE TRACKED SHIPPING ON ORDERS OVER $250",
+  "FOR LABORATORY RESEARCH USE ONLY",
+];
+
+/* Utility links sitting to the left of the logo in the main header bar. */
+export const UTILITY_NAV = [
+  { label: "Track Order", href: "/track-order" },
+  { label: "Certificates", href: "/about" },
+];
+
+export type NavItem = {
+  label: string;
+  href: string;
+  /* Rendered as a dropdown panel when present. */
+  children?: { label: string; href: string }[];
+};
+
+/* Primary navigation row. Mirrors the reference's structure: a handful of
+   top-level entries, two of which open a panel of sub-links. */
+export const MAIN_NAV: NavItem[] = [
+  { label: "New In", href: "/shop" },
+  {
+    label: "Catalog",
+    href: "/shop",
+    children: [
+      { label: "BPC-157 & TB-500", href: "/product/bpc-157-tb-500" },
+      { label: "Retatrutide 20mg", href: "/product/retatrutide" },
+      { label: "Retatrutide 40mg", href: "/product/retatrutide-40mg" },
+      { label: "Tirzepatide 40mg", href: "/product/tirzepatide" },
+      { label: "Glow 70mg", href: "/product/glow-ghk-cu" },
+      { label: "NAD+ 1000mg", href: "/product/nad-plus-1000mg" },
+      { label: "Shop All", href: "/shop" },
+    ],
+  },
+  {
+    label: "Verification",
+    href: "/about",
+    children: [
+      { label: "Third-Party Testing", href: "/about" },
+      { label: "Our Process", href: "/about#process" },
+      { label: "Batch Traceability", href: "/about#stats" },
+      { label: "Research Team", href: "/about#team" },
+    ],
+  },
+  { label: "About", href: "/about" },
+  { label: "Reviews", href: "/about#testimonials" },
+  { label: "Shop All", href: "/shop" },
+];
+
 export const BRAND_LOGOS = [
   "BioAssay",
   "PureChem",
@@ -76,6 +131,13 @@ export type Product = {
   desc: string;
   long: string;
   img: string;
+  /* Transparent-background cutout used on cards and banners. The reference
+     sits products directly on the flat section colour, which only works with
+     a cutout — `img` stays the photographic hero used by the PDP gallery. */
+  card?: string;
+  /* Styled packshot (carton + pen on a coloured ground) that cross-fades in
+     when a featured card is hovered. */
+  hover?: string;
   gallery?: string[];
   icon: string;
   price: number;
@@ -94,15 +156,16 @@ export type Product = {
 export const SERVICES: Product[] = [
   {
     slug: "bpc-157-tb-500",
+    card: "/images/products/ALLUVI Carton and Matching Pen-9.png",
+    hover: "/images/hover/ALLUVI BPC157 & TB500 packshot-8.png",
     title: "BPC-157 & TB-500 40mg (R&D Only)",
     desc: "Research reference material combining a pentadecapeptide (BPC-157) and a synthetic thymosin beta-4 fragment (TB-500), supplied in a pre-filled research device and independently characterized by Janoshik Analytical.",
     long: "A 40mg BPC-157 & TB-500 research reference material supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.",
-    img: "/images/bpc/bpcfrontnew.jpg",
+    img: "/images/hover/research (6).png",
     gallery: [
-      "/images/bpc/bpcfrontnew.jpg",
-      "/images/bpc/bpcpen.jpg",
-      "/images/bpc/bpcopen.jpg",
-      "/images/bpc/uvbpc.jpg",
+      "/images/hover/research (6).png",
+      "/images/hover/ALLUVI BPC157 & TB500 packshot-8.png",
+      "/images/products/ALLUVI Carton and Matching Pen-9.png",
     ],
     icon: "flask",
     price: 130,
@@ -138,15 +201,18 @@ export const SERVICES: Product[] = [
   },
   {
     slug: "retatrutide",
+    /* No carton + pen cutout exists for the 20mg lot, so this is the carton
+       alone, trimmed and centred on a 4:3 canvas to match the others' width. */
+    card: "/images/products/reta20-card.png",
+    hover: "/images/hover/Alluvi Retatrutide 20mg Packshot-4.png",
     title: "Retatrutide 20mg (R&D Only)",
     desc: "Research reference peptide supplied in a pre-filled analytical device. Batch-characterized for identity, purity, and content by Janoshik Analytical.",
     long: "A 20mg Retatrutide research reference material supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.",
-    img: "/images/retatwenty/retafront.jpeg",
+    img: "/images/hover/research (7).png",
     gallery: [
-      "/images/retatwenty/retafront.jpeg",
-      "/images/retatwenty/Artboard4copy.jpg",
-      "/images/retatwenty/Artboard4copy3.jpg",
-      "/images/retatwenty/retatwentyuv.jpg",
+      "/images/hover/research (7).png",
+      "/images/hover/Alluvi Retatrutide 20mg Packshot-4.png",
+      "/images/promo/reta-box.png",
     ],
     icon: "dna",
     price: 100,
@@ -182,15 +248,16 @@ export const SERVICES: Product[] = [
   },
   {
     slug: "tirzepatide",
+    card: "/images/products/Alluvi Tirzepatide Carton and Pen-6.png",
+    hover: "/images/hover/research (8).png",
     title: "Tirzepatide 40mg (R&D Only)",
     desc: "Research reference peptide supplied in a pre-filled analytical device for in-vitro laboratory characterization. Each lot ships with a Janoshik certificate of analysis.",
     long: "A 40mg Tirzepatide research reference material supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.",
-    img: "/images/tirzepetide/Artboard2.jpg",
+    img: "/images/hover/research (8).png",
     gallery: [
-      "/images/tirzepetide/Artboard2.jpg",
-      "/images/tirzepetide/Artboard2copy.jpg",
-      "/images/tirzepetide/trizyopen.jpg",
-      "/images/tirzepetide/trizyuv.jpg",
+      "/images/hover/research (8).png",
+      "/images/hover/Alluvi tirzepatide carton and pen-6.png",
+      "/images/promo/tirz-box.png",
     ],
     icon: "microscope",
     price: 100,
@@ -227,15 +294,15 @@ export const SERVICES: Product[] = [
   },
   {
     slug: "glow-ghk-cu",
+    card: "/images/products/ALLUVI carton and pen, isolated-8.png",
+    hover: "/images/hover/Alluvi GLOW carton and blue pen-7.png",
     title: "Glow 70mg (R&D Only)",
     desc: "Copper-binding tripeptide (GHK-Cu) research reference material supplied for laboratory analytical characterization. Precisely measured and independently verified for identity and purity.",
     long: "A 70mg Glow research reference material supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.",
-    img: "/images/glow/glowfrontnew.jpg",
+    img: "/images/hover/Alluvi GLOW carton and blue pen-7.png",
     gallery: [
-      "/images/glow/glowfrontnew.jpg",
-      "/images/glow/glowpen.jpg",
-      "/images/glow/glowopen.jpg",
-      "/images/glow/glowuv.jpg",
+      "/images/hover/Alluvi GLOW carton and blue pen-7.png",
+      "/images/products/ALLUVI carton and pen, isolated-8.png",
     ],
     icon: "droplet",
     price: 100,
@@ -272,15 +339,15 @@ export const SERVICES: Product[] = [
   },
   {
     slug: "retatrutide-40mg",
+    card: "/images/products/ALLUVI carton and pen with transparent background-5.png",
+    hover: "/images/hover/Alluvi 40mg pack with turquoise pen-5.png",
     title: "Retatrutide 40mg (R&D Only)",
     desc: "Higher-fill Retatrutide research reference material supplied in a pre-filled research device for laboratories that need a larger-volume batch for identity and purity work.",
     long: "A 40mg Retatrutide research reference material supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.",
-    img: "/images/retafourty/retafrontnew.jpg",
+    img: "/images/hover/Alluvi 40mg pack with turquoise pen-5.png",
     gallery: [
-      "/images/retafourty/retafrontnew.jpg",
-      "/images/retafourty/retpen.jpg",
-      "/images/retafourty/retaopen.jpg",
-      "/images/retafourty/retauv.jpg",
+      "/images/hover/Alluvi 40mg pack with turquoise pen-5.png",
+      "/images/products/ALLUVI carton and pen with transparent background-5.png",
     ],
     icon: "test-tube",
     price: 140,
@@ -302,15 +369,15 @@ export const SERVICES: Product[] = [
   },
   {
     slug: "nad-plus-1000mg",
+    card: "/images/promo/nad-card.png",
+    hover: "/images/hover/ALLUVI NAD+ Carton With Matching Pen-9.png",
     title: "NAD+ 1000mg (R&D Only)",
     desc: "Nicotinamide adenine dinucleotide (NAD+) research reference material supplied in pre-filled analytical devices for in-vitro laboratory characterization.",
     long: "A 1000mg NAD+ research reference material supplied across pre-filled research devices, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.",
-    img: "/images/nad/nadfront.jpg",
+    img: "/images/hover/ALLUVI NAD+ Carton With Matching Pen-9.png",
     gallery: [
-      "/images/nad/nadfront.jpg",
-      "/images/nad/pennad.jpg",
-      "/images/nad/opennad.jpg",
-      "/images/nad/uvnad.jpg",
+      "/images/hover/ALLUVI NAD+ Carton With Matching Pen-9.png",
+      "/images/promo/nad-card.png",
     ],
     icon: "atom",
     price: 120,
@@ -324,6 +391,68 @@ export const SERVICES: Product[] = [
     packageContents: [
       "Each NAD+ 1000mg Research kit includes:",
       "Pre-filled Research pens (100mg NAD+ per pen)",
+      "Research information sheet",
+    ],
+    storage: [
+      "Store refrigerated (2–8°C). Do not freeze.",
+      "Supplied in fixed-volume sealed format for laboratory analysis.",
+    ],
+  },
+  /* Price is a placeholder pending confirmation; no Janoshik report yet, so
+     the card shows "Cert. Pending". */
+  {
+    slug: "tesamorelin-20mg",
+    card: "/images/products/Alluvi Tesamorelin carton and pen-7.png",
+    hover: "/images/hover/Alluvi Tesamorelin carton and pen-2.png",
+    title: "Tesamorelin 20mg (R&D Only)",
+    desc: "Synthetic growth-hormone-releasing-hormone (GHRH) analogue research reference material supplied in a pre-filled research device for in-vitro laboratory characterization.",
+    long: "A 20mg Tesamorelin research reference material supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.",
+    img: "/images/hover/Alluvi Tesamorelin carton and pen-2.png",
+    gallery: [
+      "/images/hover/Alluvi Tesamorelin carton and pen-2.png",
+      "/images/products/Alluvi Tesamorelin carton and pen-7.png",
+    ],
+    icon: "flask",
+    price: 100,
+    specs: [
+      { label: "Quantity", value: "20 mg" },
+      { label: "Purity", value: "≥99% (HPLC)" },
+      { label: "Form", value: "Pre-filled research device" },
+      { label: "Testing", value: "Pending certificate" },
+    ],
+    packageContents: [
+      "Each Tesamorelin 20mg Research kit includes:",
+      "Pre-filled Research pen (20mg Tesamorelin, 10 doses of 2mg)",
+      "Research information sheet",
+    ],
+    storage: [
+      "Store refrigerated (2–8°C). Do not freeze.",
+      "Supplied in fixed-volume sealed format for laboratory analysis.",
+    ],
+  },
+  {
+    slug: "cjc-1295-10mg",
+    card: "/images/products/ALLUVI carton and pen with soft shadows-4.png",
+    hover: "/images/hover/Alluvi carton and pen on lemon yellow-1.png",
+    title: "CJC-1295 10mg (R&D Only)",
+    desc: "CJC-1295 (without DAC) research reference peptide supplied in a pre-filled research device for in-vitro laboratory characterization.",
+    long: "A 10mg CJC-1295 (without DAC) research reference material supplied in a pre-filled research device, provided exclusively for controlled laboratory R&D applications. Delivered in sealed format to support compound identity, purity, and stability analysis. For laboratory and analytical research use only — not for human or veterinary use.",
+    img: "/images/hover/Alluvi carton and pen on lemon yellow-1.png",
+    gallery: [
+      "/images/hover/Alluvi carton and pen on lemon yellow-1.png",
+      "/images/products/ALLUVI carton and pen with soft shadows-4.png",
+    ],
+    icon: "atom",
+    price: 100,
+    specs: [
+      { label: "Quantity", value: "10 mg" },
+      { label: "Purity", value: "≥99% (HPLC)" },
+      { label: "Form", value: "Pre-filled research device" },
+      { label: "Testing", value: "Pending certificate" },
+    ],
+    packageContents: [
+      "Each CJC-1295 10mg Research kit includes:",
+      "Pre-filled Research pen (10mg CJC-1295 without DAC, 25 doses of 400mcg)",
       "Research information sheet",
     ],
     storage: [

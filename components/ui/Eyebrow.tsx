@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
-import { LogoMark } from "./Logo";
 
+/* Small uppercase label. The reference sets these in blue at 15px/500
+   with 1px tracking, with no icon or rule alongside. */
 export default function Eyebrow({
   children,
   className,
@@ -16,12 +17,11 @@ export default function Eyebrow({
     <span
       className={cn(
         "eyebrow",
-        light ? "text-white" : "text-ink",
+        light ? "text-yellow" : "text-blue",
         center && "justify-center",
         className,
       )}
     >
-      <LogoMark className="h-4 w-5" color="var(--brand)" />
       {children}
     </span>
   );

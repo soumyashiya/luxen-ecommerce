@@ -7,6 +7,7 @@ import { Star } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import SplitReveal from "@/components/ui/SplitReveal";
 import { STATS, VALUE_CHIPS, IMG } from "@/lib/data";
+import { SITE_NAME } from "@/lib/seo";
 import { EASE, inView } from "@/lib/motion";
 
 function Counter({ to, suffix = "%" }: { to: number; suffix?: string }) {
@@ -39,24 +40,34 @@ function Counter({ to, suffix = "%" }: { to: number; suffix?: string }) {
 
 export default function Stats() {
   return (
-    <section className="bg-surface py-24">
-      <div className="container-luxen">
+    <section id="stats" className="bg-pale py-16 sm:py-20">
+      <div className="by-page">
         <Reveal className="flex flex-col items-center text-center">
-          <div className="flex items-center gap-1 rounded bg-[#00b67a] px-1.5 py-1">
+          <div className="flex items-center gap-1 rounded-[4px] bg-pink px-2 py-1.5">
             {Array.from({ length: 5 }).map((_, i) => (
-              <Star key={i} size={14} className="text-white" fill="currentColor" strokeWidth={0} />
+              <Star
+                key={i}
+                size={14}
+                className="text-yellow"
+                fill="currentColor"
+                strokeWidth={0}
+                aria-hidden
+              />
             ))}
           </div>
-          <span className="mt-2 text-xs font-semibold text-muted">4.5/5 (1,259)</span>
-          <SplitReveal as="h2" className="h-display mt-5 max-w-3xl text-[clamp(2.2rem,4.6vw,3.4rem)]">
-            LUXEN supplies research-grade reference peptides for reproducible laboratory analysis.
+          <span className="mt-2 text-xs font-bold uppercase tracking-[1px] text-pink">
+            4.5/5 (1,259)
+          </span>
+          <SplitReveal as="h2" className="by-h-band mt-4 max-w-3xl">
+            {SITE_NAME} supplies research-grade reference peptides for reproducible
+            laboratory analysis
           </SplitReveal>
-          <p className="mt-4 text-[15px] text-muted">
+          <p className="mt-4 text-[15px] tracking-[0.6px] text-pink">
             Independently verified reference material for laboratory research use only.
           </p>
         </Reveal>
 
-        <div className="mt-14 grid auto-rows-[300px] grid-cols-1 gap-5 md:grid-cols-5">
+        <div className="mt-10 grid auto-rows-[300px] grid-cols-1 gap-2 md:grid-cols-5">
           {/* Top-left image */}
           <BentoImage
             className="md:col-span-3"
@@ -72,14 +83,14 @@ export default function Stats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={inView}
             transition={{ duration: 0.7, ease: EASE }}
-            className="relative overflow-hidden rounded-[24px] bg-navy p-8 text-white md:col-span-2"
+            className="relative overflow-hidden rounded-[12px] bg-blue p-8 text-yellow md:col-span-2"
           >
-            <div className="absolute -right-6 top-10 h-40 w-40 rounded-full border-[18px] border-white/5" />
-            <div className="text-6xl font-extrabold">
+            <div className="absolute -right-6 top-10 h-40 w-40 rounded-full border-[18px] border-yellow/10" />
+            <div className="text-6xl font-bold">
               <Counter to={STATS.treatments.pct} />
             </div>
-            <div className="mt-1 text-lg font-semibold">{STATS.treatments.label}</div>
-            <p className="mt-6 text-sm leading-relaxed text-white/70">{STATS.treatments.desc}</p>
+            <div className="mt-1 text-lg font-bold uppercase tracking-[1px]">{STATS.treatments.label}</div>
+            <p className="mt-6 text-sm leading-relaxed tracking-[0.6px] text-yellow/80">{STATS.treatments.desc}</p>
           </motion.div>
 
           {/* Bottom-left blue chips */}
@@ -88,7 +99,7 @@ export default function Stats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={inView}
             transition={{ duration: 0.7, ease: EASE }}
-            className="relative overflow-hidden rounded-[24px] bg-brand p-5 md:col-span-2"
+            className="relative overflow-hidden rounded-[12px] bg-pink p-5 md:col-span-2"
           >
             <ShuffleChips />
           </motion.div>
@@ -166,7 +177,7 @@ function ShuffleChips() {
           }}
           animate={{ top: `${slots[i].top}%`, left: `${slots[i].left}%` }}
           transition={{ type: "spring", stiffness: 130, damping: 18 }}
-          className="absolute whitespace-nowrap rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur"
+          className="absolute whitespace-nowrap rounded-full border border-yellow/40 bg-yellow/15 px-3 py-1 text-xs font-bold uppercase tracking-[1px] text-yellow backdrop-blur"
         >
           {c}
         </motion.span>
@@ -196,20 +207,20 @@ function BentoImage({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={inView}
       transition={{ duration: 0.7, ease: EASE }}
-      className={`relative overflow-hidden rounded-[24px] ${className ?? ""}`}
+      className={`relative overflow-hidden rounded-[12px] ${className ?? ""}`}
     >
       <Image src={img} alt={label} fill className="object-cover" sizes="(min-width:768px) 55vw, 100vw" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-navy/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-blue/90 via-blue/35 to-blue/10" />
       <div
-        className={`absolute inset-x-0 p-8 text-white ${
+        className={`absolute inset-x-0 p-8 text-yellow ${
           align === "bottom" ? "bottom-0" : "top-0 text-right"
         }`}
       >
-        <div className="text-sm font-medium text-white/85">{label}</div>
-        <div className="text-6xl font-extrabold leading-none">
+        <div className="text-sm font-bold uppercase tracking-[1px] text-yellow/90">{label}</div>
+        <div className="text-6xl font-bold leading-none">
           <Counter to={pct} />
         </div>
-        <p className="mt-3 max-w-md text-sm leading-relaxed text-white/75">{desc}</p>
+        <p className="mt-3 max-w-md text-sm leading-relaxed tracking-[0.6px] text-yellow/80">{desc}</p>
       </div>
     </motion.div>
   );

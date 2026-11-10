@@ -32,7 +32,7 @@ const COUNTRIES = [
 ];
 
 const INPUT =
-  "w-full rounded-2xl border border-black/10 bg-white px-4 py-3.5 text-sm text-ink placeholder:text-muted/60 transition-colors focus:border-brand focus:outline-none focus:ring-4 focus:ring-brand/10";
+  "by-field placeholder:text-pink/50";
 
 function passwordStrength(pw: string): { score: 0 | 1 | 2 | 3 | 4; label: string } {
   let score = 0;
@@ -108,17 +108,17 @@ export default function SignUpPage() {
   };
 
   return (
-    <main className="min-h-screen bg-white lg:grid lg:grid-cols-[1fr_1.1fr]">
+    <main className="min-h-screen bg-pale lg:grid lg:grid-cols-[1fr_1.1fr]">
       {/* Left — Form column */}
       <section className="relative flex min-h-screen flex-col px-6 py-8 sm:px-10 lg:px-16 lg:py-12">
         {/* Top row */}
         <div className="flex items-center justify-between">
           <Link href="/" aria-label="LUXEN home">
-            <Logo className="text-ink" mark="var(--brand)" />
+            <Logo className="text-pink" mark="var(--brand)" />
           </Link>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-muted transition-colors hover:text-brand"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-pink/75 transition-colors hover:text-pink"
           >
             <ArrowLeft size={16} /> Back to site
           </Link>
@@ -126,18 +126,18 @@ export default function SignUpPage() {
 
         {/* Center card */}
         <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center py-10">
-          <p className="text-[0.65rem] uppercase tracking-[0.28em] text-brand">Get started</p>
-          <h1 className="h-display mt-2 text-4xl tracking-[-0.02em] text-ink lg:text-5xl">
+          <p className="text-[0.65rem] uppercase tracking-[0.28em] text-pink">Get started</p>
+          <h1 className="by-h-product mt-2">
             Create your account
           </h1>
-          <p className="mt-3 text-sm text-muted">
+          <p className="mt-3 text-sm text-pink/75">
             Order research-grade peptides, track shipments, and download certificates of analysis.
           </p>
 
           <form onSubmit={submit} className="mt-8 flex flex-col gap-4">
             <div className="grid gap-4 sm:grid-cols-2">
               <label className="block">
-                <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-muted">
+                <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-pink/75">
                   First name
                 </span>
                 <input
@@ -151,7 +151,7 @@ export default function SignUpPage() {
                 />
               </label>
               <label className="block">
-                <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-muted">
+                <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-pink/75">
                   Last name
                 </span>
                 <input
@@ -167,7 +167,7 @@ export default function SignUpPage() {
             </div>
 
             <label className="block">
-              <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-muted">
+              <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-pink/75">
                 Email
               </span>
               <input
@@ -182,7 +182,7 @@ export default function SignUpPage() {
             </label>
 
             <label className="block">
-              <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-muted">
+              <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-pink/75">
                 Date of birth
               </span>
               <input
@@ -197,7 +197,7 @@ export default function SignUpPage() {
 
             <div className="grid gap-4 sm:grid-cols-2">
               <label className="block">
-                <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-muted">
+                <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-pink/75">
                   Nationality
                 </span>
                 <input
@@ -210,7 +210,7 @@ export default function SignUpPage() {
                 />
               </label>
               <label className="block">
-                <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-muted">
+                <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-pink/75">
                   Country of residence
                 </span>
                 <select
@@ -230,7 +230,7 @@ export default function SignUpPage() {
             </div>
 
             <label className="block">
-              <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-muted">
+              <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-pink/75">
                 Password
               </span>
               <div className="relative">
@@ -247,7 +247,7 @@ export default function SignUpPage() {
                 <button
                   type="button"
                   onClick={() => setShowPwd((v) => !v)}
-                  className="absolute right-3 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full text-muted hover:bg-surface hover:text-ink"
+                  className="absolute right-3 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full text-pink/75 hover:bg-yellow hover:text-pink"
                   aria-label={showPwd ? "Hide password" : "Show password"}
                 >
                   {showPwd ? <EyeOff size={18} /> : <Eye size={18} />}
@@ -260,18 +260,18 @@ export default function SignUpPage() {
                       <span
                         key={i}
                         className={`h-1.5 rounded-full transition-colors ${
-                          i < strength.score ? "bg-brand" : "bg-black/10"
+                          i < strength.score ? "bg-pink" : "bg-pink/15"
                         }`}
                       />
                     ))}
                   </div>
-                  <p className="mt-1.5 text-xs text-muted">{strength.label}</p>
+                  <p className="mt-1.5 text-xs text-pink/75">{strength.label}</p>
                 </div>
               )}
             </label>
 
             <label className="block">
-              <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-muted">
+              <span className="mb-2 block text-xs uppercase tracking-[0.22em] text-pink/75">
                 Confirm password
               </span>
               <input
@@ -285,20 +285,20 @@ export default function SignUpPage() {
               />
             </label>
 
-            <label className="mt-1 flex cursor-pointer select-none items-start gap-2.5 text-sm text-muted">
+            <label className="mt-1 flex cursor-pointer select-none items-start gap-2.5 text-sm text-pink/75">
               <input
                 type="checkbox"
                 checked={agree}
                 onChange={(e) => setAgree(e.target.checked)}
-                className="mt-0.5 h-4 w-4 rounded border border-black/20 accent-[var(--brand)]"
+                className="mt-0.5 h-4 w-4 rounded border border-pink/30 accent-[var(--pink)]"
               />
               <span>
                 I confirm materials are for laboratory R&amp;D use only and agree to the{" "}
-                <Link href="#" className="text-brand hover:text-brand-dark">
+                <Link href="#" className="text-pink hover:text-pink-dark">
                   Terms
                 </Link>{" "}
                 and{" "}
-                <Link href="#" className="text-brand hover:text-brand-dark">
+                <Link href="#" className="text-pink hover:text-pink-dark">
                   Privacy Policy
                 </Link>
                 .
@@ -306,7 +306,7 @@ export default function SignUpPage() {
             </label>
 
             {error && (
-              <p className="rounded-2xl border border-red-300 bg-red-50 px-4 py-2 text-xs text-red-700">
+              <p className="rounded-[12px] border border-red-300 bg-red-50 px-4 py-2 text-xs text-red-700">
                 {error}
               </p>
             )}
@@ -314,27 +314,27 @@ export default function SignUpPage() {
             <button
               type="submit"
               disabled={busy}
-              className="mt-3 w-full rounded-full bg-brand py-3.5 text-sm font-semibold text-white transition-all hover:bg-brand-dark hover:shadow-[0_20px_40px_-20px_rgba(0,131,195,0.6)] disabled:opacity-70"
+              className="by-btn mt-3 w-full"
             >
               {busy ? "Creating account…" : "Create account"}
             </button>
           </form>
 
-          <p className="mt-6 text-center text-sm text-muted">
+          <p className="mt-6 text-center text-sm text-pink/75">
             Already have an account?{" "}
-            <Link href="/signin" className="font-semibold text-brand hover:text-brand-dark">
+            <Link href="/signin" className="font-semibold text-pink hover:text-pink-dark">
               Sign in
             </Link>
           </p>
         </div>
 
-        <p className="mt-4 text-center text-[0.65rem] uppercase tracking-[0.22em] text-muted lg:text-left">
+        <p className="mt-4 text-center text-[0.65rem] uppercase tracking-[0.22em] text-pink/75 lg:text-left">
           For laboratory R&amp;D use only · Not for human or veterinary consumption
         </p>
       </section>
 
       {/* Right — Visual panel: low-opacity lab image on dark backdrop */}
-      <aside className="relative hidden overflow-hidden bg-navy lg:block">
+      <aside className="relative hidden overflow-hidden bg-blue lg:block">
         <Image
           src="/images/our-process-bg.webp"
           alt=""
@@ -348,17 +348,17 @@ export default function SignUpPage() {
           className="absolute inset-0 bg-gradient-to-br from-navy/40 via-transparent to-navy/60"
         />
 
-        <div className="relative z-10 flex h-full flex-col p-14 text-white">
-          <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-white/70">
-            <span className="grid h-2 w-2 place-items-center rounded-full bg-brand" />
+        <div className="relative z-10 flex h-full flex-col p-14 text-yellow">
+          <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-yellow/70">
+            <span className="grid h-2 w-2 place-items-center rounded-full bg-pink" />
             Why researchers choose LUXEN
           </div>
 
           <div className="mt-auto">
-            <h2 className="h-display text-3xl leading-[1.15] tracking-[-0.01em] lg:text-4xl">
+            <h2 className="by-h-band">
               Pharmaceutical rigor, in every batch.
             </h2>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-white/80">
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-yellow/80">
               Every batch is independently HPLC-verified and documented to the milligram — so your
               research stays reproducible from lot to lot.
             </p>

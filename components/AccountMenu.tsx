@@ -44,9 +44,10 @@ export default function AccountMenu({
     };
   }, [open]);
 
-  if (!ready) return <div className={cn("h-9 w-9", className)} aria-hidden />;
+  if (!ready) return <div className={cn("h-10 w-10", className)} aria-hidden />;
 
-  const onDark = variant === "dark";
+  /* `dark` = sitting on the pink header bar, so the icon renders yellow. */
+  const onPink = variant === "dark";
   const first = user?.name?.split(" ")[0];
   const initial = first?.[0]?.toUpperCase();
 
@@ -59,14 +60,17 @@ export default function AccountMenu({
         aria-expanded={open}
         aria-label="Account menu"
         className={cn(
-          "grid h-9 w-9 place-items-center rounded-full transition-colors",
-          onDark
-            ? "text-white hover:bg-white/10"
-            : "text-ink hover:bg-surface",
+          "by-icon grid h-10 w-10 place-items-center",
+          onPink ? "text-yellow" : "text-pink",
         )}
       >
         {isAuthed && initial ? (
-          <span className="grid h-8 w-8 place-items-center rounded-full bg-brand text-sm font-bold text-white">
+          <span
+            className={cn(
+              "grid h-8 w-8 place-items-center rounded-full text-sm font-bold",
+              onPink ? "bg-yellow text-pink" : "bg-pink text-yellow",
+            )}
+          >
             {initial}
           </span>
         ) : (
@@ -77,14 +81,16 @@ export default function AccountMenu({
       {open && (
         <div
           role="menu"
-          className="absolute right-0 top-[calc(100%+8px)] w-64 overflow-hidden rounded-2xl border border-black/10 bg-white text-ink shadow-[0_20px_40px_-20px_rgba(0,0,0,0.25)]"
+          className="by-menu-open absolute right-0 top-[calc(100%+8px)] w-64 border border-pink/15 bg-yellow text-pink shadow-[0_16px_34px_-20px_rgba(227,29,147,0.7)]"
         >
           {isAuthed ? (
             <>
-              <div className="border-b border-black/10 bg-surface px-4 py-3">
-                <p className="text-sm font-bold text-ink">{user?.name ?? "Account"}</p>
+              <div className="border-b border-pink/15 px-4 py-3">
+                <p className="text-sm font-bold uppercase tracking-[1px] text-pink">
+                  {user?.name ?? "Account"}
+                </p>
                 {user?.email && (
-                  <p className="mt-0.5 truncate text-xs text-muted">{user.email}</p>
+                  <p className="mt-0.5 truncate text-xs text-pink/70">{user.email}</p>
                 )}
               </div>
 
@@ -93,18 +99,18 @@ export default function AccountMenu({
                   href="/track-order"
                   role="menuitem"
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-2 px-4 py-2.5 text-sm text-ink transition-colors hover:bg-surface"
+                  className="flex items-center gap-2.5 px-4 py-2.5 text-[15px] uppercase tracking-[0.6px] text-pink transition-colors hover:underline hover:underline-offset-[0.3rem]"
                 >
-                  <PackageSearch size={15} className="text-muted" />
+                  <PackageSearch size={15} aria-hidden />
                   Track order
                 </Link>
                 <Link
                   href="/cart"
                   role="menuitem"
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-2 px-4 py-2.5 text-sm text-ink transition-colors hover:bg-surface"
+                  className="flex items-center gap-2.5 px-4 py-2.5 text-[15px] uppercase tracking-[0.6px] text-pink transition-colors hover:underline hover:underline-offset-[0.3rem]"
                 >
-                  <ShoppingBag size={15} className="text-muted" />
+                  <ShoppingBag size={15} aria-hidden />
                   Your cart
                 </Link>
                 <button
@@ -114,9 +120,9 @@ export default function AccountMenu({
                     setOpen(false);
                     logout();
                   }}
-                  className="flex w-full items-center gap-2 px-4 py-2.5 text-left text-sm text-ink transition-colors hover:bg-surface"
+                  className="flex w-full items-center gap-2.5 px-4 py-2.5 text-left text-[15px] uppercase tracking-[0.6px] text-pink transition-colors hover:underline hover:underline-offset-[0.3rem]"
                 >
-                  <LogOut size={15} className="text-muted" />
+                  <LogOut size={15} aria-hidden />
                   Logout
                 </button>
               </div>
@@ -127,18 +133,18 @@ export default function AccountMenu({
                 href="/signin"
                 role="menuitem"
                 onClick={() => setOpen(false)}
-                className="flex items-center gap-2 px-4 py-2.5 text-sm text-ink transition-colors hover:bg-surface"
+                className="flex items-center gap-2.5 px-4 py-2.5 text-[15px] uppercase tracking-[0.6px] text-pink transition-colors hover:underline hover:underline-offset-[0.3rem]"
               >
-                <LogIn size={15} className="text-muted" />
+                <LogIn size={15} aria-hidden />
                 Sign in
               </Link>
               <Link
                 href="/signup"
                 role="menuitem"
                 onClick={() => setOpen(false)}
-                className="flex items-center gap-2 px-4 py-2.5 text-sm text-ink transition-colors hover:bg-surface"
+                className="flex items-center gap-2.5 px-4 py-2.5 text-[15px] uppercase tracking-[0.6px] text-pink transition-colors hover:underline hover:underline-offset-[0.3rem]"
               >
-                <UserPlus size={15} className="text-muted" />
+                <UserPlus size={15} aria-hidden />
                 Create account
               </Link>
             </div>
