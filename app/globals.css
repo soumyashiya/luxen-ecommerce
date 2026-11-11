@@ -46,6 +46,12 @@
   --dur-long: 0.5s;
   --dur-xl: 0.6s;
 
+  /* Card media cross-fade. The reference runs its product-image swap on its
+     own curve, not the global one — .4s on an ease-out-quad rather than .5s
+     on `--ease`. Measured off the live theme's `.card__media img`. */
+  --ease-media: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --dur-media: 0.4s;
+
   /* --- Geometry ---------------------------------------------------------- */
   --btn-radius: 7px;
   --badge-radius: 40px;
@@ -256,6 +262,10 @@ html.lenis body {
     text-decoration: underline;
     text-underline-offset: 0.3rem;
   }
+  /* Already underlined at rest, so hover thickens rather than draws. */
+  .by-footer-link:hover {
+    text-decoration-thickness: 0.2rem;
+  }
 
   /* Legacy aliases so untouched components keep rendering sensibly. */
   .eyebrow {
@@ -346,6 +356,21 @@ html.lenis body {
   .by-link:hover {
     text-decoration: underline;
     text-underline-offset: 0.3rem;
+    /* The reference thickens the rule on hover rather than just drawing it —
+       `.underlined-link:hover` and `.header__menu-item:hover` both land on
+       0.2rem. Without this the underline reads thinner than the original. */
+    text-decoration-thickness: 0.2rem;
+  }
+
+  /* Arrow nudge — the reference's `.animate-arrow:hover .icon-arrow path`.
+     Its arrow points left so it translates negatively; `ArrowUpRight` points
+     up and right, so the nudge follows the glyph. */
+  .by-arrow {
+    transition: transform var(--dur) var(--ease);
+  }
+  .by-btn:hover .by-arrow,
+  .by-link:hover .by-arrow {
+    transform: translate(2px, -2px);
   }
 
   /* ---------------------------------------------------------------------
@@ -541,7 +566,12 @@ html.lenis body {
     animation: none;
   }
   .by-icon:hover,
-  .by-card:hover .by-media-zoom {
+  .by-card:hover .by-media-zoom,
+  .by-btn:hover .by-arrow,
+  .by-link:hover .by-arrow {
     transform: none;
+  }
+  .by-arrow {
+    transition: none;
   }
 }

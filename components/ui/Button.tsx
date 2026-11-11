@@ -34,7 +34,14 @@ export function Button({
   return (
     <a className={cn(variants[variant], className)} {...props}>
       {children}
-      {withArrow && <ArrowUpRight size={16} strokeWidth={2.6} aria-hidden />}
+      {withArrow && (
+        <ArrowUpRight
+          size={16}
+          strokeWidth={2.6}
+          className="by-arrow"
+          aria-hidden
+        />
+      )}
     </a>
   );
 }
@@ -53,7 +60,14 @@ export function ButtonEl({
   return (
     <button className={cn(variants[variant], className)} {...props}>
       {children}
-      {withArrow && <ArrowUpRight size={16} strokeWidth={2.6} aria-hidden />}
+      {withArrow && (
+        <ArrowUpRight
+          size={16}
+          strokeWidth={2.6}
+          className="by-arrow"
+          aria-hidden
+        />
+      )}
     </button>
   );
 }
