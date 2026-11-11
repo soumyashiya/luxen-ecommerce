@@ -518,12 +518,34 @@ html.lenis body {
   transform: scale(1.07);
 }
 
-/* Media zoom on card hover. */
+/* Card hover — a short lift. The reference does this on its image areas
+   (`.ins-image-area:hover { transform: translateY(-15px) }`); 6px is enough to
+   read as a response on a dense product grid without a card colliding with the
+   caption of the row beneath it. */
+.by-card {
+  transition: transform var(--dur-medium) var(--ease);
+}
+.by-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Media zoom on card hover. 1.04 was faithful to the reference but effectively
+   invisible at card size, so this runs a little past it. */
 .by-media-zoom {
   transition: transform var(--dur-long) var(--ease);
 }
 .by-card:hover .by-media-zoom {
-  transform: scale(1.04);
+  transform: scale(1.07);
+}
+
+/* Banner artwork zoom. Full-bleed media is large enough that a slow, small
+   scale reads clearly — the longer duration is what makes it feel like a push
+   in rather than a snap. */
+.by-banner-zoom {
+  transition: transform var(--dur-xl) var(--ease);
+}
+.by-banner:hover .by-banner-zoom {
+  transform: scale(1.05);
 }
 
 /* Hide scrollbars on horizontal sliders */
@@ -566,12 +588,16 @@ html.lenis body {
     animation: none;
   }
   .by-icon:hover,
+  .by-card:hover,
   .by-card:hover .by-media-zoom,
+  .by-banner:hover .by-banner-zoom,
   .by-btn:hover .by-arrow,
   .by-link:hover .by-arrow {
     transform: none;
   }
-  .by-arrow {
+  .by-arrow,
+  .by-card,
+  .by-banner-zoom {
     transition: none;
   }
 }
