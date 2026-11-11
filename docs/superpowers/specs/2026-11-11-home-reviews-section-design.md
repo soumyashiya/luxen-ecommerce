@@ -110,12 +110,18 @@ export const REVIEWS = [
 Six entries: the four existing testimonial quotes, re-attributed with the new
 fields, plus two new quotes written in the same voice.
 
-**Avatar constraint.** Only four avatar files exist — `IMG.test1` through
-`IMG.test4` (`/images/testimonial-1.webp`, `testimonial2.webp`,
-`testimonial3.webp`, `testimonial4.webp`). Entries five and six therefore set
-`avatar: null` and render an initials circle instead of repeating a face. This
-is intentional: a review wall where not every reviewer has a photo reads as
-real.
+**Avatar supply — corrected 2026-11-11.** An earlier draft of this spec claimed
+only four portraits existed and designed an initials-disc fallback for entries
+five and six. That was wrong: `IMG` also carries `av1`–`av5`
+(`her-review-profile.webp`, `hero-review-profile2.webp`, `3`, `4`; `av1` and
+`av5` point at the same file), giving **seven unique faces**. All six reviews
+therefore get real portraits — `test1`–`test4` for the first four, `av2` and
+`av3` for the last two. `avatar` is a required `string`; there is no fallback
+and no `null` case.
+
+If real review data later includes reviewers without photos, an initials
+fallback will need adding then. It is not built speculatively here, because
+nothing currently exercises it.
 
 ### Component: `components/sections/Reviews.tsx`
 
@@ -181,9 +187,15 @@ Two local helper components, not exported:
 | Quote | `text-[15px] leading-relaxed tracking-[0.6px] text-pink` |
 | Card divider | `border-t border-pink/20`, above the reviewer row |
 | Avatar | `h-11 w-11 rounded-full overflow-hidden`, `sizes="44px"` |
-| Initials fallback | `h-11 w-11 rounded-full bg-yellow-deep`, pink letters, `text-[13px] font-bold` |
 | Reviewer name | `by-card-title` (blue, 17.5px) |
 | Role / date / product | `text-[13px] tracking-[0.6px] text-pink` |
+
+**Contrast note.** The product line was briefly set to `text-pink/70` for
+hierarchy. Measured against the yellow card that is **2.81:1** — worse than
+the site's own pink-on-yellow baseline of **3.76:1**, which already fails
+WCAG AA for small text. It is full `text-pink`; the 13px size carries the
+de-emphasis instead. The 3.76:1 baseline is a pre-existing brand-level
+constraint affecting every yellow card on the site and is not addressed here.
 
 ### Responsive behaviour
 
@@ -217,9 +229,22 @@ Gutters come from `by-page`: 50px desktop, 30px under 990px.
 - Cards stagger at `0.08s` under `stagger(0.08)`.
 - Distribution bars animate width from `0` to their percentage when scrolled
   into view, `once: true`.
-- Reduced motion: framer-motion honours `prefers-reduced-motion` natively, and
-  `globals.css` already pins `.by-reveal` to full opacity under that query. No
-  media-query branch in the component.
+- Reduced motion: **partially honoured, and that is a pre-existing site-wide
+  gap, not a property of this section.** `globals.css` pins `.by-reveal` to
+  full opacity, so `SplitReveal` headings do stop. framer-motion does **not**
+  honour `prefers-reduced-motion` by default — its `MotionConfigContext`
+  defaults to `reducedMotion: "never"`
+  (`node_modules/framer-motion/dist/es/context/MotionConfigContext.mjs:10`),
+  and nothing in this app wraps the tree in `<MotionConfig>`. So every
+  framer-motion reveal on the site — `Team`, `CollectionRow`, this section's
+  card stagger and bar fills — still animates under reduced motion. Verified
+  in-browser on 2026-11-11: cards measured at opacity 0.978 mid-fade with
+  `prefers-reduced-motion: reduce` active.
+
+  Fixing this properly is one line in `app/layout.tsx` — wrapping children in
+  `<MotionConfig reducedMotion="user">` — which corrects the whole site at
+  once. It is deliberately **out of scope** for this section, because it
+  changes motion behaviour on every page.
 
 ## Error handling
 

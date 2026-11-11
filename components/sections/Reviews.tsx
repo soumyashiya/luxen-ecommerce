@@ -54,7 +54,7 @@ function Distribution() {
           <li
             key={stars}
             className="flex items-center gap-3"
-            aria-label={`${stars} stars, ${pct} percent of reviews`}
+            aria-label={`${stars} ${stars === 1 ? "star" : "stars"}, ${pct} percent of reviews`}
           >
             <span className="w-3 text-[13px] tabular-nums text-pink" aria-hidden>
               {stars}
@@ -111,7 +111,10 @@ function ReviewCard({ r }: { r: Review }) {
         &ldquo;{r.quote}&rdquo;
       </p>
 
-      <p className="mt-4 text-[13px] tracking-[0.6px] text-pink/70">{r.product}</p>
+      {/* Full-strength pink, not a tint: pink-on-yellow is already only
+          3.76:1, and dropping it to 70% took this line to 2.81:1 — worse than
+          anything else on the site. The 13px size carries the de-emphasis. */}
+      <p className="mt-4 text-[13px] tracking-[0.6px] text-pink">{r.product}</p>
 
       <div className="mt-auto flex items-center gap-3 border-t border-pink/20 pt-5">
         <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full">
