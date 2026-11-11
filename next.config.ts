@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
   images: {
     // Prefer AVIF, fall back to WebP. next/image negotiates via Accept.
     formats: ["image/avif", "image/webp"],
+    // Next 16 only emits qualities on this allowlist (default [75]). 90 is for
+    // the full-bleed banners, where 75 leaves visible mush in gradients and
+    // skin at 2560px. Everything else stays on 75.
+    qualities: [75, 90],
     // Cache generated variants aggressively — content-hashed public assets
     // are effectively immutable, so a long TTL is safe.
     minimumCacheTTL: 60 * 60 * 24 * 365,
