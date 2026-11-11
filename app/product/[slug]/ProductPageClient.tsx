@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -24,12 +24,6 @@ import { SERVICES, type Product } from "@/lib/data";
 import { useCart, formatUSD } from "@/lib/cart";
 import { EASE } from "@/lib/motion";
 
-const TRUST = [
-  { icon: ShieldCheck, label: "≥99% HPLC purity" },
-  { icon: FlaskConical, label: "Independently tested" },
-  { icon: FileText, label: "Batch-level certificates" },
-];
-
 const TABS = [
   { id: "package", label: "Package Contents", icon: Package },
   { id: "storage", label: "Storage Logic", icon: Snowflake },
@@ -48,17 +42,10 @@ export default function ProductPageClient({ product }: { product: Product }) {
   const assayTriggerRef = useRef<HTMLButtonElement>(null);
   const closeAssay = useCallback(() => setAssayOpen(false), []);
 
-  // Show the assay dialog every time a product page with assay data opens;
-  // the "See assay results" button reopens it after it is closed.
-  const hasAssay = !!product.analysis;
-  useEffect(() => {
-    if (!hasAssay) return;
-    const t = window.setTimeout(() => setAssayOpen(true), 400);
-    return () => {
-      window.clearTimeout(t);
-      setAssayOpen(false);
-    };
-  }, [hasAssay, product.slug]);
+  /* The assay dialog used to open itself 400ms after every page load. The
+     same figures are already on the page in the verification card below, so
+     it interrupted the read to show nothing new. It now opens only from the
+     "See assay results" button, which needs no effect at all. */
 
   const tabContent: Record<TabId, string[]> = {
     package: product.packageContents,
@@ -162,42 +149,84 @@ export default function ProductPageClient({ product }: { product: Product }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: EASE, delay: 0.08 }}
             >
-              <p className="eyebrow">Compound Analysis</p>
-              <h1 className="by-h-product mt-2">{product.title}</h1>
+              <h1 className="by-h-product">{product.title}</h1>
               {/* 18px/700 at 1.3px tracking — the reference's PDP price. */}
               <p className="by-price mt-3 text-[18px] tracking-[1.3px]">
                 <span className="sr-only">Price: </span>
                 {formatUSD(product.price)}
                 <span className="ml-2 text-xs font-normal text-pink/70">USD</span>
               </p>
-              <p className="mt-5 max-w-xl text-[15px] leading-relaxed tracking-[0.6px] text-pink">
-                {product.long}
-              </p>
+              {/* No prose block: the long description restated the specs and
+                  the research-only notice in paragraph form. The four specs
+                  below are the facts a buyer decides on, so they lead. */}
+              <dl className="mt-7 grid grid-cols-2 gap-px overflow-hidden rounded-[12px] border border-pink/20 bg-pink/15">
+                {product.specs.map((s) => (
+                  <div key={s.label} className="bg-pale p-4">
+                    <dt className="text-xs font-medium uppercase tracking-wide text-pink/75">
+                      {s.label}
+                    </dt>
+                    <dd className="mt-1 text-sm font-bold text-pink">{s.value}</dd>
+                  </div>
+                ))}
+              </dl>
 
-              {/* Safety protocol callout */}
+              {/* Qty + add to cart */}
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+                {/* Square stepper — the reference uses no pill controls. */}
+                <div
+                  className="flex w-fit items-center border border-pink/55"
+                  role="group"
+                  aria-label="Quantity selector"
+                >
+                  <button
+                    onClick={() => setQty((q) => Math.max(1, q - 1))}
+                    aria-label="Decrease quantity"
+                    className="grid h-[45px] w-[45px] place-items-center text-pink transition-colors duration-[var(--dur)] ease-[var(--ease)] hover:bg-pink hover:text-yellow"
+                  >
+                    <Minus size={16} />
+                  </button>
+                  <span
+                    className="w-12 text-center text-lg font-bold text-pink"
+                    aria-live="polite"
+                    aria-atomic="true"
+                  >
+                    {qty}
+                  </span>
+                  <button
+                    onClick={() => setQty((q) => q + 1)}
+                    aria-label="Increase quantity"
+                    className="grid h-[45px] w-[45px] place-items-center text-pink transition-colors duration-[var(--dur)] ease-[var(--ease)] hover:bg-pink hover:text-yellow"
+                  >
+                    <Plus size={16} />
+                  </button>
+                </div>
+
+                <button
+                  onClick={() => add(product.slug, qty)}
+                  aria-label={`Add ${qty} × ${product.title} to cart`}
+                  className="by-btn by-btn-soft w-full sm:w-auto sm:min-w-[290px]"
+                >
+                  <ShoppingBag size={18} aria-hidden /> Add to Cart
+                </button>
+              </div>
+
+              {/* The research-only notice, stated once. It previously ran
+                  three times on this page in near-identical wording, which
+                  trains people to skip past exactly the line that matters. */}
               <div className="mt-5 flex gap-3 rounded-[12px] border border-pink/20 bg-yellow p-4">
                 <ShieldCheck className="mt-0.5 shrink-0 text-pink" size={18} aria-hidden="true" />
                 <p className="text-sm leading-relaxed text-pink">
-                  <span className="font-bold">Safety Protocol:</span>{" "}
+                  <span className="font-bold uppercase tracking-wide">
+                    For research purposes only.
+                  </span>{" "}
                   <span className="text-pink/75">
-                    Produced for laboratory research only. Not for human or veterinary consumption.
+                    Not for human or veterinary use, and not intended to
+                    diagnose, treat, cure or prevent any disease. Supplied for
+                    laboratory and analytical research by qualified
+                    professionals.
                   </span>
                 </p>
               </div>
-
-              {/* Janoshik verified report button */}
-              {product.janoshikUrl && (
-                <a
-                  href={product.janoshikUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 rounded-[7px] border-2 border-pink bg-pale px-5 py-3 text-sm font-bold uppercase tracking-wide text-pink transition-all hover:-translate-y-0.5 hover:bg-pink hover:text-yellow"
-                >
-                  <FileText size={16} aria-hidden="true" />
-                  View Janoshik Analytical Report
-                  <ExternalLink size={14} aria-hidden="true" />
-                </a>
-              )}
 
               {/* Janoshik lab analysis card */}
               {product.analysis ? (
@@ -290,6 +319,23 @@ export default function ProductPageClient({ product }: { product: Product }) {
                     mass across the stated fill volume.
                   </p>
 
+                  {/* The link out lives inside the card rather than floating
+                      above it — Janoshik was previously named three separate
+                      times on this page. */}
+                  {product.janoshikUrl && (
+                    <a
+                      href={product.janoshikUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 border-t border-pink/20 px-5 py-3 text-sm font-bold text-pink transition-colors duration-[var(--dur)] ease-[var(--ease)] hover:bg-pink hover:text-yellow"
+                    >
+                      <FileText size={14} aria-hidden="true" />
+                      View full Janoshik report
+                      <ExternalLink size={13} aria-hidden="true" />
+                      <span className="sr-only">(opens in a new tab)</span>
+                    </a>
+                  )}
+
                   {(product.certificateImages?.length ?? 0) > 0 && (
                     <button
                       type="button"
@@ -328,31 +374,9 @@ export default function ProductPageClient({ product }: { product: Product }) {
                     </div>
                   )}
                 </div>
-              ) : (
-                !product.hideCertNotice && (
-                  <div className="mt-6 flex gap-3 rounded-[12px] border border-dashed border-pink/25 bg-yellow p-4">
-                    <FlaskConical className="mt-0.5 shrink-0 text-pink/75" size={18} aria-hidden="true" />
-                    <p className="text-sm leading-relaxed text-pink/75">
-                      <span className="font-bold text-pink">Certificate of analysis pending.</span>{" "}
-                      This batch is awaiting third-party Janoshik verification — check back soon.
-                    </p>
-                  </div>
-                )
-              )}
+              ) : null}
 
-              {/* Specs */}
-              <dl className="mt-7 grid grid-cols-2 gap-px overflow-hidden rounded-[12px] border border-pink/20 bg-pink/15">
-                {product.specs.map((s) => (
-                  <div key={s.label} className="bg-pale p-4">
-                    <dt className="text-xs font-medium uppercase tracking-wide text-pink/75">
-                      {s.label}
-                    </dt>
-                    <dd className="mt-1 text-sm font-bold text-pink">{s.value}</dd>
-                  </div>
-                ))}
-              </dl>
-
-              {/* Info tabs (Package / Storage / Supply) */}
+              {/* Info tabs (Package / Storage) */}
               <div className="mt-6 overflow-hidden rounded-[12px] border border-pink/20 bg-pale">
                 <div
                   role="tablist"
@@ -389,75 +413,6 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 </ul>
               </div>
 
-              {/* Qty + add to cart */}
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-                {/* Square stepper — the reference uses no pill controls. */}
-                <div
-                  className="flex w-fit items-center border border-pink/55"
-                  role="group"
-                  aria-label="Quantity selector"
-                >
-                  <button
-                    onClick={() => setQty((q) => Math.max(1, q - 1))}
-                    aria-label="Decrease quantity"
-                    className="grid h-[45px] w-[45px] place-items-center text-pink transition-colors duration-[var(--dur)] ease-[var(--ease)] hover:bg-pink hover:text-yellow"
-                  >
-                    <Minus size={16} />
-                  </button>
-                  <span
-                    className="w-12 text-center text-lg font-bold text-pink"
-                    aria-live="polite"
-                    aria-atomic="true"
-                  >
-                    {qty}
-                  </span>
-                  <button
-                    onClick={() => setQty((q) => q + 1)}
-                    aria-label="Increase quantity"
-                    className="grid h-[45px] w-[45px] place-items-center text-pink transition-colors duration-[var(--dur)] ease-[var(--ease)] hover:bg-pink hover:text-yellow"
-                  >
-                    <Plus size={16} />
-                  </button>
-                </div>
-
-                <button
-                  onClick={() => add(product.slug, qty)}
-                  aria-label={`Add ${qty} × ${product.title} to cart`}
-                  className="by-btn by-btn-soft w-full sm:w-auto sm:min-w-[290px]"
-                >
-                  <ShoppingBag size={18} aria-hidden /> Add to Cart
-                </button>
-              </div>
-
-              {/* Research-only disclaimer near Add to Cart */}
-              <div className="mt-5 flex gap-3 rounded-[12px] border-l-4 border-pink bg-yellow p-4">
-                <ShieldCheck className="mt-0.5 shrink-0 text-pink" size={18} aria-hidden="true" />
-                <p className="text-xs leading-relaxed text-pink">
-                  <span className="font-bold uppercase tracking-wide">
-                    For research purposes only.
-                  </span>{" "}
-                  <span className="text-pink/75">
-                    Not intended for human or veterinary use. Not intended to diagnose, treat,
-                    cure, or prevent any disease. Products are supplied strictly for laboratory
-                    and analytical research conducted by qualified professionals.
-                  </span>
-                </p>
-              </div>
-
-              {/* Trust row */}
-              <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 border-t border-pink/20 pt-6">
-                {TRUST.map((t) => (
-                  <li key={t.label} className="flex items-center gap-2 text-sm font-medium text-pink">
-                    <t.icon size={18} className="text-pink" aria-hidden="true" /> {t.label}
-                  </li>
-                ))}
-              </ul>
-
-              <p className="mt-5 text-xs leading-relaxed text-pink/75">
-                FOR RESEARCH PURPOSES ONLY. Not intended for human or veterinary use. Not intended
-                to diagnose, treat, cure, or prevent any disease. Products are supplied strictly
-                for laboratory and analytical research conducted by qualified professionals.
-              </p>
             </motion.div>
           </div>
 
