@@ -333,29 +333,33 @@ export default function SignUpPage() {
         </p>
       </section>
 
-      {/* Right — Visual panel: low-opacity lab image on dark backdrop */}
-      <aside className="relative hidden overflow-hidden bg-blue lg:block">
+      {/* Right — Visual panel: model photo (the photo half of a 3:1 split
+          banner, cropped onto him) with the pitch over a blue scrim at the
+          foot. */}
+      <aside className="relative hidden overflow-hidden bg-blue lg:sticky lg:top-0 lg:block lg:h-screen lg:self-start">
         <Image
-          src="/images/our-process-bg.webp"
-          alt=""
+          src="/images/about-page/everylot.png"
+          alt="Smiling man in a blue shirt in front of colour-blocked panels"
           fill
           priority
           sizes="(min-width:1024px) 55vw, 0vw"
-          className="object-cover opacity-40"
+          className="object-cover object-[80%_center]"
         />
+        {/* Blue scrim rising from the foot, so the yellow copy reads over the
+            photo without dimming the model's face above it. */}
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-br from-navy/40 via-transparent to-navy/60"
+          className="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-blue from-25% via-blue/80 to-transparent"
         />
 
         <div className="relative z-10 flex h-full flex-col p-14 text-yellow">
-          <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-yellow/70">
+          <div className="flex w-fit items-center gap-2 rounded-full bg-blue/80 px-4 py-2 text-[0.65rem] uppercase tracking-[0.28em] text-yellow backdrop-blur-sm">
             <span className="grid h-2 w-2 place-items-center rounded-full bg-pink" />
             Why researchers choose LUXEN
           </div>
 
           <div className="mt-auto">
-            <h2 className="by-h-band">
+            <h2 className="max-w-[560px] text-[clamp(26px,2.4vw,38px)] font-bold uppercase leading-[1.1] tracking-[0.5px] text-yellow">
               Pharmaceutical rigor, in every batch.
             </h2>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-yellow/80">

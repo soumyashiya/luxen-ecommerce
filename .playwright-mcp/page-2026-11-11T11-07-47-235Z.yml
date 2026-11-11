@@ -1,0 +1,44 @@
+- generic [active] [ref=f41e1]:
+  - link "Skip to main content" [ref=f41e2] [cursor=pointer]:
+    - /url: "#main"
+  - main [ref=f41e3]:
+    - generic [ref=f41e4]:
+      - generic [ref=f41e5]:
+        - link "LUXEN home" [ref=f41e6] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f41e7]: LUXEN
+        - link "Back to site" [ref=f41e9] [cursor=pointer]:
+          - /url: /
+      - generic [ref=f41e12]:
+        - paragraph [ref=f41e13]: Welcome back
+        - heading "Sign in" [level=1] [ref=f41e14]
+        - paragraph [ref=f41e15]: Access your research orders, batch records, and certificates of analysis.
+        - generic [ref=f41e16]:
+          - generic [ref=f41e17]:
+            - generic [ref=f41e18]: Email
+            - textbox "Email" [ref=f41e19]:
+              - /placeholder: you@lab.com
+          - generic [ref=f41e20]:
+            - generic [ref=f41e21]:
+              - generic [ref=f41e22]: Password
+              - button "Password Show password" [ref=f41e23]: Forgot?
+            - generic [ref=f41e24]:
+              - textbox "••••••••" [ref=f41e25]
+              - button "Show password" [ref=f41e26]
+          - generic [ref=f41e30] [cursor=pointer]:
+            - checkbox "Keep me signed in on this device" [checked] [ref=f41e31]
+            - text: Keep me signed in on this device
+          - button "Sign in" [ref=f41e32] [cursor=pointer]
+        - paragraph [ref=f41e33]:
+          - text: New to LUXEN?
+          - link "Create an account" [ref=f41e34] [cursor=pointer]:
+            - /url: /signup
+      - paragraph [ref=f41e35]: For laboratory R&D use only · Not for human or veterinary consumption
+    - complementary [ref=f41e36]:
+      - img "Smiling model holding a Retatrutide pre-filled research pen against a lilac backdrop" [ref=f41e37]
+      - generic [ref=f41e39]:
+        - generic [ref=f41e40]: Research portal
+        - blockquote [ref=f41e42]:
+          - paragraph [ref=f41e43]: “The certificates of analysis matched our own HPLC results to the decimal. Reordering has become the easiest part of running the lab.”
+          - generic [ref=f41e44]: Research Associate · Cell Biology Lab
+  - button "Open Next.js Dev Tools" [ref=f41e50] [cursor=pointer]

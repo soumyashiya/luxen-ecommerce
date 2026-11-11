@@ -189,30 +189,33 @@ export default function SignInPage() {
         </p>
       </section>
 
-      {/* Right — Visual panel: low-opacity lab image on dark backdrop */}
-      <aside className="relative hidden overflow-hidden bg-blue lg:block">
+      {/* Right — Visual panel: model photo (the photo half of a 3:1 split
+          banner, cropped onto her face and pen) with the quote over a blue
+          scrim at the foot. */}
+      <aside className="relative hidden overflow-hidden bg-blue lg:sticky lg:top-0 lg:block lg:h-screen lg:self-start">
         <Image
-          src="/images/our-process-bg.webp"
-          alt=""
+          src="/images/about-page/science.png"
+          alt="Smiling model holding a Retatrutide pre-filled research pen against a lilac backdrop"
           fill
           priority
           sizes="(min-width:1024px) 55vw, 0vw"
-          className="object-cover opacity-40"
+          className="object-cover object-[20%_center]"
         />
-        {/* Subtle vignette so text stays legible */}
+        {/* Blue scrim rising from the foot, so the yellow copy reads over the
+            photo without dimming the model's face above it. */}
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-br from-navy/40 via-transparent to-navy/60"
+          className="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-blue from-25% via-blue/80 to-transparent"
         />
 
         <div className="relative z-10 flex h-full flex-col p-14 text-yellow">
-          <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-yellow/70">
+          <div className="flex w-fit items-center gap-2 rounded-full bg-blue/80 px-4 py-2 text-[0.65rem] uppercase tracking-[0.28em] text-yellow backdrop-blur-sm">
             <span className="grid h-2 w-2 place-items-center rounded-full bg-pink" />
             Research portal
           </div>
 
           <blockquote className="mt-auto">
-            <p className="by-h-band">
+            <p className="max-w-[560px] text-[clamp(22px,2vw,30px)] font-medium uppercase leading-[1.2] tracking-[0.5px] text-yellow">
               &ldquo;The certificates of analysis matched our own HPLC results to the decimal.
               Reordering has become the easiest part of running the lab.&rdquo;
             </p>

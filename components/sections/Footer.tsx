@@ -81,7 +81,7 @@ const FOOTER_COLUMNS: { title: string; links: { label: string; href: string }[] 
     title: "More Info",
     links: [
       { label: "Our Process", href: "/about#process" },
-      { label: "Research Team", href: "/about#team" },
+      { label: "Research Team", href: "/#team" },
       { label: "Reviews", href: "/about#testimonials" },
     ],
   },

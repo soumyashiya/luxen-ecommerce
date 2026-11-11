@@ -129,3 +129,9 @@ It can also happen if the client has a browser extension installed which messes 
 [  424902ms] [LOG] [Fast Refresh] done in 286ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
 [  446755ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
 [  446760ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1156439ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1156750ms] [LOG] [Fast Refresh] done in 416ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1187204ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1187364ms] [LOG] [Fast Refresh] done in 235ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1187478ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[ 1187795ms] [LOG] [Fast Refresh] done in 427ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478

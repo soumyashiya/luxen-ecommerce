@@ -18,10 +18,14 @@ export const IMG = {
   statDiag: "/images/On-Time Delivery (2).webp",
   process: "/images/our-process-bg.webp",
   appointment: "/images/our-process-bg.webp",
-  doc1: "/images/scientists.webp",
-  doc2: "/images/scientists2.webp",
-  doc3: "/images/scientists3.webp",
-  doc4: "/images/scientists4.webp",
+  /* "Our scientists" portraits. Shot as one square studio series on the
+     brand grounds — lemon (--yellow) and magenta (--pink) alternating so the
+     2×2 grid reads as a checkerboard. Keep the colour pairing if these are
+     ever reordered. */
+  teamElena: "/images/team/elena-voss.webp",
+  teamMarcus: "/images/team/marcus-hale.webp",
+  teamPriya: "/images/team/priya-nair.webp",
+  teamAdrian: "/images/team/adrian-kovac.webp",
   blog1: "/images/scientists2.webp",
   blog2: "/images/scientists3.webp",
   blog3: "/images/scientists4.webp",
@@ -57,7 +61,7 @@ export const ANNOUNCEMENTS = [
 /* Utility links sitting to the left of the logo in the main header bar. */
 export const UTILITY_NAV = [
   { label: "Track Order", href: "/track-order" },
-  { label: "Certificates", href: "/about" },
+  { label: "Certificates", href: "/certificates" },
 ];
 
 export type NavItem = {
@@ -68,32 +72,9 @@ export type NavItem = {
 };
 
 /* Primary navigation row. Mirrors the reference's structure: a handful of
-   top-level entries, two of which open a panel of sub-links. */
+   top-level entries. `children` (none at present) renders a dropdown. */
 export const MAIN_NAV: NavItem[] = [
-  { label: "New In", href: "/shop" },
-  {
-    label: "Catalog",
-    href: "/shop",
-    children: [
-      { label: "BPC-157 & TB-500", href: "/product/bpc-157-tb-500" },
-      { label: "Retatrutide 20mg", href: "/product/retatrutide" },
-      { label: "Retatrutide 40mg", href: "/product/retatrutide-40mg" },
-      { label: "Tirzepatide 40mg", href: "/product/tirzepatide" },
-      { label: "Glow 70mg", href: "/product/glow-ghk-cu" },
-      { label: "NAD+ 1000mg", href: "/product/nad-plus-1000mg" },
-      { label: "Shop All", href: "/shop" },
-    ],
-  },
-  {
-    label: "Verification",
-    href: "/about",
-    children: [
-      { label: "Third-Party Testing", href: "/about" },
-      { label: "Our Process", href: "/about#process" },
-      { label: "Batch Traceability", href: "/about#stats" },
-      { label: "Research Team", href: "/about#team" },
-    ],
-  },
+  { label: "New In", href: "/shop?tag=new" },
   { label: "About", href: "/about" },
   { label: "Reviews", href: "/about#testimonials" },
   { label: "Shop All", href: "/shop" },
@@ -125,8 +106,12 @@ export type ProductAnalysis = {
   compounds: CompoundRow[];
 };
 
+/* Merchandising flag shown as the pill on product cards. */
+export type ProductTag = "Bestseller" | "New" | "Limited";
+
 export type Product = {
   slug: string;
+  tag?: ProductTag;
   title: string;
   desc: string;
   long: string;
@@ -156,6 +141,7 @@ export type Product = {
 export const SERVICES: Product[] = [
   {
     slug: "bpc-157-tb-500",
+    tag: "Limited",
     card: "/images/products/ALLUVI Carton and Matching Pen-9.png",
     hover: "/images/hover/ALLUVI BPC157 & TB500 packshot-8.png",
     title: "BPC-157 & TB-500 40mg (R&D Only)",
@@ -201,6 +187,7 @@ export const SERVICES: Product[] = [
   },
   {
     slug: "retatrutide",
+    tag: "Bestseller",
     /* No carton + pen cutout exists for the 20mg lot, so this is the carton
        alone, trimmed and centred on a 4:3 canvas to match the others' width. */
     card: "/images/products/reta20-card.png",
@@ -248,6 +235,7 @@ export const SERVICES: Product[] = [
   },
   {
     slug: "tirzepatide",
+    tag: "Bestseller",
     card: "/images/products/Alluvi Tirzepatide Carton and Pen-6.png",
     hover: "/images/hover/research (8).png",
     title: "Tirzepatide 40mg (R&D Only)",
@@ -294,6 +282,7 @@ export const SERVICES: Product[] = [
   },
   {
     slug: "glow-ghk-cu",
+    tag: "Bestseller",
     card: "/images/products/ALLUVI carton and pen, isolated-8.png",
     hover: "/images/hover/Alluvi GLOW carton and blue pen-7.png",
     title: "Glow 70mg (R&D Only)",
@@ -339,6 +328,7 @@ export const SERVICES: Product[] = [
   },
   {
     slug: "retatrutide-40mg",
+    tag: "New",
     card: "/images/products/ALLUVI carton and pen with transparent background-5.png",
     hover: "/images/hover/Alluvi 40mg pack with turquoise pen-5.png",
     title: "Retatrutide 40mg (R&D Only)",
@@ -369,6 +359,7 @@ export const SERVICES: Product[] = [
   },
   {
     slug: "nad-plus-1000mg",
+    tag: "New",
     card: "/images/promo/nad-card.png",
     hover: "/images/hover/ALLUVI NAD+ Carton With Matching Pen-9.png",
     title: "NAD+ 1000mg (R&D Only)",
@@ -402,6 +393,7 @@ export const SERVICES: Product[] = [
      the card shows "Cert. Pending". */
   {
     slug: "tesamorelin-20mg",
+    tag: "Limited",
     card: "/images/products/Alluvi Tesamorelin carton and pen-7.png",
     hover: "/images/hover/Alluvi Tesamorelin carton and pen-2.png",
     title: "Tesamorelin 20mg (R&D Only)",
@@ -432,6 +424,7 @@ export const SERVICES: Product[] = [
   },
   {
     slug: "cjc-1295-10mg",
+    tag: "Bestseller",
     card: "/images/products/ALLUVI carton and pen with soft shadows-4.png",
     hover: "/images/hover/Alluvi carton and pen on lemon yellow-1.png",
     title: "CJC-1295 10mg (R&D Only)",
@@ -464,6 +457,60 @@ export const SERVICES: Product[] = [
 
 export const getProduct = (slug: string) => SERVICES.find((p) => p.slug === slug);
 
+/* Research themes — the groupings the shop-by tiles point at. A tile opens
+   `/shop?theme=<slug>` and the catalog narrows to that theme's compounds.
+
+   Membership is an explicit ordered slug list rather than a tag matched out
+   of SERVICES, matching how the homepage rows are built: reordering or
+   re-describing the catalog can't then silently change what a theme shows.
+   Compounds deliberately appear under more than one theme. */
+export type Theme = {
+  slug: string;
+  label: string;
+  blurb: string;
+  products: string[];
+};
+
+export const THEMES: Theme[] = [
+  {
+    slug: "body-balance",
+    label: "Body Balance",
+    blurb:
+      "Incretin-receptor reference compounds used in metabolic and body-composition research.",
+    products: ["retatrutide", "retatrutide-40mg", "tirzepatide"],
+  },
+  {
+    slug: "energy-movement",
+    label: "Energy & Movement",
+    blurb:
+      "Cofactor and growth-hormone-axis reference material for cellular energy and performance studies.",
+    products: ["nad-plus-1000mg", "cjc-1295-10mg", "tesamorelin-20mg"],
+  },
+  {
+    slug: "rest-recovery",
+    label: "Rest & Recovery",
+    blurb:
+      "Repair-peptide reference material for tissue, recovery and regeneration work.",
+    products: ["bpc-157-tb-500", "glow-ghk-cu"],
+  },
+  {
+    slug: "skin-radiance",
+    label: "Skin Radiance",
+    blurb:
+      "Copper-peptide and repair blends for dermal and extracellular-matrix research.",
+    products: ["glow-ghk-cu", "bpc-157-tb-500"],
+  },
+];
+
+export const getTheme = (slug: string) => THEMES.find((t) => t.slug === slug);
+
+/* Resolves a theme to products, dropping any slug that no longer exists so a
+   renamed compound degrades to a shorter list rather than a crash. */
+export const getThemeProducts = (slug: string): Product[] =>
+  getTheme(slug)
+    ?.products.map(getProduct)
+    .filter((p): p is Product => Boolean(p)) ?? [];
+
 export const WHY = [
   { title: "Independently verified", desc: "Every batch is third-party lab tested for identity, purity, and content before release.", icon: "flask" },
   { title: "Reference-grade stability", desc: "Temperature-controlled handling from synthesis to storage keeps reference material stable for analytical work.", icon: "snowflake" },
@@ -478,10 +525,10 @@ export const PROCESS = [
 ];
 
 export const TEAM = [
-  { name: "Dr. Elena Voss", role: "Head of Peptide Synthesis", img: IMG.doc1 },
-  { name: "Dr. Marcus Hale", role: "Analytical Chemistry Lead", img: IMG.doc4 },
-  { name: "Dr. Priya Nair", role: "Quality & Compliance Director", img: IMG.doc3 },
-  { name: "Dr. Adrian Kovač", role: "Research Operations Lead", img: IMG.doc2 },
+  { name: "Dr. Elena Voss", role: "Head of Peptide Synthesis", img: IMG.teamElena },
+  { name: "Dr. Marcus Hale", role: "Analytical Chemistry Lead", img: IMG.teamMarcus },
+  { name: "Dr. Priya Nair", role: "Quality & Compliance Director", img: IMG.teamPriya },
+  { name: "Dr. Adrian Kovač", role: "Research Operations Lead", img: IMG.teamAdrian },
 ];
 
 export const VALUE_CHIPS = [
@@ -519,6 +566,66 @@ export const TESTIMONIALS = [
       "Reproducible analytical work starts with well-documented reagents. The batch traceability and certificates give us complete peace of mind.",
     name: "Biochemistry PhD Candidate",
     avatar: IMG.test4,
+  },
+];
+
+/* ---------------------------------------------------------------------------
+   Video reviews — vertical buyer-shot clips in /public/images/review.
+
+   Each file is 420×754 h264, ~6s, and carries NO audio track at all, so the
+   cards autoplay muted on loop and there is no sound control to offer. The
+   posters are frame 0 of each clip, so the first painted frame matches where
+   playback begins and there is no jump when the video starts.
+
+   Attribution is deliberately limited to the product and a verified-buyer
+   flag. The people on camera are real and we have no permission to put words
+   in their mouths, so no name, handle or quote is attributed to any of them.
+   The packaging in shot reads ALLUVI; site copy stays LUXEN.
+--------------------------------------------------------------------------- */
+export type VideoReview = {
+  /** Also the basename of both the mp4 and its poster. */
+  slug: string;
+  src: string;
+  poster: string;
+  /** Describes the clip for assistive tech. No audio, so no captions needed. */
+  alt: string;
+  product: string;
+  /** PLACEHOLDER — not derived from a real submitted rating. */
+  rating: number;
+};
+
+export const VIDEO_REVIEWS: VideoReview[] = [
+  {
+    slug: "calisthenics",
+    src: "/images/review/calisthenics.mp4",
+    poster: "/images/review/posters/calisthenics.webp",
+    alt: "A buyer at an outdoor calisthenics park holding a Retatrutide carton and speaking to camera",
+    product: "Retatrutide 40mg",
+    rating: 5,
+  },
+  {
+    slug: "foamroll",
+    src: "/images/review/foamroll.mp4",
+    poster: "/images/review/posters/foamroll.webp",
+    alt: "A buyer sitting on a mat at home holding a Retatrutide carton and speaking to camera",
+    product: "Retatrutide 40mg",
+    rating: 5,
+  },
+  {
+    slug: "stretch",
+    src: "/images/review/stretch.mp4",
+    poster: "/images/review/posters/stretch.webp",
+    alt: "A buyer standing indoors beside a window holding a Retatrutide carton and speaking to camera",
+    product: "Retatrutide 40mg",
+    rating: 5,
+  },
+  {
+    slug: "terrace",
+    src: "/images/review/terrace.mp4",
+    poster: "/images/review/posters/terrace.webp",
+    alt: "A buyer on a café terrace holding a Retatrutide carton and speaking to camera",
+    product: "Retatrutide 40mg",
+    rating: 5,
   },
 ];
 

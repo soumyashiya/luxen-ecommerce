@@ -50,9 +50,9 @@ export default function ProductCard({
     window.setTimeout(() => setJustAdded(false), 1500);
   };
 
-  /* Lots without a published certificate are flagged, mirroring the way the
-     reference flags NEW / SOLD OUT on its cards. */
-  const badge = product.analysis ? "Lab Tested" : "Cert. Pending";
+  /* Merchandising pill — Bestseller / New / Limited, as the reference flags
+     its cards. Untagged products show none. */
+  const badge = product.tag;
 
   return (
     <article
@@ -94,10 +94,26 @@ export default function ProductCard({
             aria-hidden
             fill
             sizes={sizes}
-            className="object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100 group-has-[:focus-visible]:opacity-100 motion-reduce:transition-none"
+            /* .4s on an ease-out-quad, matching the reference's own
+               `.card__media img` cross-fade rather than the global `--ease`. */
+            style={{
+              transitionDuration: "var(--dur-media)",
+              transitionTimingFunction: "var(--ease-media)",
+            }}
+            className="object-cover opacity-0 transition-opacity group-hover:opacity-100 group-has-[:focus-visible]:opacity-100 motion-reduce:transition-none"
           />
         )}
-        <span className="by-badge absolute right-2 top-2">{badge}</span>
+        {badge && (
+          <span
+            className={cn(
+              "by-badge absolute right-2 top-2",
+              badge === "New" && "by-badge-yellow",
+              badge === "Limited" && "!bg-blue !text-yellow",
+            )}
+          >
+            {badge}
+          </span>
+        )}
       </Link>
 
       <Link href={`/product/${product.slug}`} className="mt-[15px] block">

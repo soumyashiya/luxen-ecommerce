@@ -1,0 +1,345 @@
+- generic [active] [ref=f46e1]:
+  - link "Skip to main content" [ref=f46e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f46e3]:
+    - generic [ref=f46e5]:
+      - button "Previous announcement" [ref=f46e6]
+      - paragraph [ref=f46e9]: EVERY BATCH INDEPENDENTLY LAB TESTED
+      - button "Next announcement" [ref=f46e10]
+    - generic [ref=f46e14]:
+      - generic [ref=f46e15]:
+        - link "Track Order" [ref=f46e16] [cursor=pointer]:
+          - /url: /track-order
+        - link "Certificates" [ref=f46e17] [cursor=pointer]:
+          - /url: /certificates
+      - link "LUXEN home" [ref=f46e18] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f46e19]: LUXEN
+      - generic [ref=f46e21]:
+        - button "Search" [ref=f46e22]
+        - button "Open cart" [ref=f46e27]
+    - navigation "Main" [ref=f46e31]:
+      - generic [ref=f46e32]:
+        - link "New In" [ref=f46e33] [cursor=pointer]:
+          - /url: /shop?tag=new
+        - link "About" [ref=f46e34] [cursor=pointer]:
+          - /url: /about
+        - link "Reviews" [ref=f46e35] [cursor=pointer]:
+          - /url: /about#testimonials
+        - link "Shop All" [ref=f46e36] [cursor=pointer]:
+          - /url: /shop
+  - main [ref=f46e37]:
+    - generic [ref=f46e38]:
+      - heading "Certificates of analysis" [level=1] [ref=f46e39]
+      - paragraph [ref=f46e40]: Every assayed lot below was independently characterised by Janoshik Analytical. Figures are taken from the published batch report — the same report you can open and read yourself.
+      - paragraph [ref=f46e41]: 4 lots independently assayed
+      - generic [ref=f46e42]:
+        - article [ref=f46e43]:
+          - generic [ref=f46e44]:
+            - list [ref=f46e45]:
+              - listitem [ref=f46e46]:
+                - generic [ref=f46e47]: 21.99 mg
+                - generic [ref=f46e48]: BPC-157
+              - listitem [ref=f46e49]:
+                - generic [ref=f46e50]: 19.59 mg
+                - generic [ref=f46e51]: TB-500
+            - paragraph [ref=f46e52]: verified content, independently assayed
+            - generic [ref=f46e53]:
+              - generic [ref=f46e54]:
+                - term [ref=f46e55]: Batch
+                - definition [ref=f46e56]: BP1701FSR
+              - generic [ref=f46e57]:
+                - term [ref=f46e58]: Fill volume
+                - definition [ref=f46e59]: 3 mL
+          - generic [ref=f46e60]:
+            - heading [level=2] [ref=f46e61]:
+              - link "BPC-157 & TB-500 40mg (R&D Only)" [ref=f46e62] [cursor=pointer]:
+                - /url: /product/bpc-157-tb-500
+            - table "Compounds measured in batch BP1701FSR" [ref=f46e63]:
+              - caption [ref=f46e64]: Compounds measured in batch BP1701FSR
+              - rowgroup [ref=f46e65]:
+                - row [ref=f46e66]:
+                  - columnheader "Compound" [ref=f46e67]
+                  - columnheader "Per mL" [ref=f46e68]
+                  - columnheader "Verified" [ref=f46e69]
+              - rowgroup [ref=f46e70]:
+                - row [ref=f46e71]:
+                  - rowheader "BPC-157" [ref=f46e72]
+                  - cell "7.33 mg/mL" [ref=f46e73]
+                  - cell "21.99 mg" [ref=f46e74]
+                - row [ref=f46e75]:
+                  - rowheader "TB-500" [ref=f46e76]
+                  - cell "6.53 mg/mL" [ref=f46e77]
+                  - cell "19.59 mg" [ref=f46e78]
+            - paragraph [ref=f46e79]: Concentration is measured per mL; verified content is the total assayed mass across the 3 mL fill.
+            - generic [ref=f46e80]:
+              - heading "Report scans" [level=3] [ref=f46e81]
+              - list [ref=f46e82]:
+                - listitem [ref=f46e83]:
+                  - link "BPC-157 & TB-500 40mg (R&D Only) certificate of analysis, page 1 (opens in a new tab)" [ref=f46e84] [cursor=pointer]:
+                    - /url: /certificates/bpc-157-tb-500-page1.jpg
+                    - img "BPC-157 & TB-500 40mg (R&D Only) certificate of analysis, page 1" [ref=f46e85]
+                    - generic [ref=f46e86]: (opens in a new tab)
+                - listitem [ref=f46e87]:
+                  - link "BPC-157 & TB-500 40mg (R&D Only) certificate of analysis, page 2 (opens in a new tab)" [ref=f46e88] [cursor=pointer]:
+                    - /url: /certificates/bpc-157-tb-500-page2.jpg
+                    - img "BPC-157 & TB-500 40mg (R&D Only) certificate of analysis, page 2" [ref=f46e89]
+                    - generic [ref=f46e90]: (opens in a new tab)
+            - link "View full report (opens in a new tab)" [ref=f46e92] [cursor=pointer]:
+              - /url: https://verify.janoshik.com/tests/163218-ALLUVI_BPC157_TB500_40MG_KIT_EAI125ZEF8TB
+              - text: View full report
+              - generic [ref=f46e97]: (opens in a new tab)
+        - article [ref=f46e98]:
+          - generic [ref=f46e99]:
+            - paragraph [ref=f46e100]: 99.21%
+            - paragraph [ref=f46e101]: purity, independently assayed
+            - generic [ref=f46e102]:
+              - generic [ref=f46e103]:
+                - term [ref=f46e104]: Batch
+                - definition [ref=f46e105]: AR1721TRT
+              - generic [ref=f46e106]:
+                - term [ref=f46e107]: Fill volume
+                - definition [ref=f46e108]: 2.4 mL
+          - generic [ref=f46e109]:
+            - heading [level=2] [ref=f46e110]:
+              - link "Retatrutide 20mg (R&D Only)" [ref=f46e111] [cursor=pointer]:
+                - /url: /product/retatrutide
+            - table "Compounds measured in batch AR1721TRT" [ref=f46e112]:
+              - caption [ref=f46e113]: Compounds measured in batch AR1721TRT
+              - rowgroup [ref=f46e114]:
+                - row [ref=f46e115]:
+                  - columnheader "Compound" [ref=f46e116]
+                  - columnheader "Per mL" [ref=f46e117]
+                  - columnheader "Verified" [ref=f46e118]
+              - rowgroup [ref=f46e119]:
+                - row [ref=f46e120]:
+                  - rowheader "Retatrutide" [ref=f46e121]
+                  - cell "9.57 mg/mL" [ref=f46e122]
+                  - cell "22.96 mg" [ref=f46e123]
+            - paragraph [ref=f46e124]: Concentration is measured per mL; verified content is the total assayed mass across the 2.4 mL fill.
+            - generic [ref=f46e125]:
+              - heading "Report scans" [level=3] [ref=f46e126]
+              - list [ref=f46e127]:
+                - listitem [ref=f46e128]:
+                  - link "Retatrutide 20mg (R&D Only) certificate of analysis, page 1 (opens in a new tab)" [ref=f46e129] [cursor=pointer]:
+                    - /url: /certificates/retatrutide-page1.jpg
+                    - img "Retatrutide 20mg (R&D Only) certificate of analysis, page 1" [ref=f46e130]
+                    - generic [ref=f46e131]: (opens in a new tab)
+                - listitem [ref=f46e132]:
+                  - link "Retatrutide 20mg (R&D Only) certificate of analysis, page 2 (opens in a new tab)" [ref=f46e133] [cursor=pointer]:
+                    - /url: /certificates/retatrutide-page2.jpg
+                    - img "Retatrutide 20mg (R&D Only) certificate of analysis, page 2" [ref=f46e134]
+                    - generic [ref=f46e135]: (opens in a new tab)
+            - link "View full report (opens in a new tab)" [ref=f46e137] [cursor=pointer]:
+              - /url: https://verify.janoshik.com/tests/163215-ALLUVI_RETATRUTIDE_20MG_KIT_GBHEFN58JXXZ
+              - text: View full report
+              - generic [ref=f46e142]: (opens in a new tab)
+        - article [ref=f46e143]:
+          - generic [ref=f46e144]:
+            - paragraph [ref=f46e145]: 99.85%
+            - paragraph [ref=f46e146]: purity, independently assayed
+            - generic [ref=f46e147]:
+              - generic [ref=f46e148]:
+                - term [ref=f46e149]: Batch
+                - definition [ref=f46e150]: TR786PAOS
+              - generic [ref=f46e151]:
+                - term [ref=f46e152]: Fill volume
+                - definition [ref=f46e153]: 3 mL
+          - generic [ref=f46e154]:
+            - heading [level=2] [ref=f46e155]:
+              - link "Tirzepatide 40mg (R&D Only)" [ref=f46e156] [cursor=pointer]:
+                - /url: /product/tirzepatide
+            - table "Compounds measured in batch TR786PAOS" [ref=f46e157]:
+              - caption [ref=f46e158]: Compounds measured in batch TR786PAOS
+              - rowgroup [ref=f46e159]:
+                - row [ref=f46e160]:
+                  - columnheader "Compound" [ref=f46e161]
+                  - columnheader "Per mL" [ref=f46e162]
+                  - columnheader "Verified" [ref=f46e163]
+              - rowgroup [ref=f46e164]:
+                - row [ref=f46e165]:
+                  - rowheader "Tirzepatide" [ref=f46e166]
+                  - cell "13.35 mg/mL" [ref=f46e167]
+                  - cell "40.05 mg" [ref=f46e168]
+            - paragraph [ref=f46e169]: Concentration is measured per mL; verified content is the total assayed mass across the 3 mL fill.
+            - generic [ref=f46e170]:
+              - heading "Report scans" [level=3] [ref=f46e171]
+              - list [ref=f46e172]:
+                - listitem [ref=f46e173]:
+                  - link "Tirzepatide 40mg (R&D Only) certificate of analysis, page 1 (opens in a new tab)" [ref=f46e174] [cursor=pointer]:
+                    - /url: /certificates/tirzepatide-page1.jpg
+                    - img "Tirzepatide 40mg (R&D Only) certificate of analysis, page 1" [ref=f46e175]
+                    - generic [ref=f46e176]: (opens in a new tab)
+                - listitem [ref=f46e177]:
+                  - link "Tirzepatide 40mg (R&D Only) certificate of analysis, page 2 (opens in a new tab)" [ref=f46e178] [cursor=pointer]:
+                    - /url: /certificates/tirzepatide-page2.jpg
+                    - img "Tirzepatide 40mg (R&D Only) certificate of analysis, page 2" [ref=f46e179]
+                    - generic [ref=f46e180]: (opens in a new tab)
+                - listitem [ref=f46e181]:
+                  - link "Tirzepatide 40mg (R&D Only) certificate of analysis, page 3 (opens in a new tab)" [ref=f46e182] [cursor=pointer]:
+                    - /url: /certificates/tirzepatide-page3.jpg
+                    - img "Tirzepatide 40mg (R&D Only) certificate of analysis, page 3" [ref=f46e183]
+                    - generic [ref=f46e184]: (opens in a new tab)
+            - link "View full report (opens in a new tab)" [ref=f46e186] [cursor=pointer]:
+              - /url: https://verify.janoshik.com/tests/147174-ALLUVI_TIRZEPATIDE_40MG_KIT_T5MBWRAYD4HN
+              - text: View full report
+              - generic [ref=f46e191]: (opens in a new tab)
+        - article [ref=f46e192]:
+          - generic [ref=f46e193]:
+            - list [ref=f46e194]:
+              - listitem [ref=f46e195]:
+                - generic [ref=f46e196]: 25.8 mg
+                - generic [ref=f46e197]: GHK-Cu
+              - listitem [ref=f46e198]:
+                - generic [ref=f46e199]: 8.13 mg
+                - generic [ref=f46e200]: BPC-157
+              - listitem [ref=f46e201]:
+                - generic [ref=f46e202]: 6.76 mg
+                - generic [ref=f46e203]: TB-500
+            - paragraph [ref=f46e204]: verified content, independently assayed
+            - generic [ref=f46e205]:
+              - generic [ref=f46e206]:
+                - term [ref=f46e207]: Batch
+                - definition [ref=f46e208]: GL0621XSA
+              - generic [ref=f46e209]:
+                - term [ref=f46e210]: Fill volume
+                - definition [ref=f46e211]: 3.4 mL
+          - generic [ref=f46e212]:
+            - heading [level=2] [ref=f46e213]:
+              - link "Glow 70mg (R&D Only)" [ref=f46e214] [cursor=pointer]:
+                - /url: /product/glow-ghk-cu
+            - table "Compounds measured in batch GL0621XSA" [ref=f46e215]:
+              - caption [ref=f46e216]: Compounds measured in batch GL0621XSA
+              - rowgroup [ref=f46e217]:
+                - row [ref=f46e218]:
+                  - columnheader "Compound" [ref=f46e219]
+                  - columnheader "Per mL" [ref=f46e220]
+                  - columnheader "Verified" [ref=f46e221]
+              - rowgroup [ref=f46e222]:
+                - row [ref=f46e223]:
+                  - rowheader "GHK-Cu" [ref=f46e224]
+                  - cell "7.59 mg/mL" [ref=f46e225]
+                  - cell "25.8 mg" [ref=f46e226]
+                - row [ref=f46e227]:
+                  - rowheader "BPC-157" [ref=f46e228]
+                  - cell "2.39 mg/mL" [ref=f46e229]
+                  - cell "8.13 mg" [ref=f46e230]
+                - row [ref=f46e231]:
+                  - rowheader "TB-500" [ref=f46e232]
+                  - cell "1.99 mg/mL" [ref=f46e233]
+                  - cell "6.76 mg" [ref=f46e234]
+            - paragraph [ref=f46e235]: Concentration is measured per mL; verified content is the total assayed mass across the 3.4 mL fill.
+            - generic [ref=f46e236]:
+              - heading "Report scans" [level=3] [ref=f46e237]
+              - list [ref=f46e238]:
+                - listitem [ref=f46e239]:
+                  - link "Glow 70mg (R&D Only) certificate of analysis, page 1 (opens in a new tab)" [ref=f46e240] [cursor=pointer]:
+                    - /url: /certificates/glow-ghk-cu-page1.jpg
+                    - img "Glow 70mg (R&D Only) certificate of analysis, page 1" [ref=f46e241]
+                    - generic [ref=f46e242]: (opens in a new tab)
+                - listitem [ref=f46e243]:
+                  - link "Glow 70mg (R&D Only) certificate of analysis, page 2 (opens in a new tab)" [ref=f46e244] [cursor=pointer]:
+                    - /url: /certificates/glow-ghk-cu-page2.jpg
+                    - img "Glow 70mg (R&D Only) certificate of analysis, page 2" [ref=f46e245]
+                    - generic [ref=f46e246]: (opens in a new tab)
+            - link "View full report (opens in a new tab)" [ref=f46e248] [cursor=pointer]:
+              - /url: https://verify.janoshik.com/tests/163217-ALLUVI_GLOW_70MG_KIT_DCL3AJSE4JQP
+              - text: View full report
+              - generic [ref=f46e253]: (opens in a new tab)
+      - generic [ref=f46e254]:
+        - paragraph [ref=f46e255]: For research purposes only. Not intended for human or veterinary use. Not intended to diagnose, treat, cure, or prevent any disease.
+        - link "Shop all" [ref=f46e256] [cursor=pointer]:
+          - /url: /shop
+  - contentinfo [ref=f46e257]:
+    - generic [ref=f46e259]:
+      - generic [ref=f46e260]:
+        - paragraph [ref=f46e263]: ≥99% Purity
+        - paragraph [ref=f46e264]: HPLC verified, every batch
+      - generic [ref=f46e265]:
+        - paragraph [ref=f46e271]: Free Delivery
+        - paragraph [ref=f46e272]: On orders over $250
+      - generic [ref=f46e273]:
+        - paragraph [ref=f46e277]: Third-Party Tested
+        - paragraph [ref=f46e278]: Certificate with every lot
+    - generic [ref=f46e280]:
+      - generic [ref=f46e281]:
+        - generic [ref=f46e282]:
+          - heading "Customer Care" [level=2] [ref=f46e283]
+          - list [ref=f46e284]:
+            - listitem [ref=f46e285]:
+              - link "Track Order" [ref=f46e286] [cursor=pointer]:
+                - /url: /track-order
+            - listitem [ref=f46e287]:
+              - link "Shipping Policy" [ref=f46e288] [cursor=pointer]:
+                - /url: /shipping-policy
+            - listitem [ref=f46e289]:
+              - link "Refund Policy" [ref=f46e290] [cursor=pointer]:
+                - /url: /refund-policy
+            - listitem [ref=f46e291]:
+              - link "Contact Us" [ref=f46e292] [cursor=pointer]:
+                - /url: /about#contact
+        - generic [ref=f46e293]:
+          - heading "Company Info" [level=2] [ref=f46e294]
+          - list [ref=f46e295]:
+            - listitem [ref=f46e296]:
+              - link "About Us" [ref=f46e297] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f46e298]:
+              - link "Privacy Policy" [ref=f46e299] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=f46e300]:
+              - link "Terms of Service" [ref=f46e301] [cursor=pointer]:
+                - /url: /terms-of-service
+            - listitem [ref=f46e302]:
+              - link "Press Release" [ref=f46e303] [cursor=pointer]:
+                - /url: /press-release
+        - generic [ref=f46e304]:
+          - heading "More Info" [level=2] [ref=f46e305]
+          - list [ref=f46e306]:
+            - listitem [ref=f46e307]:
+              - link "Our Process" [ref=f46e308] [cursor=pointer]:
+                - /url: /about#process
+            - listitem [ref=f46e309]:
+              - link "Research Team" [ref=f46e310] [cursor=pointer]:
+                - /url: /#team
+            - listitem [ref=f46e311]:
+              - link "Reviews" [ref=f46e312] [cursor=pointer]:
+                - /url: /about#testimonials
+        - generic [ref=f46e313]:
+          - heading "Shop" [level=2] [ref=f46e314]
+          - list [ref=f46e315]:
+            - listitem [ref=f46e316]:
+              - link "Shop All" [ref=f46e317] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=f46e318]:
+              - link "Retatrutide" [ref=f46e319] [cursor=pointer]:
+                - /url: /product/retatrutide
+            - listitem [ref=f46e320]:
+              - link "Tirzepatide" [ref=f46e321] [cursor=pointer]:
+                - /url: /product/tirzepatide
+            - listitem [ref=f46e322]:
+              - link "BPC-157 & TB-500" [ref=f46e323] [cursor=pointer]:
+                - /url: /product/bpc-157-tb-500
+            - listitem [ref=f46e324]:
+              - link "NAD+" [ref=f46e325] [cursor=pointer]:
+                - /url: /product/nad-plus-1000mg
+      - generic [ref=f46e327]:
+        - paragraph [ref=f46e328]: "Lab updates from LUXEN: new lots, certificates and restocks"
+        - generic [ref=f46e329]:
+          - generic [ref=f46e330]: Email
+          - textbox "Email" [ref=f46e331]
+          - button "Subscribe" [ref=f46e332]
+        - generic [ref=f46e335] [cursor=pointer]:
+          - checkbox "I agree to receive occasional updates from LUXEN." [checked] [ref=f46e336]
+          - text: I agree to receive occasional updates from LUXEN.
+      - paragraph [ref=f46e337]: Independently tested research reference material, supplied for laboratory and analytical use only. Not intended to diagnose, treat, cure, or prevent any disease. Not for human or veterinary use.
+    - generic [ref=f46e339]:
+      - paragraph [ref=f46e340]: © 2026 LUXEN
+      - generic [ref=f46e341]:
+        - link "X" [ref=f46e342] [cursor=pointer]:
+          - /url: https://twitter.com/luxenlabs
+        - link "LinkedIn" [ref=f46e345] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/luxen
+        - link "Facebook" [ref=f46e348] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=f46e356] [cursor=pointer]

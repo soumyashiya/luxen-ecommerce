@@ -3,6 +3,8 @@ import Hero from "@/components/sections/Hero";
 import CollectionRow from "@/components/sections/CollectionRow";
 import PromoBanner from "@/components/sections/PromoBanner";
 import ShopByRow from "@/components/sections/ShopByRow";
+import Testimonials from "@/components/sections/Testimonials";
+import VideoReviews from "@/components/sections/VideoReviews";
 import Team from "@/components/sections/Team";
 import WelcomeBand from "@/components/sections/WelcomeBand";
 import Newsletter from "@/components/sections/Newsletter";
@@ -40,10 +42,12 @@ const RESEARCH_CATALOG = [
      5  image banner        (product launch)
      6  image banner        (offer)
      7  shop-by row
-     8  our scientists
-     9  rich text band
-    10  newsletter
-    11  footer              (trust bar → link columns → bottom bar)
+     8  testimonials        (quote marquee, shared with `/about`)
+     9  video reviews       (four 9:16 buyer clips)
+    10  our scientists
+    11  rich text band
+    12  newsletter
+    13  footer              (trust bar → link columns → bottom bar)
 
    Four banners and two collections. Departs from the reference in two ways:
    its third collection ("Research Kits") is hidden, and the team section runs
@@ -79,15 +83,19 @@ export default function Home() {
           scrim={false}
           ink="pink"
           badge="New"
+          face="tech"
           title={["Welcome to", "the lab"]}
           sub="Every batch, independently verified"
           subRules
           cta={{ label: "Shop now", href: "/shop" }}
           note="*Every lot ships with a third-party certificate of analysis covering identity, purity and content."
-          image="/images/welcomlab2.png"
+          image="/images/welcomelab3.png"
           imageAlt="Model holding a Glow pre-filled research pen against a field of bubbles"
           imageSide="right"
-          imagePosition="70% center"
+          /* Desktop shows the artwork whole, so this only steers the narrow
+             mobile crop — onto the clean bubble field, since the centred copy
+             has no scrim under it and the model's face swallows pink type. */
+          imagePosition="25% center"
         />
 
         {/* Hover artwork scoped to this row. Glow, Retatrutide 40mg and CJC
@@ -106,29 +114,64 @@ export default function Home() {
           }}
         />
 
+        {/* Background treatment: the artwork is the band rather than a cutout
+            beside the copy. The model holds the right, so the lockup takes the
+            clean marble field on the left — bright enough (~#fbcee7) that pink
+            display type clears contrast without a scrim. */}
         <PromoBanner
+          /* Only backs the band while the artwork loads; a pale field keeps
+             that first paint close to the photo. */
           tone="periwinkle"
+          layout="background"
+          scrim={false}
+          ink="pink"
           badge="New"
-          title={["Retatrutide", "40mg"]}
-          sub="Higher-fill lots for identity & purity work"
-          cta={{ label: "Shop now", href: "/product/retatrutide-40mg" }}
-          image="/images/promo/reta-box.png"
-          imageAlt="Retatrutide 40mg research reference carton"
+          brand="LUXEN"
+          title={["NAD+", "1000mg"]}
+          sub="Sealed lots for identity & purity work"
+          cta={{ label: "Shop now", href: "/product/nad-plus-1000mg" }}
+          image="/images/new-retatrutide.png"
+          imageAlt="Model holding an NAD+ pre-filled research pen against a pink marble field"
           imageSide="right"
+          /* Desktop shows the artwork whole, so this only steers the narrow
+             mobile crop onto the clean field — the centred copy has no scrim
+             under it there and the model's face swallows pink type. */
+          imagePosition="20% center"
         />
 
+        {/* Background treatment: the artwork bakes its own field, and that
+            field is `--yellow` to within 2/255 — so it meets the band's own
+            `tone` seamlessly and needs no scrim. The four cartons hold the
+            left, so the lockup takes the clean right half. No `ink` override:
+            the yellow tone already resolves to pink type with a yellow-on-pink
+            CTA, which is the right pairing here. */}
         <PromoBanner
           tone="yellow"
+          layout="background"
+          scrim={false}
           title={["Buy more,", "save more"]}
-          sub="Volume pricing on 4+ research kits"
+          hero="4+ Kits"
+          sub="Unlock volume pricing"
           cta={{ label: "Shop all", href: "/shop" }}
-          image="/images/promo/carton-matching-pen.png"
-          imageAlt="Research reference carton with matching pre-filled pen"
+          image="/images/buymore.png"
+          imageAlt="Four research reference cartons — NAD+, Retatrutide, Tirzepatide and Glow — arranged on a lemon field"
           imageSide="left"
+          /* Desktop shows the artwork whole, so this only steers the narrow
+             mobile crop. It lands on the clean right half: the centred copy
+             has no scrim under it there, and any nearer crop slices the
+             cartons mid-pack. */
+          imagePosition="100% center"
         />
 
         <ShopByRow />
 
+        {/* Customer proof ahead of team proof — the same marquee `/about`
+            runs, so the two pages share one set of quotes. */}
+        <Testimonials />
+
+        {/* Buyer-shot video, after the written quotes: the clips are the
+            harder evidence, so they land closest to the team section. */}
+        <VideoReviews />
 
         {/* "Our scientists" — the same section `/about` runs, placed with the
             other storytelling block. Its CTA points back to `/about` for the

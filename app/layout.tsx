@@ -1,11 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Jost } from "next/font/google";
+import { Jost, Share_Tech } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import { CartProvider } from "@/lib/cart";
 import { AuthProvider } from "@/lib/auth";
 import CartDrawer from "@/components/cart/CartDrawer";
+import WelcomeModal from "@/components/WelcomeModal";
 import {
   OG_IMAGE,
   SITE_DESCRIPTION,
@@ -34,6 +35,16 @@ const jost = Jost({
     "Arial",
     "sans-serif",
   ],
+});
+
+/* Squared monoline display face, used only for the "lab" banner lockup.
+   Not preloaded: it sits below the fold. */
+const shareTech = Share_Tech({
+  variable: "--font-tech",
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -163,7 +174,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jost.variable} antialiased`}>
+    <html lang="en" className={`${jost.variable} ${shareTech.variable} antialiased`}>
       <head>
         {/* Warm up the connection used by next/image for CDN'd variants. */}
         <link rel="dns-prefetch" href="//images.unsplash.com" />
@@ -180,6 +191,7 @@ export default function RootLayout({
           <CartProvider>
             <SmoothScroll>{children}</SmoothScroll>
             <CartDrawer />
+            <WelcomeModal />
           </CartProvider>
         </AuthProvider>
         <Script

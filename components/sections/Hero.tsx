@@ -44,32 +44,31 @@ export default function Hero() {
           />
         </div>
 
+        {/* Deepens the clean right field toward a jade so the pale-yellow
+            lockup holds against it; fades out before the cartons. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 hidden lg:block bg-[linear-gradient(270deg,rgba(0,120,104,0.55)_0%,rgba(0,120,104,0.45)_34%,rgba(0,120,104,0)_52%)]"
+        />
+
         {/* Lockup — in flow below the photo on small screens, overlaid on the
-            clean right field from `lg` up. */}
-        <div className="by-page py-10 lg:absolute lg:inset-0 lg:flex lg:max-w-none lg:items-center lg:px-0 lg:py-0">
-          <div className="lg:ml-[63vw] lg:w-[33vw]">
-            <span className="by-badge inline-block italic">New</span>
-
-            <h1 className="mt-4 text-[clamp(34px,5.4vw,64px)] font-bold uppercase leading-[0.95] tracking-[0.6px] text-blue lg:text-[clamp(26px,2.6vw,46px)]">
-              <span className="block">Research Grade</span>
-              <span className="block">Reference Peptides</span>
+            clean right field from `lg` up. Centred, stacked, pale yellow. */}
+        <div className="relative by-page bg-[#0a9e8a] py-12 text-center lg:absolute lg:inset-0 lg:flex lg:max-w-none lg:items-center lg:bg-transparent lg:px-0 lg:py-0">
+          <div className="mx-auto lg:ml-[62vw] lg:mr-0 lg:w-[34vw]">
+            <h1 className="text-[clamp(40px,8vw,72px)] font-semibold uppercase leading-[1.04] tracking-[1px] text-yellow lg:text-[clamp(44px,4.9vw,96px)]">
+              <span className="block">Research</span>
+              <span className="block">Grade</span>
+              <span className="block">Peptides</span>
             </h1>
-
-            {/* Rule-flanked strapline */}
-            <p className="mt-5 flex items-center gap-3 text-[clamp(13px,1.5vw,19px)] font-bold uppercase tracking-[1px] text-blue lg:text-[clamp(12px,1.1vw,17px)]">
-              <span aria-hidden className="h-px w-8 shrink-0 bg-blue" />
-              Verified to the milligram
-              <span aria-hidden className="h-px w-8 shrink-0 bg-blue" />
-            </p>
 
             <Link
               href="/shop"
-              className="by-btn mt-7 min-h-[54px] px-10 text-[clamp(15px,1.5vw,20px)]"
+              className="mt-8 inline-flex min-h-[clamp(52px,5.2vw,96px)] items-center justify-center rounded-[10px] bg-yellow px-[1.1em] text-[clamp(18px,2.3vw,42px)] font-medium uppercase tracking-[1px] text-pink transition-colors duration-[var(--dur)] ease-[var(--ease)] hover:bg-pink hover:text-yellow"
             >
               Shop now
             </Link>
 
-            <p className="mt-6 max-w-sm text-[11px] leading-relaxed tracking-[0.4px] text-blue lg:max-w-none">
+            <p className="mx-auto mt-6 max-w-md text-[11px] leading-relaxed tracking-[0.4px] text-yellow/90">
               *Every batch independently characterised by Janoshik Analytical for
               identity, purity and content. For laboratory and in-vitro research use
               only — not for human or veterinary use.

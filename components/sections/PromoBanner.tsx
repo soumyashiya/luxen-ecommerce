@@ -123,6 +123,9 @@ export default function PromoBanner({
   tone = "teal",
   badge,
   title,
+  brand,
+  face,
+  hero,
   sub,
   subRules = false,
   note,
@@ -141,6 +144,15 @@ export default function PromoBanner({
   /* Each entry renders on its own line, matching the stacked display
      lockups the reference uses in these banners. */
   title: string[];
+  /* Switches to the offer lockup: `title` becomes a single kicker line and
+     this renders beneath it at display size (e.g. "Save 25%"). Centred. */
+  hero?: string;
+  /* Switches to the product lockup: this renders as a heavy wordmark above
+     `title`, which drops to a lighter weight as the product name. */
+  brand?: string;
+  /* "tech" sets the headline and strapline in the squared display face,
+     with the larger badge and CTA that lockup calls for. */
+  face?: "tech";
   sub?: string;
   /* Flanks the strapline with short rules, as the reference's lead banner
      does. Only legible over a quiet surface, so it pairs with `background`. */
@@ -172,13 +184,20 @@ export default function PromoBanner({
   const subText = i?.text ?? (layout === "background" ? t.overInk : t.sub);
   const badgeClass = i?.badge ?? t.badge;
   const btnClass = i?.btn ?? t.btn;
+  const tech = face === "tech";
+  /* Lockups whose badge and CTA scale up with the display type. */
+  const large = Boolean(brand) || tech;
 
   /* Desktop only — once the strapline wraps, the rules strand at the line
      box's edges instead of flanking the text. */
   const rule = (
     <span
       aria-hidden
-      className={cn("hidden h-px w-8 shrink-0 lg:block", i?.rule ?? "bg-current")}
+      className={cn(
+        "hidden shrink-0 lg:block",
+        tech ? "h-[2px] w-[1.6em]" : "h-px w-8",
+        i?.rule ?? "bg-current",
+      )}
     />
   );
 
@@ -187,7 +206,9 @@ export default function PromoBanner({
       {badge && (
         <span
           className={cn(
-            "mb-4 inline-block px-4 py-1.5 text-[15px] font-bold uppercase italic leading-none tracking-[1px]",
+            large
+              ? "mb-3 inline-block rounded-[4px] px-[0.45em] py-[0.18em] text-[clamp(20px,2.2vw,40px)] font-medium uppercase italic leading-none tracking-[1px]"
+              : "mb-4 inline-block px-4 py-1.5 text-[15px] font-bold uppercase italic leading-none tracking-[1px]",
             badgeClass,
           )}
         >
@@ -195,23 +216,73 @@ export default function PromoBanner({
         </span>
       )}
 
-      <h2
-        className={cn(
-          "text-[clamp(30px,5.6vw,62px)] font-bold uppercase leading-[1.05] tracking-[0.6px]",
-          inkText,
-        )}
-      >
-        {title.map((line) => (
-          <span key={line} className="block">
-            {line}
+      {brand ? (
+        /* Product lockup: a heavy brand wordmark over the product name set a
+           weight lighter, so the two read as maker and item. */
+        <h2 className={cn("uppercase", inkText)}>
+          <span className="block text-[clamp(44px,5.4vw,100px)] font-bold leading-[1] tracking-[1px]">
+            {brand}
           </span>
-        ))}
-      </h2>
+          <span className="mt-1 block text-[clamp(34px,4.1vw,76px)] font-medium leading-[1.02] tracking-[0.5px]">
+            {title.map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
+          </span>
+        </h2>
+      ) : hero ? (
+        /* Offer lockup: the title runs as one kicker line, the hero line is
+           the oversized focal point, the strapline closes it at kicker size. */
+        <h2 className={cn("font-bold uppercase", inkText)}>
+          <span className="block text-[clamp(24px,3.4vw,56px)] leading-[1.05] tracking-[0.5px]">
+            {title.join(" ")}
+          </span>
+          <span className="mt-1 block whitespace-nowrap text-[clamp(56px,9.4vw,156px)] leading-[0.95] tracking-[-0.5px]">
+            {hero}
+          </span>
+        </h2>
+      ) : (
+        <h2
+          className={cn(
+            tech
+              ? "font-[family-name:var(--font-tech)] text-[clamp(42px,6.2vw,116px)] font-normal uppercase leading-[0.98] tracking-[1px]"
+              : "text-[clamp(30px,5.6vw,62px)] font-bold uppercase leading-[1.05] tracking-[0.6px]",
+            inkText,
+          )}
+        >
+          {title.map((line) => (
+            <span key={line} className="block">
+              {line}
+            </span>
+          ))}
+        </h2>
+      )}
 
-      {sub && (
+      {sub && brand ? (
         <p
           className={cn(
-            "mt-4 text-[clamp(15px,2vw,22px)] font-bold uppercase leading-snug tracking-[0.6px]",
+            "mx-auto mt-3 max-w-[28em] text-[clamp(16px,1.6vw,30px)] font-semibold uppercase leading-[1.1] tracking-[0.5px] lg:mx-0",
+            subText,
+          )}
+        >
+          {sub}
+        </p>
+      ) : sub && hero ? (
+        <p
+          className={cn(
+            "mt-2 text-[clamp(20px,3vw,50px)] font-bold uppercase leading-[1.05] tracking-[0.5px]",
+            subText,
+          )}
+        >
+          {sub}
+        </p>
+      ) : sub && (
+        <p
+          className={cn(
+            tech
+              ? "mt-5 font-[family-name:var(--font-tech)] text-[clamp(18px,1.75vw,34px)] font-normal uppercase leading-snug tracking-[0.5px] lg:inline-flex lg:whitespace-nowrap"
+              : "mt-4 text-[clamp(15px,2vw,22px)] font-bold uppercase leading-snug tracking-[0.6px]",
             subRules &&
               "flex items-center justify-center gap-3 lg:justify-start",
             subText,
@@ -227,8 +298,9 @@ export default function PromoBanner({
         <Link
           href={cta.href}
           className={cn(
-            "mt-7 inline-flex min-h-[47px] items-center justify-center rounded-[7px] px-9",
-            "text-[clamp(15px,1.6vw,22px)] font-bold uppercase tracking-[1px]",
+            large
+              ? "mt-8 inline-flex min-h-[clamp(52px,5.2vw,96px)] items-center justify-center rounded-[10px] px-[1.1em] text-[clamp(18px,2.3vw,42px)] font-medium uppercase tracking-[1px]"
+              : "mt-7 inline-flex min-h-[47px] items-center justify-center rounded-[7px] px-9 text-[clamp(15px,1.6vw,22px)] font-bold uppercase tracking-[1px]",
             "transition-colors duration-[var(--dur)] ease-[var(--ease)]",
             btnClass,
           )}
@@ -240,8 +312,10 @@ export default function PromoBanner({
       {note && (
         <p
           className={cn(
-            "mt-6 max-w-sm text-[11px] italic leading-relaxed tracking-[0.4px]",
-            "mx-auto lg:mx-0",
+            hero
+              ? "mt-5 text-[clamp(10px,0.8vw,14px)] font-semibold uppercase leading-relaxed tracking-[0.4px]"
+              : "mt-6 max-w-sm text-[11px] italic leading-relaxed tracking-[0.4px]",
+            hero ? "mx-auto" : "mx-auto lg:mx-0",
             subText,
           )}
         >
@@ -257,14 +331,14 @@ export default function PromoBanner({
      always fits and ultrawide doesn't run away. */
   if (layout === "background") {
     return (
-      <section className={cn("relative overflow-hidden", t.field)}>
+      <section className={cn("by-banner relative overflow-hidden", t.field)}>
         <Image
           src={image}
           alt={imageAlt}
           fill
           priority={priority}
           sizes="100vw"
-          className="object-cover"
+          className="by-banner-zoom object-cover"
           style={{ objectPosition: imagePosition }}
         />
         {/* Legibility wash. Below `lg` the copy is centred over a narrow crop,
@@ -295,7 +369,7 @@ export default function PromoBanner({
         >
           <Reveal
             className={cn(
-              "text-center lg:text-left",
+              hero ? "text-center" : "text-center lg:text-left",
               imageSide === "left" ? "lg:col-start-2" : "lg:col-start-1",
             )}
           >
@@ -307,7 +381,7 @@ export default function PromoBanner({
   }
 
   return (
-    <section className={cn("relative overflow-hidden", t.field)}>
+    <section className={cn("by-banner relative overflow-hidden", t.field)}>
       <div
         className={cn(
           "by-page grid items-center gap-8 py-12 sm:py-14 lg:min-h-[520px] lg:grid-cols-2 lg:gap-12 lg:py-0",
@@ -326,7 +400,7 @@ export default function PromoBanner({
             fill
             priority={priority}
             sizes="(min-width:990px) 45vw, 90vw"
-            className="object-contain object-center drop-shadow-[0_18px_40px_rgba(0,0,0,0.18)]"
+            className="by-banner-zoom object-contain object-center drop-shadow-[0_18px_40px_rgba(0,0,0,0.18)]"
           />
         </Reveal>
 

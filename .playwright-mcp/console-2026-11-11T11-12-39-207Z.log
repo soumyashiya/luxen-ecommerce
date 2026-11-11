@@ -1,0 +1,59 @@
+[     251ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     289ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     428ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     469ms] [WARNING] Image with src "/certificates/bpc-157-tb-500-page1.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     475ms] [WARNING] Image with src "/certificates/bpc-157-tb-500-page2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     475ms] [WARNING] Image with src "/certificates/retatrutide-page1.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     475ms] [WARNING] Image with src "/certificates/retatrutide-page2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     475ms] [WARNING] Image with src "/certificates/tirzepatide-page1.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     475ms] [WARNING] Image with src "/certificates/tirzepatide-page2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     478ms] [WARNING] Image with src "/certificates/tirzepatide-page3.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     478ms] [WARNING] Image with src "/certificates/glow-ghk-cu-page1.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     478ms] [WARNING] Image with src "/certificates/glow-ghk-cu-page2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     489ms] [LOG] [Fast Refresh] done in 173ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     599ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     692ms] [LOG] [Fast Refresh] done in 196ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   14242ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   14322ms] [LOG] [Fast Refresh] done in 181ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   35384ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   35636ms] [LOG] [Fast Refresh] done in 347ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   35751ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   36241ms] [LOG] [Fast Refresh] done in 592ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   36382ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   36654ms] [LOG] [Fast Refresh] done in 379ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   36736ms] ReferenceError: PENDING is not defined
+    at CertificatesPage (about://React/Server/C:%5CAlluvi%5Cmy%20projects%5Cgit-update%5Cnew-update-websites%5Cecommerce-alluvi%5Cluxen%5C.next%5Cdev%5Cserver%5Cchunks%5Cssr%5C%5Broot-of-the-server%5D__1dc4o6g._.js?87:1342:33)
+    at resolveErrorDev (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-server-dom-turbopack_0amoqeu._.js:1919:105)
+    at processFullStringRow (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-server-dom-turbopack_0amoqeu._.js:2434:29)
+    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-server-dom-turbopack_0amoqeu._.js:2393:9)
+    at processBinaryChunk (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-server-dom-turbopack_0amoqeu._.js:2502:221)
+    at progress (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-server-dom-turbopack_0amoqeu._.js:2689:13)
+[   43680ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   43759ms] [LOG] [Fast Refresh] done in 184ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   43865ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   44428ms] [LOG] [Fast Refresh] done in 664ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   44729ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/certificates:1
+[   44866ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   44894ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   44976ms] ReferenceError: PENDING is not defined
+    at CertificatesPage (about://React/Server/C:%5CAlluvi%5Cmy%20projects%5Cgit-update%5Cnew-update-websites%5Cecommerce-alluvi%5Cluxen%5C.next%5Cdev%5Cserver%5Cchunks%5Cssr%5C%5Broot-of-the-server%5D__1dc4o6g._.js?19:1362:25)
+    at resolveErrorDev (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-server-dom-turbopack_0amoqeu._.js:1919:105)
+    at processFullStringRow (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-server-dom-turbopack_0amoqeu._.js:2434:29)
+    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-server-dom-turbopack_0amoqeu._.js:2393:9)
+    at processBinaryChunk (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-server-dom-turbopack_0amoqeu._.js:2502:221)
+    at progress (http://localhost:3000/_next/static/chunks/20c5_next_dist_compiled_react-server-dom-turbopack_0amoqeu._.js:2689:13)
+[   52981ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   53072ms] [LOG] [Fast Refresh] done in 205ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   53186ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   53730ms] [LOG] [Fast Refresh] done in 645ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   54301ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   54334ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   54594ms] [WARNING] Image with src "/certificates/bpc-157-tb-500-page1.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   54594ms] [WARNING] Image with src "/certificates/bpc-157-tb-500-page2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   54594ms] [WARNING] Image with src "/certificates/retatrutide-page1.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   54594ms] [WARNING] Image with src "/certificates/retatrutide-page2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   54595ms] [WARNING] Image with src "/certificates/tirzepatide-page1.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   54595ms] [WARNING] Image with src "/certificates/tirzepatide-page2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   54595ms] [WARNING] Image with src "/certificates/tirzepatide-page3.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   54595ms] [WARNING] Image with src "/certificates/glow-ghk-cu-page1.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   54595ms] [WARNING] Image with src "/certificates/glow-ghk-cu-page2.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478

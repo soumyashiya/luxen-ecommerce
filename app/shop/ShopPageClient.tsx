@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { ChevronDown, Search, X } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
@@ -8,7 +9,7 @@ import Footer from "@/components/sections/Footer";
 import ProductCard from "@/components/product/ProductCard";
 import Reveal from "@/components/ui/Reveal";
 import Eyebrow from "@/components/ui/Eyebrow";
-import { SERVICES } from "@/lib/data";
+import { SERVICES, getTheme, getThemeProducts, type ProductTag } from "@/lib/data";
 
 const SORTS = [
   { id: "featured", label: "Featured" },
@@ -19,6 +20,26 @@ const SORTS = [
 
 type SortId = (typeof SORTS)[number]["id"];
 
+/* `?tag=` collections — the header's "New In" routes to `?tag=new`. Each
+   narrows the catalog to products carrying that card tag. */
+const TAG_COLLECTIONS: Record<string, { tag: ProductTag; label: string; blurb: string }> = {
+  new: {
+    tag: "New",
+    label: "New in",
+    blurb: "The latest research reference materials added to the catalog — each lot independently documented for identity, purity and content.",
+  },
+  bestseller: {
+    tag: "Bestseller",
+    label: "Bestsellers",
+    blurb: "The research reference materials laboratories order most.",
+  },
+  limited: {
+    tag: "Limited",
+    label: "Limited",
+    blurb: "Short-run lots, available while current batches last.",
+  },
+};
+
 export default function ShopPageClient() {
   /* The header's search overlay routes here with `?q=`, so seed the filter
      from the URL on first render. Filtering stays client-side as before. */
@@ -26,20 +47,34 @@ export default function ShopPageClient() {
   const [query, setQuery] = useState(() => params.get("q") ?? "");
   const [sort, setSort] = useState<SortId>("featured");
 
+  /* The shop-by tiles route here with `?theme=`. Read straight from the URL
+     rather than into state, so moving between themes re-narrows the catalog;
+     an unknown slug falls through to the full catalog rather than empty. */
+  const theme = getTheme(params.get("theme") ?? "");
+  const tagCollection = TAG_COLLECTIONS[(params.get("tag") ?? "").toLowerCase()];
+  /* Whichever named collection the URL asked for heads the page. */
+  const collection = theme ?? tagCollection;
+
   const products = useMemo(() => {
+    const themed = theme ? getThemeProducts(theme.slug) : SERVICES;
+    const base = tagCollection
+      ? themed.filter((p) => p.tag === tagCollection.tag)
+      : themed;
+
+    /* Search narrows *within* the theme, so a tile's selection survives it. */
     const q = query.trim().toLowerCase();
     const filtered = q
-      ? SERVICES.filter(
+      ? base.filter(
           (p) => p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q),
         )
-      : SERVICES;
+      : base;
 
     const sorted = [...filtered];
     if (sort === "price-asc") sorted.sort((a, b) => a.price - b.price);
     else if (sort === "price-desc") sorted.sort((a, b) => b.price - a.price);
     else if (sort === "name") sorted.sort((a, b) => a.title.localeCompare(b.title));
     return sorted;
-  }, [query, sort]);
+  }, [query, sort, theme, tagCollection]);
 
   return (
     <>
@@ -48,12 +83,21 @@ export default function ShopPageClient() {
       <main id="main" className="bg-pale pb-20">
         {/* Page banner */}
         <section className="by-page py-12 text-center sm:py-16">
+          {/* Arriving from a shop-by tile, the banner takes that theme's name
+              and blurb — so the page reads as the collection the tile
+              promised rather than as the catalog with a hidden filter on. */}
           <Reveal className="flex flex-col items-center">
-            <Eyebrow center>Research catalog</Eyebrow>
-            <h1 className="by-h-product mt-4">Shop research peptides</h1>
+            <Eyebrow center>
+              {theme ? "Research theme" : tagCollection ? "Collection" : "Research catalog"}
+            </Eyebrow>
+            <h1 className="by-h-product mt-4">
+              {collection ? collection.label : "Shop research peptides"}
+            </h1>
             <p className="mt-4 max-w-xl text-[15px] leading-relaxed tracking-[0.6px] text-pink">
-              Every batch is supplied for laboratory and in-vitro research use only —
-              independently documented for identity, purity, and content.
+              {collection
+                ? collection.blurb
+                : `Every batch is supplied for laboratory and in-vitro research use only —
+                   independently documented for identity, purity, and content.`}
             </p>
           </Reveal>
         </section>
@@ -120,9 +164,24 @@ export default function ShopPageClient() {
             </div>
           </div>
 
-          <p className="mt-4 text-[13px] font-bold uppercase tracking-[1px] text-pink">
-            {products.length} {products.length === 1 ? "product" : "products"}
-          </p>
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            <p className="text-[13px] font-bold uppercase tracking-[1px] text-pink">
+              {products.length} {products.length === 1 ? "product" : "products"}
+            </p>
+
+            {/* The active theme, and the way back out of it. A link rather
+                than a button so it's shareable and the back button works. */}
+            {collection && (
+              <Link
+                href="/shop"
+                className="by-icon inline-flex items-center gap-2 rounded-[40px] bg-pink px-4 py-1.5 text-[13px] font-bold uppercase tracking-[1px] text-yellow"
+              >
+                {collection.label}
+                <X size={14} strokeWidth={2.5} aria-hidden />
+                <span className="sr-only">— show all products</span>
+              </Link>
+            )}
+          </div>
 
           {/* Grid — 8px gutters desktop / 4px mobile, as on the reference */}
           {products.length > 0 ? (
@@ -139,9 +198,19 @@ export default function ShopPageClient() {
             </ul>
           ) : (
             <div className="mt-12 flex flex-col items-center gap-3 rounded-[12px] bg-yellow py-16 text-center">
-              <p className="by-h-section">No products match &ldquo;{query}&rdquo;</p>
+              {/* With a theme on and no query, there is no search term to
+                  quote — the empty set came from the theme. */}
+              <p className="by-h-section">
+                {query.trim()
+                  ? `No products match “${query}”`
+                  : tagCollection && !theme
+                    ? "Nothing in this collection yet"
+                    : "Nothing in this theme yet"}
+              </p>
               <p className="text-[15px] tracking-[0.6px] text-pink">
-                Try a different compound name or clear your search.
+                {collection
+                  ? "Try another collection, or browse the full catalog."
+                  : "Try a different compound name or clear your search."}
               </p>
             </div>
           )}

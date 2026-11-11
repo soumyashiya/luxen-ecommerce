@@ -1,0 +1,93 @@
+- generic [active] [ref=f42e1]:
+  - link "Skip to main content" [ref=f42e2] [cursor=pointer]:
+    - /url: "#main"
+  - main [ref=f42e3]:
+    - generic [ref=f42e4]:
+      - generic [ref=f42e5]:
+        - link "LUXEN home" [ref=f42e6] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f42e7]: LUXEN
+        - link "Back to site" [ref=f42e9] [cursor=pointer]:
+          - /url: /
+      - generic [ref=f42e12]:
+        - paragraph [ref=f42e13]: Get started
+        - heading "Create your account" [level=1] [ref=f42e14]
+        - paragraph [ref=f42e15]: Order research-grade peptides, track shipments, and download certificates of analysis.
+        - generic [ref=f42e16]:
+          - generic [ref=f42e17]:
+            - generic [ref=f42e18]:
+              - generic [ref=f42e19]: First name
+              - textbox "First name" [ref=f42e20]:
+                - /placeholder: Alex
+            - generic [ref=f42e21]:
+              - generic [ref=f42e22]: Last name
+              - textbox "Last name" [ref=f42e23]:
+                - /placeholder: Kim
+          - generic [ref=f42e24]:
+            - generic [ref=f42e25]: Email
+            - textbox "Email" [ref=f42e26]:
+              - /placeholder: you@lab.com
+          - generic [ref=f42e27]:
+            - generic [ref=f42e28]: Date of birth
+            - textbox "Date of birth" [ref=f42e29]
+          - generic [ref=f42e30]:
+            - generic [ref=f42e31]:
+              - generic [ref=f42e32]: Nationality
+              - textbox "Nationality" [ref=f42e33]:
+                - /placeholder: e.g. British
+            - generic [ref=f42e34]:
+              - generic [ref=f42e35]: Country of residence
+              - combobox "Country of residence" [ref=f42e36]:
+                - option "United Kingdom" [selected]
+                - option "Ireland"
+                - option "France"
+                - option "Germany"
+                - option "Netherlands"
+                - option "Spain"
+                - option "Italy"
+                - option "Belgium"
+                - option "Sweden"
+                - option "Denmark"
+                - option "Norway"
+                - option "Finland"
+                - option "United States"
+                - option "Canada"
+                - option "Australia"
+                - option "New Zealand"
+                - option "Japan"
+                - option "Singapore"
+                - option "Other"
+          - generic [ref=f42e37]:
+            - generic [ref=f42e38]: Password
+            - generic [ref=f42e39]:
+              - textbox "Password Show password" [ref=f42e40]:
+                - /placeholder: At least 8 characters
+              - button "Show password" [ref=f42e41]
+          - generic [ref=f42e45]:
+            - generic [ref=f42e46]: Confirm password
+            - textbox "Confirm password" [ref=f42e47]:
+              - /placeholder: Repeat password
+          - generic [ref=f42e48] [cursor=pointer]:
+            - checkbox "I confirm materials are for laboratory R&D use only and agree to the Terms and Privacy Policy." [ref=f42e49]
+            - generic [ref=f42e50]:
+              - text: I confirm materials are for laboratory R&D use only and agree to the
+              - link "Terms" [ref=f42e51]:
+                - /url: "#"
+              - text: and
+              - link "Privacy Policy" [ref=f42e52]:
+                - /url: "#"
+              - text: .
+          - button "Create account" [ref=f42e53] [cursor=pointer]
+        - paragraph [ref=f42e54]:
+          - text: Already have an account?
+          - link "Sign in" [ref=f42e55] [cursor=pointer]:
+            - /url: /signin
+      - paragraph [ref=f42e56]: For laboratory R&D use only · Not for human or veterinary consumption
+    - complementary [ref=f42e57]:
+      - img "Smiling man in a blue shirt in front of colour-blocked panels" [ref=f42e58]
+      - generic [ref=f42e60]:
+        - generic [ref=f42e61]: Why researchers choose LUXEN
+        - generic [ref=f42e63]:
+          - heading "Pharmaceutical rigor, in every batch." [level=2] [ref=f42e64]
+          - paragraph [ref=f42e65]: Every batch is independently HPLC-verified and documented to the milligram — so your research stays reproducible from lot to lot.
+  - button "Open Next.js Dev Tools" [ref=f42e71] [cursor=pointer]

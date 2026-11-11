@@ -1,0 +1,486 @@
+- generic [ref=f32e1]:
+  - alertdialog "Cookies Settings" [ref=f32e2]:
+    - generic [ref=f32e3]:
+      - paragraph [ref=f32e5]:
+        - text: By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.
+        - link "Privacy Policy." [ref=f32e6] [cursor=pointer]:
+          - /url: https://uk.byoma.com/policies/privacy-policy
+      - generic [ref=f32e7]:
+        - button "Cookies Settings" [ref=f32e8]
+        - button "Accept All Cookies" [ref=f32e9]
+        - button "Reject All" [ref=f32e10]
+  - dialog "We don't ship to the United Arab Emirates" [active] [ref=f32e12]:
+    - generic [ref=f32e16]:
+      - generic [ref=f32e17]:
+        - heading "We don't ship to the United Arab Emirates" [level=2] [ref=f32e19]
+        - button "Close" [ref=f32e20] [cursor=pointer]
+      - generic [ref=f32e26]:
+        - paragraph [ref=f32e27]: Choose another shipping country available.
+        - generic [ref=f32e28]:
+          - paragraph [ref=f32e29]: Remember that we can only ship your order to addresses located in the chosen country.
+          - paragraph [ref=f32e30]:
+            - text: "You can find local retailers that stock BYOMA in your country at the following link:"
+            - link "https://byoma.com/pages/authorized-retailers" [ref=f32e31] [cursor=pointer]:
+              - /url: https://byoma.com/pages/authorized-retailers
+      - combobox "Country" [ref=f32e34]:
+        - generic [ref=f32e35]: United Kingdom (GBP £)
+      - button "Shop now" [ref=f32e42] [cursor=pointer]
+  - link "Skip to content" [ref=f32e44] [cursor=pointer]:
+    - /url: "#MainContent"
+  - region "Announcement bar" [ref=f32e48]:
+    - generic [ref=f32e49]:
+      - button "Previous announcement" [ref=f32e50] [cursor=pointer]
+      - generic [ref=f32e54]:
+        - group "1 of 3" [ref=f32e55]:
+          - region "Announcement" [ref=f32e56]:
+            - paragraph [ref=f32e57]:
+              - strong [ref=f32e59]: FREE DELIVERY ON ORDERS OVER £30
+        - group [aria-hidden] [ref=f32e60]:
+          - region [ref=f32e61]:
+            - paragraph [ref=f32e62]:
+              - strong [ref=f32e64]: FREE SAMPLE WITH EVERY ORDER
+        - group [aria-hidden] [ref=f32e65]:
+          - region [ref=f32e66]:
+            - link [ref=f32e67] [cursor=pointer]:
+              - /url: /pages/shop-by-offer
+              - paragraph [ref=f32e68]:
+                - strong [ref=f32e70]: 25% OFF ORDERS WITH 4+ PRODUCTS
+      - button "Next announcement" [ref=f32e71] [cursor=pointer]
+  - banner [ref=f32e77]:
+    - generic [ref=f32e78]:
+      - link "Skin Analysis Tool" [ref=f32e79] [cursor=pointer]:
+        - /url: /pages/skin-analysis
+      - link "Byology Class" [ref=f32e80] [cursor=pointer]:
+        - /url: /pages/byology-class
+    - heading [level=1] [ref=f32e81]:
+      - link [ref=f32e82] [cursor=pointer]:
+        - /url: /
+        - img "The BYOMA log in yellow font." [ref=f32e84]
+    - generic [ref=f32e85]:
+      - button "Change Shipping Country" [ref=f32e86]
+      - link "Log in" [ref=f32e88] [cursor=pointer]:
+        - /url: https://uk.byoma.com/customer_authentication/redirect?locale=en&region_country=GB
+      - group [ref=f32e95]:
+        - button "Search" [ref=f32e96] [cursor=pointer]
+      - link "Cart" [ref=f32e101] [cursor=pointer]:
+        - /url: /cart
+    - navigation "Main Dropdown" [ref=f32e106]:
+      - list [ref=f32e107]:
+        - listitem [ref=f32e108]:
+          - link "New In" [ref=f32e109] [cursor=pointer]:
+            - /url: /collections/new-in
+        - listitem [ref=f32e111]:
+          - group [ref=f32e113]:
+            - button "Skin" [ref=f32e114] [cursor=pointer]
+        - listitem [ref=f32e118]:
+          - group [ref=f32e120]:
+            - button "Body" [ref=f32e121] [cursor=pointer]
+        - listitem [ref=f32e125]:
+          - group [ref=f32e127]:
+            - button "Concern" [ref=f32e128] [cursor=pointer]
+        - listitem [ref=f32e132]:
+          - link "Gift Sets" [ref=f32e133] [cursor=pointer]:
+            - /url: /collections/holiday
+        - listitem [ref=f32e135]:
+          - link "Build Your Routine" [ref=f32e136] [cursor=pointer]:
+            - /url: /pages/shop-by-offer
+        - listitem [ref=f32e138]:
+          - link "Shop All" [ref=f32e139] [cursor=pointer]:
+            - /url: /collections/all
+  - main [ref=f32e141]:
+    - link [ref=f32e144] [cursor=pointer]:
+      - /url: /collections/holiday
+    - generic [ref=f32e147]:
+      - generic [ref=f32e148]:
+        - heading [level=2] [ref=f32e149]:
+          - strong [ref=f32e150]:
+            - strong [ref=f32e151]: HOLIDAY
+        - link "View all products in the Sets collection" [ref=f32e153] [cursor=pointer]:
+          - /url: /collections/holiday
+          - text: VIEW ALL
+      - list "Slider" [ref=f32e155]:
+        - listitem [ref=f32e156]:
+          - generic [ref=f32e158]:
+            - generic [ref=f32e159]:
+              - generic [ref=f32e161]:
+                - img "The Barrier Boosting Lab Kit" [ref=f32e162]
+                - img "The Barrier Boosting Lab Kit" [ref=f32e163]
+              - paragraph [ref=f32e167]: NEW
+            - generic [ref=f32e168]:
+              - generic [ref=f32e169]:
+                - heading [level=2] [ref=f32e170]:
+                  - link "The Barrier Boosting Lab Kit" [ref=f32e171] [cursor=pointer]:
+                    - /url: /products/the-barrier-boosting-lab-kit
+                - generic [ref=f32e172]:
+                  - generic [ref=f32e178]:
+                    - generic [ref=f32e179]: "5"
+                    - generic [ref=f32e187]: out 5 stars rating in total
+                    - generic [ref=f32e188]: 1 Review
+                  - generic [ref=f32e192]:
+                    - generic [ref=f32e193]: Regular price
+                    - generic [ref=f32e194]: £22.00
+              - button "Add to cart The Barrier Boosting Lab Kit" [ref=f32e198] [cursor=pointer]:
+                - generic [ref=f32e199]: Add to cart
+        - listitem [ref=f32e200]:
+          - generic [ref=f32e202]:
+            - generic [ref=f32e203]:
+              - generic [ref=f32e205]:
+                - img "Byoma Lab Kit 'The Hydrated + Bright Lab Kit' in its retail box, featuring a bright teal background with lime green and hot pink graphics, showcasing two tubes of skincare cream inside." [ref=f32e206]
+                - img "The Hydrated + Bright Lab Kit" [ref=f32e207]
+              - paragraph [ref=f32e211]: NEW
+            - generic [ref=f32e212]:
+              - generic [ref=f32e213]:
+                - heading [level=2] [ref=f32e214]:
+                  - link "The Hydrated + Bright Lab Kit" [ref=f32e215] [cursor=pointer]:
+                    - /url: /products/the-hydrated-bright-lab-kit
+                - generic [ref=f32e220]:
+                  - generic [ref=f32e221]: Regular price
+                  - generic [ref=f32e222]: £10.00
+              - button "Add to cart The Hydrated + Bright Lab Kit" [ref=f32e226] [cursor=pointer]:
+                - generic [ref=f32e227]: Add to cart
+        - listitem [ref=f32e228]:
+          - generic [ref=f32e230]:
+            - generic [ref=f32e231]:
+              - generic [ref=f32e233]:
+                - img "The Smooth + Bright Body Lab Kit" [ref=f32e234]
+                - img "The Smooth + Bright Body Lab Kit" [ref=f32e235]
+              - paragraph [ref=f32e239]: NEW
+            - generic [ref=f32e240]:
+              - generic [ref=f32e241]:
+                - heading [level=2] [ref=f32e242]:
+                  - link "The Smooth + Bright Body Lab Kit" [ref=f32e243] [cursor=pointer]:
+                    - /url: /products/the-smooth-bright-body-lab-kit
+                - generic [ref=f32e248]:
+                  - generic [ref=f32e249]: Regular price
+                  - generic [ref=f32e250]: £22.00
+              - button "Add to cart The Smooth + Bright Body Lab Kit" [ref=f32e254] [cursor=pointer]:
+                - generic [ref=f32e255]: Add to cart
+        - listitem [ref=f32e256]:
+          - generic [ref=f32e258]:
+            - generic [ref=f32e259]:
+              - generic [ref=f32e261]:
+                - img "The Hydrating Heroes Lab Kit" [ref=f32e262]
+                - 'img "Two BYOMA skincare bottles on a pale yellow background: a pale yellow tube labeled ''Milky Moisture Cleanser 60ml'' and a coral-pink rectangular bottle labeled ''Hydrating Milky Toner 50ml'', with pink text above each product." [ref=f32e263]'
+              - paragraph [ref=f32e267]: NEW
+            - generic [ref=f32e268]:
+              - generic [ref=f32e269]:
+                - heading [level=2] [ref=f32e270]:
+                  - link "The Hydrating Heroes Lab Kit" [ref=f32e271] [cursor=pointer]:
+                    - /url: /products/the-hydrating-heroes-lab-kit
+                - generic [ref=f32e276]:
+                  - generic [ref=f32e277]: Regular price
+                  - generic [ref=f32e278]: £12.00
+              - button "Add to cart The Hydrating Heroes Lab Kit" [ref=f32e282] [cursor=pointer]:
+                - generic [ref=f32e283]: Add to cart
+    - link [ref=f32e286] [cursor=pointer]:
+      - /url: /pages/longevit-8-peptide-serum
+    - generic [ref=f32e289]:
+      - generic [ref=f32e290]:
+        - heading [level=2] [ref=f32e291]:
+          - strong [ref=f32e292]:
+            - strong [ref=f32e293]: BESTSELLERS
+        - link "View all products in the Bestsellers collection" [ref=f32e295] [cursor=pointer]:
+          - /url: /collections/bestsellers
+          - text: VIEW ALL
+      - list "Slider" [ref=f32e297]:
+        - listitem [ref=f32e298]:
+          - generic [ref=f32e300]:
+            - generic [ref=f32e303]:
+              - img "Five BYOMA skincare bottles in assorted pastel colors with a pink circular '25% OFF' badge in the top right. The products include a yellow creamy jelly cleanser, a coral hydrating mist toner, a blue hydrating serum, a pink moisturizing gel cream, and an orange-amber ultra-light face fluid SPF 50." [ref=f32e304]
+              - img "BYOMA cleanser bottle with key benefits on a yellow background" [ref=f32e305]
+            - generic [ref=f32e307]:
+              - generic [ref=f32e308]:
+                - heading [level=2] [ref=f32e309]:
+                  - link "Bestsellers" [ref=f32e310] [cursor=pointer]:
+                    - /url: /products/bestsellers
+                - generic [ref=f32e311]:
+                  - generic [ref=f32e317]:
+                    - generic [ref=f32e318]: "4.6"
+                    - generic [ref=f32e326]: out 5 stars rating in total
+                    - generic [ref=f32e327]: 1521 Reviews
+                  - generic [ref=f32e331]:
+                    - generic [ref=f32e332]: Regular price
+                    - generic [ref=f32e333]: £64.95
+                    - generic [ref=f32e335]: Sale price
+                    - generic [ref=f32e336]: £48.70
+              - button "Add to cart Bestsellers" [ref=f32e340] [cursor=pointer]:
+                - generic [ref=f32e341]: Add to cart
+        - listitem [ref=f32e342]:
+          - generic [ref=f32e344]:
+            - generic [ref=f32e347]:
+              - img "BYOMA CREAMY JELLY CLEANSER against a white background. The text Accepted National Eczema Association written." [ref=f32e348]
+              - img "BYOMA CREAMY JELLY CLEANSER against a blue background." [ref=f32e349]
+            - generic [ref=f32e351]:
+              - generic [ref=f32e352]:
+                - heading [level=2] [ref=f32e353]:
+                  - link "Creamy Jelly Cleanser" [ref=f32e354] [cursor=pointer]:
+                    - /url: /products/creamy-jelly-cleanser
+                - generic [ref=f32e355]:
+                  - generic [ref=f32e361]:
+                    - generic [ref=f32e362]: "4.4"
+                    - generic [ref=f32e370]: out 5 stars rating in total
+                    - generic [ref=f32e371]: 424 Reviews
+                  - generic [ref=f32e375]:
+                    - generic [ref=f32e376]: Regular price
+                    - generic [ref=f32e377]: £10.99
+              - button "Add to cart Creamy Jelly Cleanser" [ref=f32e381] [cursor=pointer]:
+                - generic [ref=f32e382]: Add to cart
+        - listitem [ref=f32e383]:
+          - generic [ref=f32e385]:
+            - generic [ref=f32e388]:
+              - img "BYOMA HYDRATING MILKY TONER bottle against a white background." [ref=f32e389]
+              - img "BYOMA HYDRATING MILKY TONER against a blue background." [ref=f32e390]
+            - generic [ref=f32e392]:
+              - generic [ref=f32e393]:
+                - heading [level=2] [ref=f32e394]:
+                  - link "Hydrating Milky Toner" [ref=f32e395] [cursor=pointer]:
+                    - /url: /products/byoma-milky-toner-sensitive-skin-hydrating
+                - generic [ref=f32e396]:
+                  - generic [ref=f32e402]:
+                    - generic [ref=f32e403]: "4.7"
+                    - generic [ref=f32e411]: out 5 stars rating in total
+                    - generic [ref=f32e412]: 83 Reviews
+                  - generic [ref=f32e416]:
+                    - generic [ref=f32e417]: Regular price
+                    - generic [ref=f32e418]: £11.99
+              - button "Add to cart Hydrating Milky Toner" [ref=f32e422] [cursor=pointer]:
+                - generic [ref=f32e423]: Add to cart
+        - listitem [ref=f32e424]:
+          - generic [ref=f32e426]:
+            - generic [ref=f32e429]:
+              - img "BYOMA MOISTURIZING GEL-CREAM against a white background and the text, \"Accepted National Eczema Association\"" [ref=f32e430]
+              - img "BYOMA MOISTURIZING GEL-CREAM in a yellow background." [ref=f32e431]
+            - generic [ref=f32e433]:
+              - generic [ref=f32e434]:
+                - heading [level=2] [ref=f32e435]:
+                  - link "Moisturising Gel Cream" [ref=f32e436] [cursor=pointer]:
+                    - /url: /products/moisturising-gel-cream
+                - generic [ref=f32e437]:
+                  - generic [ref=f32e443]:
+                    - generic [ref=f32e444]: "4.6"
+                    - generic [ref=f32e452]: out 5 stars rating in total
+                    - generic [ref=f32e453]: 508 Reviews
+                  - generic [ref=f32e457]:
+                    - generic [ref=f32e458]: Regular price
+                    - generic [ref=f32e459]: £12.99
+              - button "Add to cart Moisturising Gel Cream" [ref=f32e463] [cursor=pointer]:
+                - generic [ref=f32e464]: Add to cart
+    - link [ref=f32e467] [cursor=pointer]:
+      - /url: /products/hydrating-milky-moisturiser
+    - link [ref=f32e470] [cursor=pointer]:
+      - /url: /collections/bestsellers
+      - img "Wide BYOMA promotional banner – Buy more, save more. Save 25% when you buy 4+ products. Includes full skincare product range on yellow background." [ref=f32e471]
+    - generic [ref=f32e474]:
+      - generic [ref=f32e475]:
+        - heading [level=2] [ref=f32e476]:
+          - strong [ref=f32e477]: BUNDLES
+        - link "View all products in the Bundles collection" [ref=f32e479] [cursor=pointer]:
+          - /url: /collections/bundles
+          - text: VIEW ALL
+      - list "Slider" [ref=f32e481]:
+        - listitem [ref=f32e482]:
+          - generic [ref=f32e484]:
+            - img "Ultimate PM Bundle" [ref=f32e488]
+            - generic [ref=f32e490]:
+              - generic [ref=f32e491]:
+                - heading [level=2] [ref=f32e492]:
+                  - link "Ultimate PM Bundle" [ref=f32e493] [cursor=pointer]:
+                    - /url: /products/ultimate-pm-bundle
+                - generic [ref=f32e494]:
+                  - generic [ref=f32e500]:
+                    - generic [ref=f32e501]: "4.6"
+                    - generic [ref=f32e509]: out 5 stars rating in total
+                    - generic [ref=f32e510]: 887 Reviews
+                  - generic [ref=f32e514]:
+                    - generic [ref=f32e515]: Regular price
+                    - generic [ref=f32e516]: £68.95
+                    - generic [ref=f32e518]: Sale price
+                    - generic [ref=f32e519]: £51.70
+              - button "Add to cart Ultimate PM Bundle" [ref=f32e523] [cursor=pointer]:
+                - generic [ref=f32e524]: Add to cart
+        - listitem [ref=f32e525]:
+          - generic [ref=f32e527]:
+            - img "Winter Essentials" [ref=f32e531]
+            - generic [ref=f32e533]:
+              - generic [ref=f32e534]:
+                - heading [level=2] [ref=f32e535]:
+                  - link "Winter Essentials" [ref=f32e536] [cursor=pointer]:
+                    - /url: /products/dry-skin
+                - generic [ref=f32e541]:
+                  - generic [ref=f32e542]: Regular price
+                  - generic [ref=f32e543]: £70.95
+                  - generic [ref=f32e545]: Sale price
+                  - generic [ref=f32e546]: £53.20
+              - button "Add to cart Winter Essentials" [ref=f32e550] [cursor=pointer]:
+                - generic [ref=f32e551]: Add to cart
+        - listitem [ref=f32e552]:
+          - generic [ref=f32e554]:
+            - img "Set of BYOMA skincare products on a green background with a 25% off badge." [ref=f32e558]
+            - generic [ref=f32e560]:
+              - generic [ref=f32e561]:
+                - heading [level=2] [ref=f32e562]:
+                  - link "Blemish" [ref=f32e563] [cursor=pointer]:
+                    - /url: /products/blemish
+                - generic [ref=f32e564]:
+                  - generic [ref=f32e570]:
+                    - generic [ref=f32e571]: "4.5"
+                    - generic [ref=f32e579]: out 5 stars rating in total
+                    - generic [ref=f32e580]: 139 Reviews
+                  - generic [ref=f32e584]:
+                    - generic [ref=f32e585]: Regular price
+                    - generic [ref=f32e586]: £49.96
+                    - generic [ref=f32e588]: Sale price
+                    - generic [ref=f32e589]: £37.45
+              - button "Add to cart Blemish" [ref=f32e593] [cursor=pointer]:
+                - generic [ref=f32e594]: Add to cart
+        - listitem [ref=f32e595]:
+          - generic [ref=f32e597]:
+            - img "Five BYOMA skincare bottles in assorted pastel colors with a pink circular '25% OFF' badge in the top right. The products include a yellow creamy jelly cleanser, a coral hydrating mist toner, a blue hydrating serum, a pink moisturizing gel cream, and an orange-amber ultra-light face fluid SPF 50." [ref=f32e601]
+            - generic [ref=f32e603]:
+              - generic [ref=f32e604]:
+                - heading [level=2] [ref=f32e605]:
+                  - link "Bestsellers" [ref=f32e606] [cursor=pointer]:
+                    - /url: /products/bestsellers
+                - generic [ref=f32e607]:
+                  - generic [ref=f32e613]:
+                    - generic [ref=f32e614]: "4.6"
+                    - generic [ref=f32e622]: out 5 stars rating in total
+                    - generic [ref=f32e623]: 1521 Reviews
+                  - generic [ref=f32e627]:
+                    - generic [ref=f32e628]: Regular price
+                    - generic [ref=f32e629]: £64.95
+                    - generic [ref=f32e631]: Sale price
+                    - generic [ref=f32e632]: £48.70
+              - button "Add to cart Bestsellers" [ref=f32e636] [cursor=pointer]:
+                - generic [ref=f32e637]: Add to cart
+    - generic [ref=f32e640]:
+      - link [ref=f32e642] [cursor=pointer]:
+        - /url: /collections/dry-skin-care-products
+        - heading "DRY SKIN" [level=2] [ref=f32e644]
+      - link [ref=f32e646] [cursor=pointer]:
+        - /url: /collections/sensitive-skin-care
+        - heading "SENSITIVE SKIN" [level=2] [ref=f32e648]
+      - link [ref=f32e650] [cursor=pointer]:
+        - /url: /collections/dull-skin-care-products
+        - heading "DULL SKIN" [level=2] [ref=f32e652]
+      - link "Shop All" [ref=f32e654] [cursor=pointer]:
+        - /url: /collections/skin-care-blemish-prone
+        - heading "BLEMISH PRONE SKIN" [level=2] [ref=f32e656]
+    - generic [ref=f32e664]:
+      - heading [level=2] [ref=f32e665]:
+        - strong [ref=f32e666]: WELCOME TO BYOMA
+      - paragraph [ref=f32e668]: Meet BYOMA. Barrier-boosting skincare, driven by science, powered by actives for the ultimate skin-compatible solution. Clinically proven, dermatologist-approved formulas boost, build, balance, brighten for your best skin day.
+      - link "ABOUT US" [ref=f32e670] [cursor=pointer]:
+        - /url: /pages/byoma-about-us
+    - generic [ref=f32e673]:
+      - heading [level=2] [ref=f32e674]:
+        - strong [ref=f32e675]: SIGN UP FOR 15% OFF YOUR FIRST PURCHASE
+      - paragraph [ref=f32e677]: Be the first to know about our exclusive new product launches, news & promotions when you sign up to our mailing list.
+      - generic [ref=f32e681]:
+        - textbox "Email" [ref=f32e682]
+        - generic: Email
+        - button "Subscribe" [ref=f32e683] [cursor=pointer]
+  - img "Promotional banner with free sample, free delivery, and discount offer on a yellow background" [ref=f32e689]
+  - contentinfo [ref=f32e691]:
+    - generic [ref=f32e692]:
+      - generic [ref=f32e693]:
+        - group [ref=f32e695]:
+          - generic "Customer Care":
+            - heading "Customer Care" [level=2]
+          - list [ref=f32e696]:
+            - listitem [ref=f32e697]:
+              - link "Contact Us" [ref=f32e698] [cursor=pointer]:
+                - /url: /pages/contact-us
+            - listitem [ref=f32e699]:
+              - link "Delivery" [ref=f32e700] [cursor=pointer]:
+                - /url: /policies/shipping-policy
+            - listitem [ref=f32e701]:
+              - link "Returns & Refunds" [ref=f32e702] [cursor=pointer]:
+                - /url: /policies/refund-policy
+            - listitem [ref=f32e703]:
+              - link "FAQS" [ref=f32e704] [cursor=pointer]:
+                - /url: /pages/faqs
+            - listitem [ref=f32e705]:
+              - link "Authorised Retailers" [ref=f32e706] [cursor=pointer]:
+                - /url: /pages/authorised-retailers
+        - group [ref=f32e708]:
+          - generic "Company Info":
+            - heading "Company Info" [level=2]
+          - list [ref=f32e709]:
+            - listitem [ref=f32e710]:
+              - link "About Us" [ref=f32e711] [cursor=pointer]:
+                - /url: /pages/byoma-about-us
+            - listitem [ref=f32e712]:
+              - link "Privacy Policy" [ref=f32e713] [cursor=pointer]:
+                - /url: /policies/privacy-policy
+            - listitem [ref=f32e714]:
+              - link "Terms & Conditions" [ref=f32e715] [cursor=pointer]:
+                - /url: /policies/terms-of-service
+            - listitem [ref=f32e716]:
+              - link "Accessibility" [ref=f32e717] [cursor=pointer]:
+                - /url: /pages/accessibility
+            - listitem [ref=f32e718]:
+              - link "Modern Slavery Statement" [ref=f32e719] [cursor=pointer]:
+                - /url: https://cdn.shopify.com/s/files/1/0632/7395/9560/files/BYOMA_UK_Modern_Slavery_Statement_2024.pdf?v=1744628753
+        - group [ref=f32e721]:
+          - generic "More Info":
+            - heading "More Info" [level=2]
+          - list [ref=f32e722]:
+            - listitem [ref=f32e723]:
+              - link "About Us" [ref=f32e724] [cursor=pointer]:
+                - /url: /pages/byoma-about-us
+            - listitem [ref=f32e725]:
+              - link "Byology Class" [ref=f32e726] [cursor=pointer]:
+                - /url: /pages/byology-class
+            - listitem [ref=f32e727]:
+              - link "Sitemap" [ref=f32e728] [cursor=pointer]:
+                - /url: /pages/sitemap
+        - group [ref=f32e730]:
+          - generic "Shop":
+            - heading "Shop" [level=2]
+          - list [ref=f32e731]:
+            - listitem [ref=f32e732]:
+              - link "Shop All" [ref=f32e733] [cursor=pointer]:
+                - /url: /collections/all
+            - listitem [ref=f32e734]:
+              - link "Skin Analysis Tool" [ref=f32e735] [cursor=pointer]:
+                - /url: /pages/skin-analysis
+            - listitem [ref=f32e736]:
+              - link "Bestsellers" [ref=f32e737] [cursor=pointer]:
+                - /url: /collections/bestsellers
+            - listitem [ref=f32e738]:
+              - link "Skincare" [ref=f32e739] [cursor=pointer]:
+                - /url: /collections/shop-all-skin
+            - listitem [ref=f32e740]:
+              - link "Bodycare" [ref=f32e741] [cursor=pointer]:
+                - /url: /collections/byoma-body-collection
+            - listitem [ref=f32e742]:
+              - link "Bundles" [ref=f32e743] [cursor=pointer]:
+                - /url: /collections/bundles
+      - generic [ref=f32e744]:
+        - generic [ref=f32e745]:
+          - paragraph [ref=f32e746]:
+            - strong [ref=f32e747]: "Boost your emails with BYOMA: Offers, updates, and better skin as standard"
+          - generic [ref=f32e750]:
+            - textbox "Email" [ref=f32e751]
+            - generic: Email
+            - button "Subscribe" [ref=f32e752] [cursor=pointer]
+        - button [ref=f32e759] [cursor=pointer]:
+          - generic [ref=f32e764]:
+            - text: Follow on
+            - img "Shop" [ref=f32e765]
+    - generic [ref=f32e768]:
+      - generic [ref=f32e769]: © 2026 BYOMA
+      - list [ref=f32e770]:
+        - listitem [ref=f32e771]:
+          - link "Facebook" [ref=f32e772] [cursor=pointer]:
+            - /url: https://www.facebook.com/byomaskin
+        - listitem [ref=f32e777]:
+          - link "Instagram" [ref=f32e778] [cursor=pointer]:
+            - /url: https://www.instagram.com/byoma/
+        - listitem [ref=f32e783]:
+          - link "TikTok" [ref=f32e784] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@byoma
+    - generic [ref=f32e794]:
+      - combobox "United Kingdom" [ref=f32e795]
+      - generic [aria-hidden] [ref=f32e801]: Begin typing to search, use the up and down arrow keys to navigate, Enter to select and Escape to close.

@@ -1,0 +1,28 @@
+[     202ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     225ms] [LOG] [Fast Refresh] done in 131ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     344ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[     363ms] [LOG] [Fast Refresh] done in 126ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   11511ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   11531ms] [LOG] [Fast Refresh] done in 120ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   35024ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   35255ms] [LOG] [Fast Refresh] done in 338ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   49089ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=sEAO6H3jmuM8l_-_Tba_B' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:13423
+[   50104ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=sEAO6H3jmuM8l_-_Tba_B' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:13423
+[   51122ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=sEAO6H3jmuM8l_-_Tba_B' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:13423
+[   52140ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=sEAO6H3jmuM8l_-_Tba_B' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:13423
+[   53152ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=sEAO6H3jmuM8l_-_Tba_B' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/20c5_next_dist_client_0_8rdhp._.js:13423
+[   58171ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   58690ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   58723ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   59192ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[   59235ms] [LOG] [Fast Refresh] done in 148ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  101712ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  103421ms] [LOG] [Fast Refresh] done in 1655ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  103538ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  103676ms] [LOG] [Fast Refresh] done in 252ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  103950ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  103991ms] [LOG] [Fast Refresh] done in 149ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  104153ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  104534ms] [LOG] [Fast Refresh] done in 491ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  105826ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478
+[  105893ms] [LOG] [Fast Refresh] done in 169ms @ http://localhost:3000/_next/static/chunks/20c5_next_dist_12vrclz._.js:2478

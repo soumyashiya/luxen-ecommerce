@@ -69,7 +69,7 @@ function Card({ r }: { r: VideoReview }) {
   }, []);
 
   return (
-    <article className="w-[68vw] shrink-0 snap-start sm:w-[42vw] lg:w-[262px]">
+    <article className="w-[72vw] shrink-0 snap-start sm:w-[44vw] lg:w-auto">
       {/* The clips are 9:16, which makes for a very tall card. The box is
           pinned to 4:5 and the video cropped into it instead. 32% biases the
           crop upward: faces sit high in these frames and the carton sits low,
@@ -148,9 +148,10 @@ export default function VideoReviews() {
           </Reveal>
         </div>
 
-        {/* Snap rail on small screens; at `lg` the four fixed-width cards fit
-            the row outright, so the overflow container stops scrolling. */}
-        <div className="no-scrollbar mt-10 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 lg:gap-4 lg:overflow-visible lg:pb-0">
+        {/* Snap rail on small screens; at `lg` a four-column grid that spans
+            the full container, so the cards grow to fill the row instead of
+            leaving empty space on the right. */}
+        <div className="no-scrollbar mt-10 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 lg:grid lg:grid-cols-4 lg:gap-5 lg:overflow-visible lg:pb-0">
           {VIDEO_REVIEWS.map((r) => (
             <Card key={r.slug} r={r} />
           ))}

@@ -1,0 +1,215 @@
+- generic [active] [ref=f3e1]:
+  - link "Skip to main content" [ref=f3e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f3e3]:
+    - generic [ref=f3e5]:
+      - button "Previous announcement" [ref=f3e6]
+      - paragraph [ref=f3e9]: EVERY BATCH INDEPENDENTLY LAB TESTED
+      - button "Next announcement" [ref=f3e10]
+    - generic [ref=f3e14]:
+      - generic [ref=f3e15]:
+        - link "Track Order" [ref=f3e16] [cursor=pointer]:
+          - /url: /track-order
+        - link "Certificates" [ref=f3e17] [cursor=pointer]:
+          - /url: /about
+      - link "LUXEN home" [ref=f3e18] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f3e19]: LUXEN
+      - generic [ref=f3e21]:
+        - button "Search" [ref=f3e22]
+        - button "Open cart" [ref=f3e27]
+    - navigation "Main" [ref=f3e31]:
+      - generic [ref=f3e32]:
+        - link "New In" [ref=f3e33] [cursor=pointer]:
+          - /url: /shop
+        - link "Catalog" [ref=f3e35] [cursor=pointer]:
+          - /url: /shop
+        - link "Verification" [ref=f3e40] [cursor=pointer]:
+          - /url: /about
+        - link "About" [ref=f3e44] [cursor=pointer]:
+          - /url: /about
+        - link "Reviews" [ref=f3e45] [cursor=pointer]:
+          - /url: /about#testimonials
+        - link "Shop All" [ref=f3e46] [cursor=pointer]:
+          - /url: /shop
+  - main [ref=f3e47]:
+    - region "About LUXEN" [ref=f3e48]:
+      - img "Model in sunglasses holding a BPC-157 & TB-500 pre-filled research pen against a magenta backdrop" [ref=f3e50]
+    - generic [ref=f3e51]:
+      - generic [ref=f3e52]:
+        - heading "About LUXEN" [level=1] [ref=f3e53]
+        - paragraph [ref=f3e54]:
+          - text: LUXEN supplies research reference peptides for
+          - strong [ref=f3e55]: laboratory
+          - text: and
+          - strong [ref=f3e56]: in-vitro
+          - text: analytical work. Every lot is
+          - strong [ref=f3e57]: independently tested
+          - text: ", documented to the milligram and shipped with its"
+          - strong [ref=f3e58]: certificate of analysis
+          - text: — because good science starts with material you can
+          - strong [ref=f3e59]: verify
+          - text: .
+      - img "CJC-1295 10mg research reference carton and matching pre-filled pen on a lemon backdrop" [ref=f3e62]
+    - generic [ref=f3e63]:
+      - img "Smiling model holding a Glow pre-filled research pen against a yellow backdrop" [ref=f3e65]
+      - generic [ref=f3e67]:
+        - heading "We believe research material should arrive with proof." [level=2] [ref=f3e68]
+        - paragraph [ref=f3e69]: Not a promise on a label — a certificate you can read. That idea sits behind every reference peptide we supply.
+    - generic [ref=f3e70]:
+      - img "Smiling man in a blue shirt in front of colour-blocked panels" [ref=f3e72]
+      - generic [ref=f3e74]:
+        - heading "Every lot independently tested. Every certificate shared." [level=2] [ref=f3e75]
+        - paragraph [ref=f3e76]: Identity, purity and content are checked by a third-party laboratory before release, and batch numbers trace each result back to the material used.
+    - generic [ref=f3e77]:
+      - img "Smiling model holding a Retatrutide pre-filled research pen against a lilac backdrop" [ref=f3e79]
+      - generic [ref=f3e81]:
+        - heading "Science that's simple to verify." [level=2] [ref=f3e82]
+        - paragraph [ref=f3e83]: ≥99% purity by HPLC, sealed fixed-volume formats and refrigerated handling — so your analytical work starts from a known quantity.
+    - generic [ref=f3e84]:
+      - img "Model holding an NAD+ 1,000 mg research reference carton against a sky-blue backdrop" [ref=f3e86]
+      - generic [ref=f3e88]:
+        - heading "Kept cold. Shipped tracked." [level=2] [ref=f3e89]
+        - paragraph [ref=f3e90]: Reference material is stored refrigerated and ships with tracking — free on orders over $250 — so it reaches your bench the way it left ours.
+    - generic [ref=f3e91]:
+      - img "Model holding a MOTS-c pre-filled research pen against a sky-blue backdrop" [ref=f3e93]
+      - generic [ref=f3e95]:
+        - heading "Meet the lab" [level=2] [ref=f3e96]
+        - blockquote [ref=f3e97]:
+          - paragraph [ref=f3e98]: “We don't ask researchers to take our word for it. We hand them the certificate.”
+          - generic [ref=f3e99]: — The LUXEN lab team
+        - generic [ref=f3e100]:
+          - link "Shop the catalog" [ref=f3e101] [cursor=pointer]:
+            - /url: /shop
+          - link "Track an order" [ref=f3e102] [cursor=pointer]:
+            - /url: /track-order
+    - region "Why order from us" [ref=f3e103]:
+      - list [ref=f3e104]:
+        - listitem [ref=f3e105]:
+          - generic [ref=f3e109]: Every batch independently lab tested
+        - listitem [ref=f3e110]:
+          - generic [ref=f3e116]: Free tracked shipping on orders over $250
+        - listitem [ref=f3e117]:
+          - generic [ref=f3e120]: For laboratory research use only
+    - generic [ref=f3e121]:
+      - generic [ref=f3e123]:
+        - generic [ref=f3e124]: Testimonials
+        - heading "What researchers say about us" [level=2] [ref=f3e125]
+      - generic [ref=f3e127]:
+        - article [ref=f3e128]:
+          - paragraph [ref=f3e140]: “The certificates of analysis matched our own HPLC readings to the decimal. Reordering reference material has become the easiest part of running the lab.”
+          - paragraph [ref=f3e143]: Research Associate, Cell Biology Lab
+        - article [ref=f3e144]:
+          - paragraph [ref=f3e156]: “Consistent purity across batches is what we care about most for our analytical work, and the documentation confirms it every single time.”
+          - paragraph [ref=f3e159]: Principal Investigator
+        - article [ref=f3e160]:
+          - paragraph [ref=f3e172]: “Transparent testing and honest documentation. Procurement of research reference material used to be a headache — now it's a two-minute task.”
+          - paragraph [ref=f3e175]: Lab Procurement Manager
+        - article [ref=f3e176]:
+          - paragraph [ref=f3e188]: “Reproducible analytical work starts with well-documented reagents. The batch traceability and certificates give us complete peace of mind.”
+          - paragraph [ref=f3e191]: Biochemistry PhD Candidate
+        - article [ref=f3e192]:
+          - paragraph [ref=f3e204]: “The certificates of analysis matched our own HPLC readings to the decimal. Reordering reference material has become the easiest part of running the lab.”
+          - paragraph [ref=f3e207]: Research Associate, Cell Biology Lab
+        - article [ref=f3e208]:
+          - paragraph [ref=f3e220]: “Consistent purity across batches is what we care about most for our analytical work, and the documentation confirms it every single time.”
+          - paragraph [ref=f3e223]: Principal Investigator
+        - article [ref=f3e224]:
+          - paragraph [ref=f3e236]: “Transparent testing and honest documentation. Procurement of research reference material used to be a headache — now it's a two-minute task.”
+          - paragraph [ref=f3e239]: Lab Procurement Manager
+        - article [ref=f3e240]:
+          - paragraph [ref=f3e252]: “Reproducible analytical work starts with well-documented reagents. The batch traceability and certificates give us complete peace of mind.”
+          - paragraph [ref=f3e255]: Biochemistry PhD Candidate
+  - contentinfo [ref=f3e256]:
+    - generic [ref=f3e258]:
+      - generic [ref=f3e259]:
+        - paragraph [ref=f3e262]: ≥99% Purity
+        - paragraph [ref=f3e263]: HPLC verified, every batch
+      - generic [ref=f3e264]:
+        - paragraph [ref=f3e270]: Free Delivery
+        - paragraph [ref=f3e271]: On orders over $250
+      - generic [ref=f3e272]:
+        - paragraph [ref=f3e276]: Third-Party Tested
+        - paragraph [ref=f3e277]: Certificate with every lot
+    - generic [ref=f3e279]:
+      - generic [ref=f3e280]:
+        - generic [ref=f3e281]:
+          - heading "Customer Care" [level=2] [ref=f3e282]
+          - list [ref=f3e283]:
+            - listitem [ref=f3e284]:
+              - link "Track Order" [ref=f3e285] [cursor=pointer]:
+                - /url: /track-order
+            - listitem [ref=f3e286]:
+              - link "Shipping Policy" [ref=f3e287] [cursor=pointer]:
+                - /url: /shipping-policy
+            - listitem [ref=f3e288]:
+              - link "Refund Policy" [ref=f3e289] [cursor=pointer]:
+                - /url: /refund-policy
+            - listitem [ref=f3e290]:
+              - link "Contact Us" [ref=f3e291] [cursor=pointer]:
+                - /url: /about#contact
+        - generic [ref=f3e292]:
+          - heading "Company Info" [level=2] [ref=f3e293]
+          - list [ref=f3e294]:
+            - listitem [ref=f3e295]:
+              - link "About Us" [ref=f3e296] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f3e297]:
+              - link "Privacy Policy" [ref=f3e298] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=f3e299]:
+              - link "Terms of Service" [ref=f3e300] [cursor=pointer]:
+                - /url: /terms-of-service
+            - listitem [ref=f3e301]:
+              - link "Press Release" [ref=f3e302] [cursor=pointer]:
+                - /url: /press-release
+        - generic [ref=f3e303]:
+          - heading "More Info" [level=2] [ref=f3e304]
+          - list [ref=f3e305]:
+            - listitem [ref=f3e306]:
+              - link "Our Process" [ref=f3e307] [cursor=pointer]:
+                - /url: /about#process
+            - listitem [ref=f3e308]:
+              - link "Research Team" [ref=f3e309] [cursor=pointer]:
+                - /url: /about#team
+            - listitem [ref=f3e310]:
+              - link "Reviews" [ref=f3e311] [cursor=pointer]:
+                - /url: /about#testimonials
+        - generic [ref=f3e312]:
+          - heading "Shop" [level=2] [ref=f3e313]
+          - list [ref=f3e314]:
+            - listitem [ref=f3e315]:
+              - link "Shop All" [ref=f3e316] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=f3e317]:
+              - link "Retatrutide" [ref=f3e318] [cursor=pointer]:
+                - /url: /product/retatrutide
+            - listitem [ref=f3e319]:
+              - link "Tirzepatide" [ref=f3e320] [cursor=pointer]:
+                - /url: /product/tirzepatide
+            - listitem [ref=f3e321]:
+              - link "BPC-157 & TB-500" [ref=f3e322] [cursor=pointer]:
+                - /url: /product/bpc-157-tb-500
+            - listitem [ref=f3e323]:
+              - link "NAD+" [ref=f3e324] [cursor=pointer]:
+                - /url: /product/nad-plus-1000mg
+      - generic [ref=f3e326]:
+        - paragraph [ref=f3e327]: "Lab updates from LUXEN: new lots, certificates and restocks"
+        - generic [ref=f3e328]:
+          - generic [ref=f3e329]: Email
+          - textbox "Email" [ref=f3e330]
+          - button "Subscribe" [ref=f3e331]
+        - generic [ref=f3e334] [cursor=pointer]:
+          - checkbox "I agree to receive occasional updates from LUXEN." [checked] [ref=f3e335]
+          - text: I agree to receive occasional updates from LUXEN.
+      - paragraph [ref=f3e336]: Independently tested research reference material, supplied for laboratory and analytical use only. Not intended to diagnose, treat, cure, or prevent any disease. Not for human or veterinary use.
+    - generic [ref=f3e338]:
+      - paragraph [ref=f3e339]: © 2026 LUXEN
+      - generic [ref=f3e340]:
+        - link "X" [ref=f3e341] [cursor=pointer]:
+          - /url: https://twitter.com/luxenlabs
+        - link "LinkedIn" [ref=f3e344] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/luxen
+        - link "Facebook" [ref=f3e347] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=f3e355] [cursor=pointer]
