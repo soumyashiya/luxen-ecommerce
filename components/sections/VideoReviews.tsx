@@ -69,8 +69,12 @@ function Card({ r }: { r: VideoReview }) {
   }, []);
 
   return (
-    <article className="w-[62vw] shrink-0 snap-start sm:w-[38vw] lg:w-[228px]">
-      <div className="relative overflow-hidden rounded-[12px] bg-yellow">
+    <article className="w-[68vw] shrink-0 snap-start sm:w-[42vw] lg:w-[262px]">
+      {/* The clips are 9:16, which makes for a very tall card. The box is
+          pinned to 4:5 and the video cropped into it instead. 32% biases the
+          crop upward: faces sit high in these frames and the carton sits low,
+          and a centred crop clips foreheads before it clips the box. */}
+      <div className="relative aspect-[4/5] overflow-hidden rounded-[12px] bg-yellow">
         <video
           ref={ref}
           src={r.src}
@@ -84,7 +88,7 @@ function Card({ r }: { r: VideoReview }) {
           onPause={() => setPlaying(false)}
           width={420}
           height={754}
-          className="block h-auto w-full"
+          className="h-full w-full object-cover [object-position:center_32%]"
         />
 
         {/* One control, two sizes: a full-cover target with a centred disc
