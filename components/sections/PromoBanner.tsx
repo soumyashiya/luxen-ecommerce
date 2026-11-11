@@ -338,6 +338,8 @@ export default function PromoBanner({
           fill
           priority={priority}
           sizes="100vw"
+          /* Full-bleed artwork — 75 leaves visible mush in the gradients. */
+          quality={90}
           className="by-banner-zoom object-cover"
           style={{ objectPosition: imagePosition }}
         />

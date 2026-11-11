@@ -131,10 +131,13 @@ export default function JanoshikModal({ product, open, onClose, returnFocusRef }
                 Third-party assay
               </p>
 
-              <div>
+              {/* Container for the figure: its size tracks this column's width
+                  (cqi), so a long reading like "99.21%" never spills into the
+                  next column. */}
+              <div className="@container min-w-0">
                 {analysis.purity ? (
                   <>
-                    <p className="text-[72px] font-bold leading-[0.9] tracking-[-0.03em] text-yellow tabular-nums md:text-[104px]">
+                    <p className="whitespace-nowrap text-[min(104px,25cqi)] font-bold leading-[0.9] tracking-[-0.03em] text-yellow tabular-nums">
                       {analysis.purity}
                     </p>
                     <p className="mt-4 text-base leading-snug text-pale">
@@ -148,7 +151,7 @@ export default function JanoshikModal({ product, open, onClose, returnFocusRef }
                     <ul className="space-y-2">
                       {analysis.compounds.map((c) => (
                         <li key={c.compound} className="flex items-baseline gap-3">
-                          <span className="text-[44px] font-bold leading-none tracking-[-0.02em] text-yellow tabular-nums md:text-[56px]">
+                          <span className="shrink-0 text-[min(56px,16cqi)] font-bold leading-none tracking-[-0.02em] text-yellow tabular-nums">
                             {c.verifiedContent}
                           </span>
                           <span className="text-sm text-pale/80">{c.compound}</span>

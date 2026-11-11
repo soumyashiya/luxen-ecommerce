@@ -1,0 +1,371 @@
+- generic [active] [ref=f49e1]:
+  - link "Skip to main content" [ref=f49e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f49e3]:
+    - generic [ref=f49e5]:
+      - button "Previous announcement" [ref=f49e6]
+      - paragraph [ref=f49e9]: EVERY BATCH INDEPENDENTLY LAB TESTED
+      - button "Next announcement" [ref=f49e10]
+    - generic [ref=f49e14]:
+      - generic [ref=f49e15]:
+        - link "Track Order" [ref=f49e16] [cursor=pointer]:
+          - /url: /track-order
+        - link "Certificates" [ref=f49e17] [cursor=pointer]:
+          - /url: /certificates
+      - link "LUXEN home" [ref=f49e18] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f49e19]: LUXEN
+      - generic [ref=f49e21]:
+        - button "Search" [ref=f49e22]
+        - button "Open cart" [ref=f49e27]
+    - navigation "Main" [ref=f49e31]:
+      - generic [ref=f49e32]:
+        - link "New In" [ref=f49e33] [cursor=pointer]:
+          - /url: /shop?tag=new
+        - link "About" [ref=f49e34] [cursor=pointer]:
+          - /url: /about
+        - link "Reviews" [ref=f49e35] [cursor=pointer]:
+          - /url: /about#testimonials
+        - link "Shop All" [ref=f49e36] [cursor=pointer]:
+          - /url: /shop
+  - main [ref=f49e37]:
+    - region "Featured research reference peptides" [ref=f49e38]:
+      - generic [ref=f49e42]:
+        - heading "Research Grade Peptides" [level=1] [ref=f49e43]:
+          - generic [ref=f49e44]: Research
+          - generic [ref=f49e45]: Grade
+          - generic [ref=f49e46]: Peptides
+        - link "Shop now" [ref=f49e47] [cursor=pointer]:
+          - /url: /shop
+        - paragraph [ref=f49e48]: "*Every batch independently characterised by Janoshik Analytical for identity, purity and content. For laboratory and in-vitro research use only — not for human or veterinary use."
+    - generic [ref=f49e50]:
+      - generic [ref=f49e51]:
+        - heading "Bestsellers" [level=2] [ref=f49e52]
+        - link "View all" [ref=f49e53] [cursor=pointer]:
+          - /url: /shop
+      - list [ref=f49e55]:
+        - listitem [ref=f49e56]:
+          - article [ref=f49e57]:
+            - link "Glow 70mg (R&D Only) Bestseller" [ref=f49e58] [cursor=pointer]:
+              - /url: /product/glow-ghk-cu
+              - img "Glow 70mg (R&D Only)" [ref=f49e59]
+              - generic [ref=f49e61]: Bestseller
+            - link [ref=f49e62] [cursor=pointer]:
+              - /url: /product/glow-ghk-cu
+              - heading "Glow 70mg (R&D Only)" [level=3] [ref=f49e63]
+            - paragraph [ref=f49e64]: $100
+            - button "Add Glow 70mg (R&D Only) to cart" [ref=f49e65] [cursor=pointer]: Add to cart
+        - listitem [ref=f49e66]:
+          - article [ref=f49e67]:
+            - link "Tesamorelin 20mg (R&D Only) Limited" [ref=f49e68] [cursor=pointer]:
+              - /url: /product/tesamorelin-20mg
+              - img "Tesamorelin 20mg (R&D Only)" [ref=f49e69]
+              - generic [ref=f49e71]: Limited
+            - link [ref=f49e72] [cursor=pointer]:
+              - /url: /product/tesamorelin-20mg
+              - heading "Tesamorelin 20mg (R&D Only)" [level=3] [ref=f49e73]
+            - paragraph [ref=f49e74]: $100
+            - button "Add Tesamorelin 20mg (R&D Only) to cart" [ref=f49e75] [cursor=pointer]: Add to cart
+        - listitem [ref=f49e76]:
+          - article [ref=f49e77]:
+            - link "Retatrutide 40mg (R&D Only) New" [ref=f49e78] [cursor=pointer]:
+              - /url: /product/retatrutide-40mg
+              - img "Retatrutide 40mg (R&D Only)" [ref=f49e79]
+              - generic [ref=f49e81]: New
+            - link [ref=f49e82] [cursor=pointer]:
+              - /url: /product/retatrutide-40mg
+              - heading "Retatrutide 40mg (R&D Only)" [level=3] [ref=f49e83]
+            - paragraph [ref=f49e84]: $140
+            - button "Add Retatrutide 40mg (R&D Only) to cart" [ref=f49e85] [cursor=pointer]: Add to cart
+        - listitem [ref=f49e86]:
+          - article [ref=f49e87]:
+            - link "CJC-1295 10mg (R&D Only) Bestseller" [ref=f49e88] [cursor=pointer]:
+              - /url: /product/cjc-1295-10mg
+              - img "CJC-1295 10mg (R&D Only)" [ref=f49e89]
+              - generic [ref=f49e91]: Bestseller
+            - link [ref=f49e92] [cursor=pointer]:
+              - /url: /product/cjc-1295-10mg
+              - heading "CJC-1295 10mg (R&D Only)" [level=3] [ref=f49e93]
+            - paragraph [ref=f49e94]: $100
+            - button "Add CJC-1295 10mg (R&D Only) to cart" [ref=f49e95] [cursor=pointer]: Add to cart
+    - generic [ref=f49e96]:
+      - img "Model holding a Glow pre-filled research pen against a field of bubbles" [ref=f49e97]
+      - generic [ref=f49e99]:
+        - generic [ref=f49e100]: New
+        - heading "Welcome to the lab" [level=2] [ref=f49e101]:
+          - generic [ref=f49e102]: Welcome to
+          - generic [ref=f49e103]: the lab
+        - paragraph [ref=f49e104]: Every batch, independently verified
+        - link "Shop now" [ref=f49e107] [cursor=pointer]:
+          - /url: /shop
+        - paragraph [ref=f49e108]: "*Every lot ships with a third-party certificate of analysis covering identity, purity and content."
+    - generic [ref=f49e110]:
+      - generic [ref=f49e111]:
+        - heading "Research Catalog" [level=2] [ref=f49e112]
+        - link "View all" [ref=f49e113] [cursor=pointer]:
+          - /url: /shop
+      - list [ref=f49e115]:
+        - listitem [ref=f49e116]:
+          - article [ref=f49e117]:
+            - link "Tirzepatide 40mg (R&D Only) Bestseller" [ref=f49e118] [cursor=pointer]:
+              - /url: /product/tirzepatide
+              - img "Tirzepatide 40mg (R&D Only)" [ref=f49e119]
+              - generic [ref=f49e121]: Bestseller
+            - link [ref=f49e122] [cursor=pointer]:
+              - /url: /product/tirzepatide
+              - heading "Tirzepatide 40mg (R&D Only)" [level=3] [ref=f49e123]
+            - paragraph [ref=f49e124]: $100
+            - button "Add Tirzepatide 40mg (R&D Only) to cart" [ref=f49e125] [cursor=pointer]: Add to cart
+        - listitem [ref=f49e126]:
+          - article [ref=f49e127]:
+            - link "Glow 70mg (R&D Only) Bestseller" [ref=f49e128] [cursor=pointer]:
+              - /url: /product/glow-ghk-cu
+              - img "Glow 70mg (R&D Only)" [ref=f49e129]
+              - generic [ref=f49e131]: Bestseller
+            - link [ref=f49e132] [cursor=pointer]:
+              - /url: /product/glow-ghk-cu
+              - heading "Glow 70mg (R&D Only)" [level=3] [ref=f49e133]
+            - paragraph [ref=f49e134]: $100
+            - button "Add Glow 70mg (R&D Only) to cart" [ref=f49e135] [cursor=pointer]: Add to cart
+        - listitem [ref=f49e136]:
+          - article [ref=f49e137]:
+            - link "Retatrutide 40mg (R&D Only) New" [ref=f49e138] [cursor=pointer]:
+              - /url: /product/retatrutide-40mg
+              - img "Retatrutide 40mg (R&D Only)" [ref=f49e139]
+              - generic [ref=f49e141]: New
+            - link [ref=f49e142] [cursor=pointer]:
+              - /url: /product/retatrutide-40mg
+              - heading "Retatrutide 40mg (R&D Only)" [level=3] [ref=f49e143]
+            - paragraph [ref=f49e144]: $140
+            - button "Add Retatrutide 40mg (R&D Only) to cart" [ref=f49e145] [cursor=pointer]: Add to cart
+        - listitem [ref=f49e146]:
+          - article [ref=f49e147]:
+            - link "CJC-1295 10mg (R&D Only) Bestseller" [ref=f49e148] [cursor=pointer]:
+              - /url: /product/cjc-1295-10mg
+              - img "CJC-1295 10mg (R&D Only)" [ref=f49e149]
+              - generic [ref=f49e151]: Bestseller
+            - link [ref=f49e152] [cursor=pointer]:
+              - /url: /product/cjc-1295-10mg
+              - heading "CJC-1295 10mg (R&D Only)" [level=3] [ref=f49e153]
+            - paragraph [ref=f49e154]: $100
+            - button "Add CJC-1295 10mg (R&D Only) to cart" [ref=f49e155] [cursor=pointer]: Add to cart
+    - generic [ref=f49e156]:
+      - img "Model holding an NAD+ pre-filled research pen against a pink marble field" [ref=f49e157]
+      - generic [ref=f49e159]:
+        - generic [ref=f49e160]: New
+        - heading "LUXEN NAD+ 1000mg" [level=2] [ref=f49e161]:
+          - generic [ref=f49e162]: LUXEN
+          - generic [ref=f49e163]:
+            - generic [ref=f49e164]: NAD+
+            - generic [ref=f49e165]: 1000mg
+        - paragraph [ref=f49e166]: Sealed lots for identity & purity work
+        - link "Shop now" [ref=f49e167] [cursor=pointer]:
+          - /url: /product/nad-plus-1000mg
+    - generic [ref=f49e168]:
+      - img "Four research reference cartons — NAD+, Retatrutide, Tirzepatide and Glow — arranged on a lemon field" [ref=f49e169]
+      - generic [ref=f49e171]:
+        - heading "Buy more, save more 4+ Kits" [level=2] [ref=f49e172]:
+          - generic [ref=f49e173]: Buy more, save more
+          - generic [ref=f49e174]: 4+ Kits
+        - paragraph [ref=f49e175]: Unlock volume pricing
+        - link "Shop all" [ref=f49e176] [cursor=pointer]:
+          - /url: /shop
+    - generic [ref=f49e178]:
+      - link "Body Balance" [ref=f49e179] [cursor=pointer]:
+        - /url: /shop?theme=body-balance
+      - link "Energy & Movement" [ref=f49e181] [cursor=pointer]:
+        - /url: /shop?theme=energy-movement
+      - link "Rest & Recovery" [ref=f49e183] [cursor=pointer]:
+        - /url: /shop?theme=rest-recovery
+      - link "Skin Radiance" [ref=f49e185] [cursor=pointer]:
+        - /url: /shop?theme=skin-radiance
+    - generic [ref=f49e187]:
+      - generic [ref=f49e189]:
+        - generic [ref=f49e190]: Testimonials
+        - heading "What researchers say about us" [level=2] [ref=f49e191]
+      - generic [ref=f49e193]:
+        - article [ref=f49e194]:
+          - paragraph [ref=f49e206]: “The certificates of analysis matched our own HPLC readings to the decimal. Reordering reference material has become the easiest part of running the lab.”
+          - paragraph [ref=f49e209]: Research Associate, Cell Biology Lab
+        - article [ref=f49e210]:
+          - paragraph [ref=f49e222]: “Consistent purity across batches is what we care about most for our analytical work, and the documentation confirms it every single time.”
+          - paragraph [ref=f49e225]: Principal Investigator
+        - article [ref=f49e226]:
+          - paragraph [ref=f49e238]: “Transparent testing and honest documentation. Procurement of research reference material used to be a headache — now it's a two-minute task.”
+          - paragraph [ref=f49e241]: Lab Procurement Manager
+        - article [ref=f49e242]:
+          - paragraph [ref=f49e254]: “Reproducible analytical work starts with well-documented reagents. The batch traceability and certificates give us complete peace of mind.”
+          - paragraph [ref=f49e257]: Biochemistry PhD Candidate
+        - article [ref=f49e258]:
+          - paragraph [ref=f49e270]: “The certificates of analysis matched our own HPLC readings to the decimal. Reordering reference material has become the easiest part of running the lab.”
+          - paragraph [ref=f49e273]: Research Associate, Cell Biology Lab
+        - article [ref=f49e274]:
+          - paragraph [ref=f49e286]: “Consistent purity across batches is what we care about most for our analytical work, and the documentation confirms it every single time.”
+          - paragraph [ref=f49e289]: Principal Investigator
+        - article [ref=f49e290]:
+          - paragraph [ref=f49e302]: “Transparent testing and honest documentation. Procurement of research reference material used to be a headache — now it's a two-minute task.”
+          - paragraph [ref=f49e305]: Lab Procurement Manager
+        - article [ref=f49e306]:
+          - paragraph [ref=f49e318]: “Reproducible analytical work starts with well-documented reagents. The batch traceability and certificates give us complete peace of mind.”
+          - paragraph [ref=f49e321]: Biochemistry PhD Candidate
+    - generic [ref=f49e323]:
+      - generic [ref=f49e324]:
+        - heading "See it in use" [level=2] [ref=f49e325]
+        - paragraph [ref=f49e327]: Clips from verified buyers
+      - generic [ref=f49e328]:
+        - article [ref=f49e329]:
+          - generic [ref=f49e330]:
+            - generic "A buyer at an outdoor calisthenics park holding a Retatrutide carton and speaking to camera" [ref=f49e331]
+            - 'button "Play video: A buyer at an outdoor calisthenics park holding a Retatrutide carton and speaking to camera" [ref=f49e332]'
+          - generic [ref=f49e336]:
+            - img "Rated 5 out of 5" [ref=f49e337]
+            - heading "Retatrutide 40mg" [level=3] [ref=f49e348]
+            - generic [ref=f49e349]: Verified buyer
+        - article [ref=f49e353]:
+          - generic [ref=f49e354]:
+            - generic "A buyer sitting on a mat at home holding a Retatrutide carton and speaking to camera" [ref=f49e355]
+            - 'button "Play video: A buyer sitting on a mat at home holding a Retatrutide carton and speaking to camera" [ref=f49e356]'
+          - generic [ref=f49e360]:
+            - img "Rated 5 out of 5" [ref=f49e361]
+            - heading "Retatrutide 40mg" [level=3] [ref=f49e372]
+            - generic [ref=f49e373]: Verified buyer
+        - article [ref=f49e377]:
+          - generic [ref=f49e378]:
+            - generic "A buyer standing indoors beside a window holding a Retatrutide carton and speaking to camera" [ref=f49e379]
+            - 'button "Play video: A buyer standing indoors beside a window holding a Retatrutide carton and speaking to camera" [ref=f49e380]'
+          - generic [ref=f49e384]:
+            - img "Rated 5 out of 5" [ref=f49e385]
+            - heading "Retatrutide 40mg" [level=3] [ref=f49e396]
+            - generic [ref=f49e397]: Verified buyer
+        - article [ref=f49e401]:
+          - generic [ref=f49e402]:
+            - generic "A buyer on a café terrace holding a Retatrutide carton and speaking to camera" [ref=f49e403]
+            - 'button "Play video: A buyer on a café terrace holding a Retatrutide carton and speaking to camera" [ref=f49e404]'
+          - generic [ref=f49e408]:
+            - img "Rated 5 out of 5" [ref=f49e409]
+            - heading "Retatrutide 40mg" [level=3] [ref=f49e420]
+            - generic [ref=f49e421]: Verified buyer
+    - generic [ref=f49e426]:
+      - generic [ref=f49e427]:
+        - generic [ref=f49e428]: Our scientists
+        - heading "Meet the people behind the science" [level=2] [ref=f49e430]
+        - paragraph [ref=f49e432]: Our chemists and quality specialists oversee synthesis, analytical testing, and compliance — so every reference compound that leaves the lab meets research-grade standards for identity and purity.
+        - link "More of the team" [ref=f49e434] [cursor=pointer]:
+          - /url: /about
+      - generic [ref=f49e435]:
+        - article [ref=f49e436]:
+          - paragraph [ref=f49e438]: Head of Peptide Synthesis
+          - heading "Dr. Elena Voss" [level=3] [ref=f49e439]
+        - article [ref=f49e440]:
+          - paragraph [ref=f49e442]: Analytical Chemistry Lead
+          - heading "Dr. Marcus Hale" [level=3] [ref=f49e443]
+        - article [ref=f49e444]:
+          - paragraph [ref=f49e446]: Quality & Compliance Director
+          - heading "Dr. Priya Nair" [level=3] [ref=f49e447]
+        - article [ref=f49e448]:
+          - paragraph [ref=f49e450]: Research Operations Lead
+          - heading "Dr. Adrian Kovač" [level=3] [ref=f49e451]
+    - generic [ref=f49e453]:
+      - heading "Welcome to LUXEN" [level=2] [ref=f49e454]
+      - paragraph [ref=f49e455]: Meet LUXEN. Research reference peptides, characterised by accredited third-party laboratories and documented to the milligram. Every lot ships with a certificate of analysis covering identity, purity and content — so your analytical work stays reproducible.
+      - link "About LUXEN" [ref=f49e456] [cursor=pointer]:
+        - /url: /about
+    - generic [ref=f49e458]:
+      - heading "Sign up for lab updates & new lots" [level=2] [ref=f49e459]
+      - paragraph [ref=f49e460]: Be the first to hear about new batches, published certificates of analysis and restocks when you join our mailing list.
+      - generic [ref=f49e461]:
+        - generic [ref=f49e462]: Email
+        - textbox "Email" [ref=f49e463]
+        - button "Subscribe" [ref=f49e464]
+  - contentinfo [ref=f49e467]:
+    - generic [ref=f49e469]:
+      - generic [ref=f49e470]:
+        - paragraph [ref=f49e473]: ≥99% Purity
+        - paragraph [ref=f49e474]: HPLC verified, every batch
+      - generic [ref=f49e475]:
+        - paragraph [ref=f49e481]: Free Delivery
+        - paragraph [ref=f49e482]: On orders over $250
+      - generic [ref=f49e483]:
+        - paragraph [ref=f49e487]: Third-Party Tested
+        - paragraph [ref=f49e488]: Certificate with every lot
+    - generic [ref=f49e490]:
+      - generic [ref=f49e491]:
+        - generic [ref=f49e492]:
+          - heading "Customer Care" [level=2] [ref=f49e493]
+          - list [ref=f49e494]:
+            - listitem [ref=f49e495]:
+              - link "Track Order" [ref=f49e496] [cursor=pointer]:
+                - /url: /track-order
+            - listitem [ref=f49e497]:
+              - link "Shipping Policy" [ref=f49e498] [cursor=pointer]:
+                - /url: /shipping-policy
+            - listitem [ref=f49e499]:
+              - link "Refund Policy" [ref=f49e500] [cursor=pointer]:
+                - /url: /refund-policy
+            - listitem [ref=f49e501]:
+              - link "Contact Us" [ref=f49e502] [cursor=pointer]:
+                - /url: /about#contact
+        - generic [ref=f49e503]:
+          - heading "Company Info" [level=2] [ref=f49e504]
+          - list [ref=f49e505]:
+            - listitem [ref=f49e506]:
+              - link "About Us" [ref=f49e507] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f49e508]:
+              - link "Privacy Policy" [ref=f49e509] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=f49e510]:
+              - link "Terms of Service" [ref=f49e511] [cursor=pointer]:
+                - /url: /terms-of-service
+            - listitem [ref=f49e512]:
+              - link "Press Release" [ref=f49e513] [cursor=pointer]:
+                - /url: /press-release
+        - generic [ref=f49e514]:
+          - heading "More Info" [level=2] [ref=f49e515]
+          - list [ref=f49e516]:
+            - listitem [ref=f49e517]:
+              - link "Our Process" [ref=f49e518] [cursor=pointer]:
+                - /url: /about#process
+            - listitem [ref=f49e519]:
+              - link "Research Team" [ref=f49e520] [cursor=pointer]:
+                - /url: /#team
+            - listitem [ref=f49e521]:
+              - link "Reviews" [ref=f49e522] [cursor=pointer]:
+                - /url: /about#testimonials
+        - generic [ref=f49e523]:
+          - heading "Shop" [level=2] [ref=f49e524]
+          - list [ref=f49e525]:
+            - listitem [ref=f49e526]:
+              - link "Shop All" [ref=f49e527] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=f49e528]:
+              - link "Retatrutide" [ref=f49e529] [cursor=pointer]:
+                - /url: /product/retatrutide
+            - listitem [ref=f49e530]:
+              - link "Tirzepatide" [ref=f49e531] [cursor=pointer]:
+                - /url: /product/tirzepatide
+            - listitem [ref=f49e532]:
+              - link "BPC-157 & TB-500" [ref=f49e533] [cursor=pointer]:
+                - /url: /product/bpc-157-tb-500
+            - listitem [ref=f49e534]:
+              - link "NAD+" [ref=f49e535] [cursor=pointer]:
+                - /url: /product/nad-plus-1000mg
+      - generic [ref=f49e537]:
+        - paragraph [ref=f49e538]: "Lab updates from LUXEN: new lots, certificates and restocks"
+        - generic [ref=f49e539]:
+          - generic [ref=f49e540]: Email
+          - textbox "Email" [ref=f49e541]
+          - button "Subscribe" [ref=f49e542]
+        - generic [ref=f49e545] [cursor=pointer]:
+          - checkbox "I agree to receive occasional updates from LUXEN." [checked] [ref=f49e546]
+          - text: I agree to receive occasional updates from LUXEN.
+      - paragraph [ref=f49e547]: Independently tested research reference material, supplied for laboratory and analytical use only. Not intended to diagnose, treat, cure, or prevent any disease. Not for human or veterinary use.
+    - generic [ref=f49e549]:
+      - paragraph [ref=f49e550]: © 2026 LUXEN
+      - generic [ref=f49e551]:
+        - link "X" [ref=f49e552] [cursor=pointer]:
+          - /url: https://twitter.com/luxenlabs
+        - link "LinkedIn" [ref=f49e555] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/luxen
+        - link "Facebook" [ref=f49e558] [cursor=pointer]:
+          - /url: "#"

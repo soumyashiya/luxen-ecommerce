@@ -40,6 +40,8 @@ export default function Hero() {
             priority
             fetchPriority="high"
             sizes="100vw"
+            /* Full-bleed artwork — 75 leaves visible mush in the gradients. */
+            quality={90}
             className="object-cover object-[30%_center] lg:object-center"
           />
         </div>
